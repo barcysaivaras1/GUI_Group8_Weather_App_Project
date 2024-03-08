@@ -1,0 +1,44 @@
+.box{
+    height: 40px;
+    width: 40px;
+}
+
+.box .group{
+    background-color:  #b5b8d7;
+    border-radius: 20px;
+    height: 40px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: rotate(-90deg);
+    width: 40px;
+}
+
+.box .overlap-group{
+    height: 20px;
+    left: 10px;
+    position: relative;
+    top: 10px;
+    width: 20px;
+}
+
+.box .rectangle{
+    background-color: #000000;
+    border-radius: 1px;
+    height: 20px;
+    left: 9px;
+    position: absolute;
+    top: 0px;
+    transform: rotate(90deg);
+    width: 2px;
+}
+
+.box .div {
+    background-color: #000000;
+    border-radius: 1px;
+    height: 20px;
+    left: 9px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+}
