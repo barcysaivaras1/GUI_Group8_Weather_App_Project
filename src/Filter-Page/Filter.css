@@ -1,0 +1,434 @@
+.Filter :root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.Filter button{
+  background: none;
+  border: none;
+}
+
+.Filter {
+  position: relative;
+  width: 428px;
+  height: 926px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(2, 0, 146, 0), #0e4089);
+  background-color: black;
+  overflow: hidden;
+}
+.Filter .group {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 42px 0 0 364px;
+  background: url(./assets/images/43b9fc9b-9edf-467a-af82-0d5ff2b58576.png)
+    no-repeat center;
+  background-size: cover;
+}
+.Filter .rectangle-temperature {
+  position: relative;
+  width: 400px;
+  height: 158px;
+  margin: 84px 0 0 12px;
+  font-size: 0px;
+  border: 2px solid rgba(255, 255, 255, 0.37);
+  z-index: 17;
+  border-radius: 23px;
+}
+.Filter .temperature {
+  display: block;
+  position: relative;
+  height: 35.962px;
+  margin: 21px 0 0 18px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34.188px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 5;
+}
+.Filter .rectangle-btn {
+  flex-shrink: 0;
+  position: relative;
+  width: 35.016px;
+  height: 22.713px;
+  cursor: pointer;
+  background: rgba(217, 217, 217, 0.32);
+  border: none;
+  z-index: 4;
+  border-radius: 7px;
+}
+
+.Filter .rectangle-continent {
+  position: relative;
+  width: 400px;
+  height: 160px;
+  margin: 26px 0 0 12px;
+  font-size: 0px;
+  border: 2px solid rgba(255, 255, 255, 0.37);
+  z-index: 18;
+  overflow: visible auto;
+  border-radius: 23px;
+}
+.Filter .continent {
+  display: block;
+  position: relative;
+  height: 35.962px;
+  margin: 15px 0 0 18px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34.188px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 12;
+}
+.Filter .continents-container {
+  position: relative;
+  width: 279px;
+  height: 32px;
+  margin: 0.5rem 0 0 18px;
+  z-index: 28;
+}
+.Filter #africa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 1rem;
+  width: 6rem;
+  height: 2rem;
+  top: 0;
+  left: 5px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 25;
+}
+.Filter #asia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 2rem;
+  width: 6rem;
+  height: 2rem;
+  top: 0;
+  left: 101.07px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 22;
+}
+.Filter #europe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 4rem;
+  width: 6rem;
+  height: 2rem;
+  top: 0;
+  left: 184.814px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 28;
+}
+.Filter #north-america {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 10rem;
+  height: 2rem;
+  top: 3rem;
+  left: 12.97px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 50;
+}
+.Filter #south-america {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 0.8rem;
+  width: 10rem;
+  height: 2rem;
+  top: 3rem;
+  left: 183.299px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 47;
+}
+.Filter .rectangle-weather {
+  position: relative;
+  width: 400px;
+  height: 160px;
+  margin: 25px 0 0 12px;
+  border: 2px solid rgba(255, 255, 255, 0.37);
+  z-index: 19;
+  border-radius: 23px;
+}
+.Filter .weather-type {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  height: 35.962px;
+  top: 12px;
+  left: 15px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34.188px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 13;
+}
+
+.Filter #rain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 5rem;
+  height: 31px;
+  top: 4rem;
+  left: 3rem;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 32;
+}
+.Filter #sun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 5rem;
+  height: 31px;
+  top: 4rem;
+  left: 10rem;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 35;
+}
+.Filter #snow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 5rem;
+  height: 31px;
+  top: 4rem;
+  left: 17rem;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 38;
+}
+.Filter #wind {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 5rem;
+  height: 31px;
+  top: 7rem;
+  left: 13.5rem;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 41;
+}
+
+.Filter #cloud {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 5rem;
+  height: 31px;
+  top: 7rem;
+  left: 6.5rem;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23.199px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 44;
+}
+.Filter .btn{
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 20px;
+  z-index: 31;
+}
+.Filter .rectangle-11 {
+  position: relative;
+  width: 178px;
+  height: 67px;
+  bottom: 4rem;
+  margin: 134px 0 0 126px;
+  cursor: pointer;
+  background: #3667af;
+  border: 3px solid rgba(255, 255, 255, 0.37);
+  z-index: 15;
+  border-radius: 46px;
+}
+.Filter .apply {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 59px;
+  height: 27px;
+  top: 14px;
+  left: 55px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 16;
+}
+.Filter .filters {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  height: 27px;
+  top: 107px;
+  left: 3rem;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 33px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 1;
+}
+.Filter .Xsymbol {
+  position: absolute;
+  width: 15.564px;
+  height: 20.058px;
+  top: 114px;
+  left: 376px;
+  background: url(./assets/images/9caebbf3-9450-4d9d-afc7-60afc4de711b.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 14;
+}
+
+
+/*Styling double slider*/
+
+.Filter .container{
+    position: relative;
+    width: 80%;
+    height: 100px;
+    left: 40px;
+}
+.Filter .values{
+    width: 32%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+.Filter .slider {
+  touch-action: none;
+  height: 0.6rem;
+  width: 20rem;
+  background: linear-gradient(270deg, rgb(209, 80, 48), #0e4089);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.Filter #range1,#range2,#dash{
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.Filter #dash{
+  color: #48515e;
+}
+.Filter #range1{
+  color:#4a87e4;
+}
+.Filter #range2{
+  color: rgb(219, 112, 85);
+}
+/* Styles for the slider thumb */
+.Filter .slider .thumb {
+  pointer-events: none;
+  position: absolute;
+  touch-action: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background:  linear-gradient(180deg, rgb(77, 113, 212),#1336a0);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the slider active state */
+.Filter .slider .thumb.active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
