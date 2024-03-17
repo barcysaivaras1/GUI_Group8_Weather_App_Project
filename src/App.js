@@ -1,6 +1,5 @@
 import React from 'react';
-import Weather from './Weather';
-import './Weather.css';
+import { AppRoute } from './Routes';
 
 const App = () => {
   const appStyle = {
@@ -11,10 +10,7 @@ const App = () => {
   };
 
   return(
-    <div className='background'>
-      <h1>Weather Forecast App</h1>
-      <Weather />
-    </div>
+    <AppRoute/>
   );
 };
 
