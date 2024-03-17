@@ -1,0 +1,174 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+.Results .weather-type{
+  border: 0;
+}
+.Results {
+  position: relative;
+  width: 428px;
+  height: 926px;
+  margin: 0 auto;
+  font-size: 0px;
+  background: linear-gradient(180deg, rgba(2, 0, 146, 0), #0e4089);
+  background-color: black;
+  overflow: hidden;
+}
+.Results .find-places-to-go {
+  display: block;
+  position: relative;
+  height: 27px;
+  margin: 133px 0 0 27px;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 1;
+}
+.Results .results-container{
+  margin-top: 7rem;
+}
+/*A Container holding the results*/
+.Results .result-box {
+  position: relative;
+  width: 365px;
+  height: 103px;
+  margin: 2rem 0 0 28px;
+  background: url(./assets/images/789963b7-902b-46c4-b86e-4a0fe9869e68.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 12;
+}
+/*A container holding the country and city text*/
+.Results .city-country {
+  position: absolute;
+  width: 132px;
+  height: 77px;
+  top: 11px;
+  left: 50%;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48.84px;
+  text-align: left;
+  transform: translate(-122.35%, 0);
+  z-index: 13;
+}
+/*city text*/
+.Results .city {
+  position: relative;
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48.84px;
+  text-align: left;
+}
+/*country text*/
+.Results .country {
+  position: relative;
+  bottom: 1rem;
+  color: #acb0db;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 48.84px;
+  text-align: left;
+}
+/*temperature text*/
+.Results .temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 5rem;
+  height: 1rem;
+  top: 2.5rem;
+  left: calc(50% - -89.5px);
+  color: #fcf6f6;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 51px;
+  font-weight: 400;
+  line-height: 60.843px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 14;
+}
+/*Weather Image*/
+.Results .weather-type {
+  position: absolute;
+  width: 42px;
+  height: 45.396px;
+  top: 29px;
+  left: 214px;
+  background: url(./assets/images/7ee590b4-2cff-4e9e-a540-c0c149cde4ff.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 16;
+}
+/*Options symbol*/
+.Results .options {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 42px;
+  left: 364px;
+  background: url(./assets/images/571c13cf-eafd-4bb4-92a9-f63f2324f715.png)
+    no-repeat center;
+  background-size: cover;
+}
+/*Arrow Symbol*/
+.Results .arrow {
+  position: absolute;
+  width: 10.889px;
+  height: 23.84px;
+  top: 48px;
+  left: 36px;
+  background: url(./assets/images/e98cccf9-a070-4e0e-9663-fffb79f8e3c8.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 23;
+}
+/*This is the box around the Filters applied text*/
+.Results .filter-box {
+  position: absolute;
+  width: 260px;
+  height: 34px;
+  top: 216px;
+  left: 81px;
+  background: url(./assets/images/8855fa4a-ff7a-4e32-aada-7d08b1599537.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}
+/*Filters applied Text*/
+.Results .filters-applied {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 202.222px;
+  height: 29px;
+  top: 219px;
+  left: calc(50% - 102.8px);
+  color: #ffffff;
+  font-family: Helvetica Neue, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.632px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 4;
+}

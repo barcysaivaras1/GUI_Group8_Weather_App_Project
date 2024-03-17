@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Helvetica Neue-Regular";
+    src: url("../public/fonts/helvetica-neue-master/HelveticaNeue-Regular.otf")
+    format("opentype");
+}
+@font-face {
+    font-family: "Helvetica Neue-Bold";
+    src: url("../public/fonts/helvetica-neue-master/HelveticaNeue-Bold.otf")
+    format("opentype");
+}
+@keyframes gradientBackground {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.centered-pill {
+    width: 48px; /* Equivalent to Tailwind's w-12 */
+    height: 6px; /* Equivalent to Tailwind's h-1.5 */
+    background-color: #d1d5db; /* Similar to Tailwind's bg-zinc-300 */
+    border-radius: 9999px; /* To make it fully rounded like Tailwind's rounded-full */
+    margin: 0 auto; /* Center it horizontally */
+    margin-bottom: 32px; /* Equivalent to Tailwind's mb-8 */
+}
+
+.image {
+    width: 368px; /* Set the width */
+    height: 212px; /* Height is auto to maintain aspect ratio */
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+*:focus {
+    outline: none;
+}
+
+.thePanel {
+    /* Define a linear gradient background with your colors */
+    /*background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e, #fad0c4);*/
+    background: linear-gradient(270deg, #0a3379, #145496, #2773b0, #4188bd, #63C2FF);
+    /* Set the background size to be larger than the container */
+    background-size: 400% 400%;
+    /* Start the animation */
+    animation: gradientBackground 15s ease infinite;
+    padding: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 388px;
+    height: 926px;
+}
