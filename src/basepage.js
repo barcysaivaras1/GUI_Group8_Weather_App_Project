@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './style.css'; 
+import { Link } from 'react-router-dom';
 // import './styleguide.css'; 
 import vectorImage from './img/vector.svg';
 import rectangle44 from './img/rectangle-44.svg';
@@ -255,9 +256,11 @@ function BasePage() {
   </div>
 </div>
        <div className="vector-wrapper">
+        <Link to="/filter">
         <button className="button-style">
         <img className="vector" src={vectorImage} alt="" />
         </button>
+        </Link>
        </div>
      </div>
    </div>

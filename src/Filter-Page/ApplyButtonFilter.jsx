@@ -22,7 +22,7 @@ export const ButtonApply =()=>{
     // const htmlValues = "{weatherData ?(<SearchResults name={weatherData.name} country={country} temp={Math.ceil(weatherData.main.temp)}  />): (<p>Loading weather data...</p>)}"
 	return(
 		<div>
-			<Link to="/results">
+			<Link to="/filter/results">
 				<button class="rectangle-11">
 				<span class="apply">Apply</span>
 				</button>
