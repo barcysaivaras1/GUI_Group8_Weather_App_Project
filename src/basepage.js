@@ -1,21 +1,21 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './style.css'; 
-import './styleguide.css'; 
-import vectorImage from './vector.svg';
-import rectangle44 from './rectangle-44.svg';
-import licensedImage1 from './licensed-image-1.png';
-import arrow1 from './arrow-1.svg'; 
-import arrow2 from './arrow-2.svg';
-import dotsThreeVertical from './dots-three-vertical.svg';
-import ellipse8 from './ellipse-8.svg';
-import city1 from './city-1.jpg';
-import city2 from './city-2.jpg';
-import city3 from './city-3.jpg';
-import city4 from './city-4.jpg';
+// import './styleguide.css'; 
+import vectorImage from './img/vector.svg';
+import rectangle44 from './img/rectangle-44.svg';
+import licensedImage1 from './img/licensed-image-1.png';
+import arrow1 from './img/arrow-1.svg'; 
+import arrow2 from './img/arrow-2.svg';
+import dotsThreeVertical from './img/dots-three-vertical.svg';
+import ellipse8 from './img/ellipse-8.svg';
+import city1 from './images/city-1.jpg';
+import city2 from './images/city-2.jpg';
+import city3 from './images/city-3.jpg';
+import city4 from './images/city-4.jpg';
 
 
-function App() {
+function BasePage() {
   // State for London's weather
   const [currentTemp, setCurrentTemp] = useState('');
   const [weatherDesc, setWeatherDesc] = useState('');
@@ -264,4 +264,4 @@ function App() {
  );
 }
 
-export default App; 
+export default BasePage; 
