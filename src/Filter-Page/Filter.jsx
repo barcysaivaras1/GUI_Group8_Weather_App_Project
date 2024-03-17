@@ -27,6 +27,7 @@ export const FilterPage = () => {
 export default FilterPage;
 
 //This is the double slider for the temperature
+//values[0] will give you the minimum value, values[1] will give you the maximum value
 const Temperatureslider = () =>{
 	const [values, setValues] = useState([-20, 40]);
 	const handleChange = (newValues) => setValues(newValues);
@@ -48,19 +49,34 @@ const Temperatureslider = () =>{
 	}
 
 
-
+var weatherTypes_selected = [];
+var continents_selected = [];
 const ButtonPress =(e)=>{
 	//This is the function that highlights the buttons when they are pressed
 	var id = e.target.id
+	const weather = ["Rain","Clouds","Sun","Snow","Wind"];
+	const continent = ["africa","europe","asia","north-america","south-america"];
   	if(e.target.style.background === "white"){
 		//Off state
+		if (weather.includes(id)) {
+			weatherTypes_selected = weatherTypes_selected.filter(item => item !== id);
+		} else {
+			continents_selected = continents_selected.filter(item => item !== id);
+		}
 		document.getElementById(id).style.background="hsla(0, 0%, 0%, 0.5)";
 		document.getElementById(id).style.color="white";}
 	else{
 		//On state
+		if (weather.includes(id)) {
+			weatherTypes_selected.push(id)
+		} else {
+			continents_selected.push(id)
+		}
 		document.getElementById(id).style.background="white";
 		document.getElementById(id).style.color="black"
 		document.getElementById(id).style.borderRadius="20px";}
+	console.log(weatherTypes_selected)
+	console.log(continents_selected)
 }
 
 //This is just a component that creates all of the html for the weather buttons
@@ -68,11 +84,11 @@ const ButtonWeather =()=>{
 	return(
 	<div class="rectangle-weather">
 		<span   class="weather-type">Weather Type</span>
-		<button className='btn' id="rain" onClick={(e) => ButtonPress(e)}>Rain</button>
-		<button className='btn' id="sun" onClick={(e) => ButtonPress(e)}>Sun</button>
-		<button className='btn' id="snow" onClick={(e) => ButtonPress(e)}>Snow</button>
-		<button className='btn' id="wind" onClick={(e) => ButtonPress(e)}>Wind</button>
-		<button className='btn' id="cloud" onClick={(e) => ButtonPress(e)}>Cloud</button>
+		<button className='btn' id="Rain" onClick={(e) => ButtonPress(e)}>Rain</button>
+		<button className='btn' id="Sun" onClick={(e) => ButtonPress(e)}>Sun</button>
+		<button className='btn' id="Snow" onClick={(e) => ButtonPress(e)}>Snow</button>
+		<button className='btn' id="Wind" onClick={(e) => ButtonPress(e)}>Wind</button>
+		<button className='btn' id="Clouds" onClick={(e) => ButtonPress(e)}>Cloud</button>
   	</div>)
 }
 

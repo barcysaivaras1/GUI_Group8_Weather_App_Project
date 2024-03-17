@@ -217,7 +217,7 @@
   z-index: 13;
 }
 
-.Filter #rain {
+.Filter #Rain {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,7 +235,7 @@
   white-space: nowrap;
   z-index: 32;
 }
-.Filter #sun {
+.Filter #Sun {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,7 +253,7 @@
   white-space: nowrap;
   z-index: 35;
 }
-.Filter #snow {
+.Filter #Snow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,7 +271,7 @@
   white-space: nowrap;
   z-index: 38;
 }
-.Filter #wind {
+.Filter #Wind {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,7 +290,7 @@
   z-index: 41;
 }
 
-.Filter #cloud {
+.Filter #Clouds {
   display: flex;
   align-items: center;
   justify-content: center;
