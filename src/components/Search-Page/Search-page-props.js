@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import './globals.css'; // Import global CSS styles
-import './style.css'; // Import component-specific CSS styles
+import './Search-page.css'; // Import component-specific CSS styles
 import './styleguide.css';
 import SearchResults from './results';
 import useWeatherData from './fetchWeather';

@@ -1,4 +1,4 @@
-.iphone {
+.search-page {
   background-color: black;
   display: flex;
   flex-direction: row;
@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.iphone .div {
+.search-page .div {
   background-color: rgba(255, 255, 255, 1);
   overflow: hidden;
   background: linear-gradient(180deg, rgba(2.93, 0, 146.32, 0) 0%, rgb(14.84, 64.08, 137.93) 49%);
@@ -15,7 +15,7 @@
   position: relative;
 }
 
-.iphone .overlap {
+.search-page .search-bar {
   position: absolute;
   width: 364px;
   height: 39px;
@@ -25,7 +25,7 @@
   /* background-size: 100% 100%; */
 }
 
-.iphone .text-wrapper {
+.search-page .text-wrapper {
   position: absolute;
   width: 320px;
   height: 29px;
@@ -40,7 +40,7 @@
   white-space: nowrap;
 }
 
-.iphone .rectangle { 
+.search-page .rectangle { 
   position: absolute;
   width: 2px;
   height: 30px;
@@ -51,7 +51,7 @@
 }
 /* what does this even do */
 
-.iphone .overlap-group {
+.search-page .overlap-group {
   /* position: absolute; */
   position: relative;
   width: 365px;
@@ -63,8 +63,9 @@
   background-size: 100% 100%;
 }
 
-.iphone .tokyo-japan {
-  position: absolute;
+.search-page .city-country {
+  position: relative;
+  margin-top: 1rem;
   height: 77px;
   top: 10px;
   left: 20px;
@@ -75,16 +76,16 @@
   letter-spacing: 0;
 }
 
-.iphone .span {
+.search-page .span {
   color: #ffffff;
 }
 
-.iphone .text-wrapper-2 {
+.search-page .text-wrapper-2 {
   color: #acb0db;
   font-size: 25px;
 }
 
-.iphone .element {
+.search-page .element {
   height: 61px;
   top: 20px;
   left: 271px;
@@ -99,15 +100,15 @@
   line-height: normal;
 }
 
-.iphone .emoji-cloud-with {
-  position: absolute;
+.search-page .weather-type {
+  position: relative;
   width: 54px;
   height: 53px;
-  top: 26px;
-  left: 200px;
+  bottom: 6rem;
+  left: 11rem;
 }
 
-.iphone .overlap-2 {
+.search-page .overlap-2 {
   position: absolute;
   width: 365px;
   height: 103px;
@@ -117,7 +118,7 @@
   background-size: 100% 100%;
 }
 
-.iphone .osaka-japan {
+.search-page .osaka-japan {
   position: absolute;
   height: 77px;
   top: 7px;
@@ -129,7 +130,7 @@
   letter-spacing: 0;
 }
 
-.iphone .element-2 {
+.search-page .element-2 {
   height: 61px;
   top: 15px;
   left: 272px;
@@ -144,7 +145,7 @@
   line-height: normal;
 }
 
-.iphone .emoji-white-sun {
+.search-page .emoji-white-sun {
   position: absolute;
   width: 52px;
   height: 52px;
@@ -152,7 +153,7 @@
   left: 200px;
 }
 
-.iphone .overlap-3 {
+.search-page .overlap-3 {
   position: absolute;
   width: 365px;
   height: 103px;
@@ -162,7 +163,7 @@
   background-size: 100% 100%;
 }
 
-.iphone .kyoto-japan {
+.search-page .kyoto-japan {
   position: absolute;
   height: 77px;
   top: 10px;
@@ -174,7 +175,7 @@
   letter-spacing: 0;
 }
 
-.iphone .element-3 {
+.search-page .element-3 {
   height: 61px;
   top: 20px;
   left: 272px;
@@ -189,7 +190,7 @@
   line-height: normal;
 }
 
-.iphone .icon-weather-windy {
+.search-page .icon-weather-windy {
   position: absolute;
   width: 42px;
   height: 45px;
@@ -197,7 +198,7 @@
   left: 200px;
 }
 
-.iphone .img {
+.search-page .img {
   position: absolute;
   width: 365px;
   height: 19px;
@@ -205,7 +206,7 @@
   left: 20px;
 }
 
-.iphone .text-wrapper-3 {
+.search-page .text-wrapper-3 {
   position: absolute;
   width: 134px;
   height: 27px;
@@ -219,7 +220,7 @@
   line-height: normal;
 }
 
-.iphone .group {
+.search-page .group {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -230,7 +231,7 @@
   transform: rotate(-90deg);
 }
 
-.iphone .dots-three-vertical {
+.search-page .dots-three-vertical {
   position: absolute;
   width: 36px;
   height: 36px;
@@ -239,7 +240,7 @@
   transform: rotate(90deg);
 }
 
-.iphone .places-to-go {
+.search-page .places-to-go {
   position: absolute;
   width: 436px;
   height: 319px;
@@ -247,14 +248,14 @@
   left: -2px;
 }
 
-.iphone .overlap-4 {
+.search-page .overlap-4 {
   position: relative;
   width: 430px;
   height: 319px;
   border-radius: 20px;
 }
 
-.iphone .rectangle-2 {
+.search-page .rectangle-2 {
   position: absolute;
   width: 46px;
   height: 5px;
@@ -265,7 +266,7 @@
   mix-blend-mode: soft-light;
 }
 
-.iphone .licensed-image {
+.search-page .licensed-image {
   position: absolute;
   width: 374px;
   height: 225px;
@@ -274,7 +275,7 @@
   object-fit: cover;
 }
 
-.iphone .rectangle-3 {
+.search-page .rectangle-3 {
   position: absolute;
   width: 374px;
   height: 225px;
@@ -284,7 +285,7 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41%, rgb(0, 0, 0) 100%);
 }
 
-.iphone .rectangle-4 {
+.search-page .rectangle-4 {
   position: absolute;
   width: 430px;
   height: 319px;
@@ -296,7 +297,7 @@
   opacity: 0.3;
 }
 
-.iphone .text-wrapper-4 {
+.search-page .text-wrapper-4 {
   position: absolute;
   width: 134px;
   height: 27px;
@@ -312,7 +313,7 @@
   white-space: nowrap;
 }
 
-.iphone .text-wrapper-5 {
+.search-page .text-wrapper-5 {
   position: absolute;
   width: 108px;
   top: 253px;
@@ -326,7 +327,7 @@
   line-height: normal;
 }
 
-.iphone .element-4 {
+.search-page .element-4 {
   width: 107px;
   height: 64px;
   top: 233px;
@@ -341,7 +342,7 @@
   line-height: normal;
 }
 
-.iphone .overlap-group-wrapper {
+.search-page .overlap-group-wrapper {
   position: absolute;
   width: 46px;
   height: 9px;
@@ -349,13 +350,13 @@
   left: 192px;
 }
 
-.iphone .overlap-group-2 {
+.search-page .overlap-group-2 {
   position: relative;
   height: 9px;
   border-radius: 16px;
 }
 
-.iphone .rectangle-5 {
+.search-page .rectangle-5 {
   position: absolute;
   width: 46px;
   height: 9px;
@@ -366,7 +367,7 @@
   opacity: 0.3;
 }
 
-.iphone .ellipse {
+.search-page .ellipse {
   left: 3px;
   opacity: 0.6;
   position: absolute;
@@ -377,7 +378,7 @@
   border-radius: 3.5px;
 }
 
-.iphone .ellipse-2 {
+.search-page .ellipse-2 {
   left: 14px;
   opacity: 0.91;
   position: absolute;
@@ -388,7 +389,7 @@
   border-radius: 3.5px;
 }
 
-.iphone .ellipse-3 {
+.search-page .ellipse-3 {
   left: 25px;
   opacity: 0.6;
   position: absolute;
@@ -399,7 +400,7 @@
   border-radius: 3.5px;
 }
 
-.iphone .ellipse-4 {
+.search-page .ellipse-4 {
   left: 36px;
   opacity: 0.6;
   position: absolute;
@@ -410,8 +411,9 @@
   border-radius: 3.5px;
 }
 
-.iphone .arrow {
-  left: 375px;
+
+.search-page .arrow-2 {
+  left: 40px;
   position: absolute;
   width: 13px;
   height: 22px;
@@ -419,11 +421,23 @@
   mix-blend-mode: exclusion;
 }
 
-.iphone .arrow-2 {
-  left: 40px;
-  position: absolute;
-  width: 13px;
-  height: 22px;
-  top: 172px;
-  mix-blend-mode: exclusion;
+
+.search-page .temp{
+  position: relative;
+  bottom: 3rem;
+  right: 2rem;
+}
+
+
+/*Arrow Symbol*/
+.search-page .arrow {
+  position: relative;
+  width: 10.889px;
+  height: 23.84px;
+  top: 4rem;
+  right: 25rem;
+  background: url(../../Filter-Page/assets/images/e98cccf9-a070-4e0e-9663-fffb79f8e3c8.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 23;
 }

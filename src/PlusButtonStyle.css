@@ -1,9 +1,9 @@
-.box{
+.plus{
     height: 40px;
     width: 40px;
 }
 
-.box .group{
+.plus .group{
     background-color:  #b5b8d7;
     border-radius: 20px;
     height: 40px;
@@ -14,7 +14,7 @@
     width: 40px;
 }
 
-.box .overlap-group{
+.plus .overlap-group{
     height: 20px;
     left: 10px;
     position: relative;
@@ -22,7 +22,7 @@
     width: 20px;
 }
 
-.box .rectangle{
+.plus .rectangle{
     background-color: #000000;
     border-radius: 1px;
     height: 20px;
@@ -33,7 +33,7 @@
     width: 2px;
 }
 
-.box .div {
+.plus .div {
     background-color: #000000;
     border-radius: 1px;
     height: 20px;

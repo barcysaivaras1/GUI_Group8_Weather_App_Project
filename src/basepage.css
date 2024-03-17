@@ -1,4 +1,4 @@
-.iphone {
+.basepage {
   background-color: black;
   display: flex;
   flex-direction: row;
@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.iphone .div {
+.basepage .div {
   background-color: rgba(255, 255, 255, 1);
   overflow: hidden;
   background: linear-gradient(180deg, rgba(2.93, 0, 146.32, 0) 0%, rgb(14.84, 64.08, 137.93) 49%);
@@ -15,7 +15,7 @@
   position: relative;
 }
 
-.iphone .overlap {
+.basepage .overlap {
   position: absolute;
   width: 449px;
   height: 227px;
@@ -23,7 +23,7 @@
   left: -9px;
 }
 
-.iphone .cloudy {
+.basepage .cloudy {
   position: absolute;
   width: 200px;
   height: 207px;
@@ -31,7 +31,7 @@
   left: 196px;
 }
 
-.iphone .element {
+.basepage .element {
   width: 107px;
   height: 64px;
   top: 97px;
@@ -52,7 +52,7 @@
   line-height: normal;
 }
 
-.iphone .text-wrapper {
+.basepage .text-wrapper {
   position: absolute;
   width: 155px;
   height: 23px;
@@ -67,7 +67,7 @@
   line-height: normal;
 }
 
-.iphone .text-wrapper-2 {
+.basepage .text-wrapper-2 {
   position: absolute;
   width: 196px;
   top: 97px;
@@ -81,7 +81,7 @@
   white-space: nowrap;
 }
 
-.iphone .text-wrapper-3 {
+.basepage .text-wrapper-3 {
   position: absolute;
   width: 124px;
   top: 75px;
@@ -94,7 +94,7 @@
   line-height: normal;
 }
 
-.iphone .group {
+.basepage .group {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -105,7 +105,7 @@
   transform: rotate(-90deg);
 }
 
-.iphone .dots-three-vertical {
+.basepage .dots-three-vertical {
   position: absolute;
   width: 36px;
   height: 36px;
@@ -114,7 +114,7 @@
   transform: rotate(90deg);
 }
 
-.iphone .text-wrapper-4 {
+.basepage .text-wrapper-4 {
   width: 114px;
   height: 31px;
   top: 194px;
@@ -131,7 +131,7 @@
   line-height: normal;
 }
 
-.iphone .text-wrapper-5 {
+.basepage .text-wrapper-5 {
   width: 114px;
   height: 31px;
   top: 196px;
@@ -148,7 +148,7 @@
   line-height: normal;
 }
 /*This styles the rectangle between the min and max temps*/
-.iphone .rectangle {
+.basepage .rectangle {
   position: absolute;
   width: 261px;
   height: 4px;
@@ -158,7 +158,7 @@
   background-image: linear-gradient(to right, #1A92E2, #D85B4D);
 }
 
-.iphone .frame {
+.basepage .frame {
   position: absolute;
   width: 150px;
   height: 26px;
@@ -166,7 +166,7 @@
   left: 139px;
 }
 
-.iphone .overlap-group {
+.basepage .overlap-group {
   position: relative;
   width: 191px;
   height: 39px;
@@ -175,7 +175,7 @@
   border-radius: 30px;
 }
 
-.iphone .text-wrapper-6 {
+.basepage .text-wrapper-6 {
   position: absolute;
   width: 69px;
   top: 5px;
@@ -189,7 +189,7 @@
   white-space: nowrap;
 }
 
-.iphone .overlap-2 {
+.basepage .overlap-2 {
   position: absolute;
   width: 374px;
   height: 217px;
@@ -197,7 +197,7 @@
   left: 27px;
 }
 
-.iphone .overlap-wrapper {
+.basepage .overlap-wrapper {
   position: absolute;
   width: 374px;
   height: 217px;
@@ -205,13 +205,13 @@
   left: 0;
 }
 
-.iphone .overlap-3 {
+.basepage .overlap-3 {
   position: relative;
   height: 217px;
   border-radius: 20px;
 }
 
-.iphone .rectangle-2 {
+.basepage .rectangle-2 {
   position: absolute;
   width: 374px;
   height: 217px;
@@ -223,7 +223,7 @@
   opacity: 0.3;
 }
 
-.iphone .group-2 {
+.basepage .group-2 {
   position: absolute;
   width: 344px;
   height: 155px;
@@ -231,7 +231,7 @@
   left: 15px;
 }
 
-.iphone .cardweather {
+.basepage .cardweather {
   position: absolute;
   width: 76px;
   height: 155px;
@@ -239,13 +239,13 @@
   left: 0;
 }
 
-.iphone .overlap-group-2 {
+.basepage .overlap-group-2 {
   position: relative;
   height: 155px;
   border-radius: 20px;
 }
 
-.iphone .text-wrapper-7 {
+.basepage .text-wrapper-7 {
   position: absolute;
   width: 43px;
   top: 12px;
@@ -260,7 +260,7 @@
   box-shadow: var(--text-shadow-normal);
 }
 
-.iphone .text-wrapper-8 {
+.basepage .text-wrapper-8 {
   position: absolute;
   width: 50px;
   top: 113px;
@@ -275,7 +275,7 @@
   box-shadow: var(--text-shadow-normal);
 }
 
-.iphone .group-3 {
+.basepage .group-3 {
   position: absolute;
   width: 47px;
   height: 44px;
@@ -283,12 +283,12 @@
   left: 10px;
 }
 
-.iphone .overlap-4 {
+.basepage .overlap-4 {
   position: relative;
   height: 44px;
 }
 
-.iphone .ellipse {
+.basepage .ellipse {
   position: absolute;
   width: 14px;
   height: 13px;
@@ -298,7 +298,7 @@
   
 }
 
-.iphone .overlap-group-wrapper {
+.basepage .overlap-group-wrapper {
   position: absolute;
   width: 47px;
   height: 44px;
@@ -306,7 +306,7 @@
   left: 0;
 }
 
-.iphone .union-wrapper {
+.basepage .union-wrapper {
   position: relative;
   width: 130px;
   height: 117px;
@@ -316,7 +316,7 @@
   background-size: 100% 100%;
 }
 
-.iphone .union {
+.basepage .union {
   position: absolute;
   width: 37px;
   height: 22px;
@@ -324,7 +324,7 @@
   left: 49px;
 }
 
-.iphone .rectangle-3 {
+.basepage .rectangle-3 {
   position: absolute;
   width: 76px;
   height: 155px;
@@ -334,7 +334,7 @@
   border-radius: 20px;
 }
 
-.iphone .div-wrapper {
+.basepage .div-wrapper {
   left: 89px;
   position: absolute;
   width: 76px;
@@ -342,7 +342,7 @@
   top: 0;
 }
 
-.iphone .text-wrapper-9 {
+.basepage .text-wrapper-9 {
   position: absolute;
   width: 43px;
   top: 12px;
@@ -357,7 +357,7 @@
   box-shadow: var(--text-shadow-normal);
 }
 
-.iphone .group-4 {
+.basepage .group-4 {
   top: 64px;
   left: 9px;
   position: absolute;
@@ -365,7 +365,7 @@
   height: 44px;
 }
 
-.iphone .img-wrapper {
+.basepage .img-wrapper {
   position: relative;
   width: 130px;
   height: 117px;
@@ -375,7 +375,7 @@
   background-size: 100% 100%;
 }
 
-.iphone .cardweather-2 {
+.basepage .cardweather-2 {
   left: 179px;
   background-color: #2566a233;
   border-radius: 20px;
@@ -385,11 +385,11 @@
   top: 0;
 }
 
-.iphone .group-5 {
+.basepage .group-5 {
   height: 44px;
 }
 
-.iphone .overlap-group-3 {
+.basepage .overlap-group-3 {
   position: relative;
   width: 130px;
   height: 117px;
@@ -399,7 +399,7 @@
   background-size: 100% 100%;
 }
 
-.iphone .group-6 {
+.basepage .group-6 {
   position: absolute;
   width: 76px;
   height: 155px;
@@ -407,12 +407,12 @@
   left: 268px;
 }
 
-.iphone .overlap-5 {
+.basepage .overlap-5 {
   position: relative;
   height: 155px;
 }
 
-.iphone .text-wrapper-10 {
+.basepage .text-wrapper-10 {
   width: 50px;
   top: 113px;
   left: 15px;
@@ -427,7 +427,7 @@
   box-shadow: var(--text-shadow-normal);
 }
 
-.iphone .group-7 {
+.basepage .group-7 {
   position: absolute;
   width: 47px;
   height: 48px;
@@ -435,13 +435,13 @@
   left: 16px;
 }
 
-.iphone .overlap-6 {
+.basepage .overlap-6 {
   position: relative;
   height: 45px;
   top: 2px;
 }
 
-.iphone .subtract {
+.basepage .subtract {
   position: absolute;
   width: 15px;
   height: 13px;
@@ -449,7 +449,7 @@
   left: 21px;
 }
 
-.iphone .group-wrapper {
+.basepage .group-wrapper {
   top: 2px;
   left: 0;
   transform: rotate(180deg);
@@ -458,7 +458,7 @@
   height: 44px;
 }
 
-.iphone .overlap-group-4 {
+.basepage .overlap-group-4 {
   position: relative;
   width: 130px;
   height: 117px;
@@ -466,7 +466,7 @@
   left: -40px;
 }
 
-.iphone .img {
+.basepage .img {
   position: absolute;
   width: 130px;
   height: 117px;
@@ -475,7 +475,7 @@
   transform: rotate(-180deg);
 }
 
-.iphone .union-2 {
+.basepage .union-2 {
   position: absolute;
   width: 37px;
   height: 22px;
@@ -484,7 +484,7 @@
   transform: rotate(-180deg);
 }
 
-.iphone .rectangle-4 {
+.basepage .rectangle-4 {
   position: absolute;
   width: 320px;
   height: 26px;
@@ -494,7 +494,7 @@
   border-radius: 20px;
 }
 
-.iphone .rectangle-5 {
+.basepage .rectangle-5 {
   position: absolute;
   width: 163px;
   height: 22px;
@@ -505,7 +505,7 @@
 }
 
 /*Today text styling*/
-.iphone .text-wrapper-11 {
+.basepage .text-wrapper-11 {
   position: absolute;
   width: 85px;
   height: 21px;
@@ -520,7 +520,7 @@
   line-height: normal;
 }
 /*8-Day text styling*/
-.iphone .text-wrapper-12 {
+.basepage .text-wrapper-12 {
   position: absolute;
   width: 85px;
   height: 21px;
@@ -535,7 +535,7 @@
   line-height: normal;
 }
 
-.iphone .rectangle-wrapper {
+.basepage .rectangle-wrapper {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -545,7 +545,7 @@
   background-size: 100% 100%;
 }
 
-.iphone .rectangle-6 {
+.basepage .rectangle-6 {
   position: absolute;
   width: 15px;
   height: 23px;
@@ -553,7 +553,7 @@
   left: 12px;
 }
 
-.iphone .places-to-go {
+.basepage .places-to-go {
   position: absolute;
   width: 436px;
   height: 319px;
@@ -561,14 +561,14 @@
   left: 0;
 }
 
-.iphone .overlap-7 {
+.basepage .overlap-7 {
   position: relative;
   width: 430px;
   height: 319px;
   border-radius: 20px;
 }
 
-.iphone .rectangle-7 {
+.basepage .rectangle-7 {
   position: absolute;
   width: 46px;
   height: 5px;
@@ -579,7 +579,7 @@
   mix-blend-mode: soft-light;
 }
 
-.iphone .licensed-image {
+.basepage .licensed-image {
   position: absolute;
   width: 374px;
   height: 225px;
@@ -588,7 +588,7 @@
   object-fit: cover;
 }
 
-.iphone .rectangle-8 {
+.basepage .rectangle-8 {
   position: absolute;
   width: 430px;
   height: 319px;
@@ -600,7 +600,7 @@
   opacity: 0.3;
 }
 
-.iphone .rectangle-9 {
+.basepage .rectangle-9 {
   position: absolute;
   width: 374px;
   height: 225px;
@@ -610,7 +610,7 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41%, rgb(0, 0, 0) 100%);
 }
 
-.iphone .text-wrapper-13 {
+.basepage .text-wrapper-13 {
   position: absolute;
   width: 134px;
   height: 27px;
@@ -626,7 +626,7 @@
   white-space: nowrap;
 }
 
-.iphone .text-wrapper-14 {
+.basepage .text-wrapper-14 {
   position: absolute;
   width: 108px;
   top: 253px;
@@ -640,7 +640,7 @@
   line-height: normal;
 }
 
-.iphone .element-2 {
+.basepage .element-2 {
   width: 107px;
   height: 64px;
   top: 233px;
@@ -655,7 +655,7 @@
   line-height: normal;
 }
 
-.iphone .group-8 {
+.basepage .group-8 {
   position: absolute;
   width: 46px;
   height: 9px;
@@ -663,13 +663,13 @@
   left: 192px;
 }
 
-.iphone .overlap-group-5 {
+.basepage .overlap-group-5 {
   position: relative;
   height: 9px;
   border-radius: 16px;
 }
 
-.iphone .rectangle-10 {
+.basepage .rectangle-10 {
   position: absolute;
   width: 46px;
   height: 9px;
@@ -680,7 +680,7 @@
   opacity: 0.3;
 }
 
-.iphone .ellipse-2 {
+.basepage .ellipse-2 {
   position: absolute;
   width: 7px;
   height: 7px;
@@ -691,7 +691,7 @@
   opacity: 0.6;
 }
 
-.iphone .ellipse-3 {
+.basepage .ellipse-3 {
   position: absolute;
   width: 7px;
   height: 7px;
@@ -702,7 +702,7 @@
   opacity: 0.91;
 }
 
-.iphone .ellipse-4 {
+.basepage .ellipse-4 {
   position: absolute;
   width: 7px;
   height: 7px;
@@ -713,7 +713,7 @@
   opacity: 0.6;
 }
 
-.iphone .ellipse-5 {
+.basepage .ellipse-5 {
   position: absolute;
   width: 7px;
   height: 7px;
@@ -724,7 +724,7 @@
   opacity: 0.6;
 }
 
-.iphone .arrow {
+.basepage .arrow {
   left: 375px;
   position: absolute;
   width: 13px;
@@ -733,7 +733,7 @@
   mix-blend-mode: exclusion;
 }
 
-.iphone .arrow-2 {
+.basepage .arrow-2 {
   left: 40px;
   position: absolute;
   width: 13px;
@@ -742,7 +742,7 @@
   mix-blend-mode: exclusion;
 }
 
-.iphone .vector-wrapper {
+.basepage .vector-wrapper {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -752,7 +752,7 @@
   background-size: 100% 100%;
 }
 
-.iphone .vector {
+.basepage .vector {
   position: absolute;
   width: 20px;
   height: 20px;

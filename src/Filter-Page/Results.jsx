@@ -14,23 +14,25 @@ export const ResultsPage = () =>{
     const {city,weatherData,forecastData,country,loading,error,handleInputChange,handleSubmit,handleKeyPress} = useWeatherData();
     const cities = ["London","Kyoto","Dubai","Manchester"]
     return(
-        <div class="Results">
-        <span class="find-places-to-go">Find Places To Go</span>
-        <button id="London" onClick={handleInputChange}/>
-        <div className="results-container">
-            {weatherData ?(
-            <SearchResults name={weatherData.name} country={country} temp={Math.ceil(weatherData.main.temp)}  />)
-            : (
-                <p>Loading weather data...</p>
-            )}
-            <ResultBox/>
-        </div>
-        <div class="options"></div>
-        <Link to="/"> 
-        <div class="arrow"></div>
-        </Link>
-        <div class="filter-box"></div>
-        <span class="filters-applied">Filters Applied</span>
+        <div className="page">
+            <div class="Results">
+            <span class="find-places-to-go">Find Places To Go</span>
+            <button id="London" onClick={handleInputChange}/>
+            <div className="results-container">
+                {weatherData ?(
+                <SearchResults name={weatherData.name} country={country} temp={Math.ceil(weatherData.main.temp)}  />)
+                : (
+                    <p>Loading weather data...</p>
+                )}
+                <ResultBox/>
+            </div>
+            <div class="options"></div>
+            <Link to="/filter"> 
+            <div class="arrow"></div>
+            </Link>
+            <div class="filter-box"></div>
+            <span class="filters-applied">Filters Applied</span>
+            </div>
         </div>
         )
 };

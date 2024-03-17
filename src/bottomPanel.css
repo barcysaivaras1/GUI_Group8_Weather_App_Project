@@ -20,7 +20,7 @@
     }
 }
 
-.centered-pill {
+.thePanel .centered-pill {
     width: 48px; /* Equivalent to Tailwind's w-12 */
     height: 6px; /* Equivalent to Tailwind's h-1.5 */
     background-color: #d1d5db; /* Similar to Tailwind's bg-zinc-300 */
@@ -29,7 +29,7 @@
     margin-bottom: 32px; /* Equivalent to Tailwind's mb-8 */
 }
 
-.image {
+.thePanel .image {
     width: 368px; /* Set the width */
     height: 212px; /* Height is auto to maintain aspect ratio */
     margin-left: 10px;
@@ -39,7 +39,7 @@
     position: relative;
 }
 
-*:focus {
+.thePanel *:focus {
     outline: none;
 }
 

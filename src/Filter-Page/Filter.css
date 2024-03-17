@@ -5,6 +5,9 @@
     "Source Han Sans CN", sans-serif;
 }
 
+.page{
+  background-color: black;
+}
 .Filter button{
   background: none;
   border: none;
@@ -15,6 +18,7 @@
   width: 428px;
   height: 926px;
   margin: 0 auto;
+  background-color: black;
   background: linear-gradient(180deg, rgba(2, 0, 146, 0), #0e4089);
   background-color: black;
   overflow: hidden;
@@ -375,6 +379,21 @@
   z-index: 14;
 }
 
+/*Arrow Symbol*/
+.Filter .arrow {
+  position: absolute;
+  width: 10.889px;
+  height: 23.84px;
+  top: 48px;
+  left: 36px;
+  background: url(./assets/images/e98cccf9-a070-4e0e-9663-fffb79f8e3c8.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 23;
+}
+
+
+
 
 /*Styling double slider*/
 
@@ -402,6 +421,7 @@
   background: linear-gradient(270deg, rgb(209, 80, 48), #0e4089);
   border-radius: 5px;
   margin-top: 10px;
+  left: 2.5rem;
 }
 .Filter #range1,#range2,#dash{
   font-size: 1.5rem;

@@ -1,4 +1,4 @@
-.iphone {
+.favourites {
   background-color: black;
   display: flex;
   flex-direction: row;
@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.iphone .div {
+.favourites .div {
   background-color: rgba(255, 255, 255, 1);
   overflow: hidden;
   background: linear-gradient(180deg, rgba(2.93, 0, 146.32, 0) 0%, rgb(14.84, 64.08, 137.93) 49%);
@@ -15,7 +15,7 @@
   position: relative;
 }
 
-.iphone .group {
+.favourites .group {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -26,7 +26,7 @@
   transform: rotate(-90deg);
 }
 
-.iphone .dots-three-vertical {
+.favourites .dots-three-vertical {
   position: absolute;
   width: 36px;
   height: 36px;
@@ -35,7 +35,7 @@
   transform: rotate(90deg);
 }
 
-.iphone .places-to-go {
+.favourites .places-to-go {
   position: absolute;
   width: 436px;
   height: 319px;
@@ -44,14 +44,14 @@
   white-space: nowrap;
 }
 
-.iphone .overlap {
+.favourites .overlap {
   position: relative;
   width: 430px;
   height: 319px;
   border-radius: 20px;
 }
 
-.iphone .rectangle {
+.favourites .rectangle {
   position: absolute;
   width: 46px;
   height: 5px;
@@ -62,7 +62,7 @@
   mix-blend-mode: soft-light;
 }
 
-.iphone .licensed-image {
+.favourites .licensed-image {
   position: absolute;
   width: 374px;
   height: 225px;
@@ -71,7 +71,7 @@
   object-fit: cover;
 }
 
-.iphone .rectangle-2 {
+.favourites .rectangle-2 {
   position: absolute;
   width: 374px;
   height: 225px;
@@ -81,7 +81,7 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41%, rgb(0, 0, 0) 100%);
 }
 
-.iphone .rectangle-3 {
+.favourites .rectangle-3 {
   position: absolute;
   width: 430px;
   height: 319px;
@@ -93,7 +93,7 @@
   opacity: 0.3;
 }
 
-.iphone .text-wrapper {
+.favourites .text-wrapper {
   position: absolute;
   width: 134px;
   height: 27px;
@@ -108,7 +108,7 @@
   line-height: normal;
 }
 
-.iphone .text-wrapper-2 {
+.favourites .text-wrapper-2 {
   position: absolute;
   width: 108px;
   top: 253px;
@@ -122,7 +122,7 @@
   line-height: normal;
 }
 
-.iphone .element {
+.favourites .element {
   width: 107px;
   height: 64px;
   top: 233px;
@@ -137,7 +137,7 @@
   line-height: normal;
 }
 
-.iphone .overlap-group-wrapper {
+.favourites .overlap-group-wrapper {
   position: absolute;
   width: 46px;
   height: 9px;
@@ -145,13 +145,13 @@
   left: 192px;
 }
 
-.iphone .overlap-group {
+.favourites .overlap-group {
   position: relative;
   height: 9px;
   border-radius: 16px;
 }
 
-.iphone .rectangle-4 {
+.favourites .rectangle-4 {
   position: absolute;
   width: 46px;
   height: 9px;
@@ -162,7 +162,7 @@
   opacity: 0.3;
 }
 
-.iphone .ellipse {
+.favourites .ellipse {
   left: 3px;
   opacity: 0.6;
   position: absolute;
@@ -173,7 +173,7 @@
   border-radius: 3.5px;
 }
 
-.iphone .ellipse-2 {
+.favourites .ellipse-2 {
   left: 14px;
   opacity: 0.91;
   position: absolute;
@@ -184,7 +184,7 @@
   border-radius: 3.5px;
 }
 
-.iphone .ellipse-3 {
+.favourites .ellipse-3 {
   left: 25px;
   opacity: 0.6;
   position: absolute;
@@ -195,7 +195,7 @@
   border-radius: 3.5px;
 }
 
-.iphone .ellipse-4 {
+.favourites .ellipse-4 {
   left: 36px;
   opacity: 0.6;
   position: absolute;
@@ -206,7 +206,7 @@
   border-radius: 3.5px;
 }
 
-.iphone .arrow {
+.favourites .arrow {
   left: 375px;
   position: absolute;
   width: 13px;
@@ -215,7 +215,7 @@
   mix-blend-mode: exclusion;
 }
 
-.iphone .img {
+.favourites .img {
   left: 40px;
   position: absolute;
   width: 13px;
@@ -224,7 +224,7 @@
   mix-blend-mode: exclusion;
 }
 
-.iphone .overlap-2 {
+.favourites .overlap-2 {
   position: absolute;
   width: 323px;
   height: 105px;
@@ -232,7 +232,7 @@
   left: 40px;
 }
 
-.iphone .overlap-wrapper {
+.favourites .overlap-wrapper {
   position: absolute;
   width: 283px;
   height: 66px;
@@ -240,13 +240,13 @@
   left: 40px;
 }
 
-.iphone .overlap-3 {
+.favourites .overlap-3 {
   position: relative;
   width: 281px;
   height: 66px;
 }
 
-.iphone .text-wrapper-3 {
+.favourites .text-wrapper-3 {
   position: absolute;
   width: 270px;
   top: 0;
@@ -259,7 +259,7 @@
   line-height: normal;
 }
 
-.iphone .icon-heart {
+.favourites .icon-heart {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -267,7 +267,7 @@
   left: 241px;
 }
 
-.iphone .text-wrapper-4 {
+.favourites .text-wrapper-4 {
   position: absolute;
   width: 169px;
   top: 0;
@@ -280,7 +280,7 @@
   line-height: normal;
 }
 
-.iphone .text-wrapper-5 {
+.favourites .text-wrapper-5 {
   position: absolute;
   width: 169px;
   top: 181px;
@@ -294,8 +294,7 @@
   line-height: normal;
 }
 
-.iphone .overlap-4 {
-  position: absolute;
+.favourites .overlap-4 {
   width: 365px;
   height: 103px;
   top: 219px;
@@ -304,51 +303,53 @@
   background-size: 100% 100%;
 }
 
-.iphone .tokyo-japan {
-  position: absolute;
+.favourites .city-country {
+  position: relative;
+  top: 0.5rem;
   height: 77px;
-  top: 10px;
   left: 20px;
   font-family: "Helvetica Neue-Medium", Helvetica;
   font-weight: 500;
   color: transparent;
   font-size: 40px;
   letter-spacing: 0;
+  margin-top: 1rem;
 }
 
-.iphone .span {
+.favourites .span {
   color: #ffffff;
 }
 
-.iphone .text-wrapper-6 {
+.favourites .text-wrapper-6 {
   color: #acb0db;
   font-size: 25px;
 }
 
-.iphone .element-2 {
+.favourites .temp {
+  position: relative;
+  bottom: 6rem;
   height: 61px;
-  top: 20px;
-  left: 271px;
   font-size: 51px;
   white-space: nowrap;
-  position: absolute;
   font-family: "Helvetica Neue-Regular", Helvetica;
   font-weight: 400;
   color: #fcf6f6;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  margin-left: 15rem;
+  margin-top: 0;
 }
 
-.iphone .emoji-cloud-with {
-  position: absolute;
+.favourites .weather-type {
+  position: relative;
+  left: 11rem;
   width: 54px;
   height: 53px;
-  top: 26px;
-  left: 200px;
+  bottom: 9.5rem;
 }
 
-.iphone .overlap-5 {
+.favourites .overlap-5 {
   position: absolute;
   width: 365px;
   height: 103px;
@@ -358,7 +359,7 @@
   background-size: 100% 100%;
 }
 
-.iphone .osaka-japan {
+.favourites .osaka-japan {
   position: absolute;
   height: 77px;
   top: 7px;
@@ -370,7 +371,7 @@
   letter-spacing: 0;
 }
 
-.iphone .element-3 {
+.favourites .element-3 {
   height: 61px;
   top: 15px;
   left: 272px;
@@ -385,15 +386,14 @@
   line-height: normal;
 }
 
-.iphone .emoji-white-sun {
-  position: absolute;
+.favourites .emoji-white-sun {
   width: 52px;
   height: 52px;
   top: 26px;
   left: 200px;
 }
 
-.iphone .overlap-6 {
+.favourites .overlap-6 {
   position: absolute;
   width: 365px;
   height: 103px;
@@ -403,7 +403,7 @@
   background-size: 100% 100%;
 }
 
-.iphone .kyoto-japan {
+.favourites .kyoto-japan {
   position: absolute;
   height: 77px;
   top: 10px;
@@ -415,7 +415,7 @@
   letter-spacing: 0;
 }
 
-.iphone .element-4 {
+.favourites .element-4 {
   height: 61px;
   top: 20px;
   left: 272px;
@@ -430,7 +430,7 @@
   line-height: normal;
 }
 
-.iphone .icon-weather-windy {
+.favourites .icon-weather-windy {
   position: absolute;
   width: 42px;
   height: 45px;
@@ -438,10 +438,34 @@
   left: 200px;
 }
 
-.iphone .rectangle-5 {
+.favourites .rectangle-5 {
   position: absolute;
   width: 365px;
   height: 19px;
   top: 587px;
   left: 31px;
+}
+
+.favourites .container {
+  margin-top: 14rem;
+  justify-content: space-around;
+}
+
+.favourites .box {
+  position: relative;
+  width: 30%; /* Adjust width as needed */
+  margin-left: 2rem;
+}
+
+/*Arrow Symbol*/
+.favourites .back-arrow {
+  position: relative;
+  width: 10.889px;
+  height: 23.84px;
+  top: 2rem;
+  right: 25rem;
+  background: url(../Filter-Page/assets/images/e98cccf9-a070-4e0e-9663-fffb79f8e3c8.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 23;
 }

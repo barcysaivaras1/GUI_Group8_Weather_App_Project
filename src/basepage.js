@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
-import './style.css'; 
+import './basepage.css'; 
 import { Link } from 'react-router-dom';
 // import './styleguide.css'; 
 import vectorImage from './img/vector.svg';
@@ -14,7 +14,6 @@ import city1 from './images/city-1.jpg';
 import city2 from './images/city-2.jpg';
 import city3 from './images/city-3.jpg';
 import city4 from './images/city-4.jpg';
-
 
 function BasePage() {
   // State for London's weather
@@ -115,7 +114,7 @@ function BasePage() {
   
 
  return (
-   <div className="iphone">
+   <div className="basepage">
      <div className="div">
        <div className="overlap">
        
@@ -132,13 +131,15 @@ function BasePage() {
          <div className="text-wrapper-5">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
          <div className="rectangle"></div>
        </div>
-       <div className="frame">
-       <button className="button-style search-button">
-         <div className="overlap-group">
-           <div className="text-wrapper-6">Search</div>
-         </div>
-         </button>
-       </div>
+       <Link to="/search">
+        <div className="frame">
+        <button className="button-style search-button">
+          <div className="overlap-group">
+            <div className="text-wrapper-6">Search</div>
+          </div>
+          </button>
+        </div>
+       </Link>
        <div className="overlap-2">
          <div className="overlap-wrapper">
            <div className="overlap-3">
@@ -221,11 +222,13 @@ function BasePage() {
          <div className="text-wrapper-11">Today</div>
          <div className="text-wrapper-12">8-Day</div>
        </div>
+       <Link to="/favourites">
        <div className="rectangle-wrapper">
         <button className="button-style">
          <img className="rectangle-6" src={rectangle44} alt="Rectangle 44" />
         </button>
        </div>
+       </Link>
        <div className="places-to-go">
   <div className="overlap-7">
     <div className="rectangle-7"></div>
@@ -255,13 +258,13 @@ function BasePage() {
     </button>
   </div>
 </div>
-       <div className="vector-wrapper">
-        <Link to="/filter">
-        <button className="button-style">
-        <img className="vector" src={vectorImage} alt="" />
-        </button>
-        </Link>
-       </div>
+      <Link to="/filter">
+        <div className="vector-wrapper">
+          <button className="button-style">
+          <img className="vector" src={vectorImage} alt="" />
+          </button>
+        </div>
+       </Link>
      </div>
    </div>
  );

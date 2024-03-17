@@ -21,7 +21,7 @@ function PlusFavouritesButton() {
   };
 
   return (
-    <div className="box">
+    <div className="plus">
       <div className="group">
         <div className="overlap-group">
           <div className="rectangle">

@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import './globals.css'; // Import global CSS styles
-import './style.css'; // Import component-specific CSS styles
-import './styleguide.css';
+import './Search-page.css'; // Import component-specific CSS styles
 import SearchResults from './results';
 import useWeatherData from './fetchWeather';
 import useCitySelector from '../useCountry';
-import useNewWeatherData from '../../NewWeatherHook';
+import useNewWeatherData from './NewWeatherHook';
+import { Link } from 'react-router-dom';
 function NewWeatherSearchPage()
 {
     const { countries, selectedCountry, cities, cityArray, capitalCity, handleCountryChange } = useCitySelector();
@@ -17,7 +16,7 @@ function NewWeatherSearchPage()
     };
 
 return (
-    <div className="iphone">
+    <div className="search-page">
         <div className="div">
             {/* <div className="overlap">
                 <input
@@ -32,7 +31,7 @@ return (
                     <button type="submit" style={{ display: 'none' }}>Get Weather</button>
                 </form>
             </div> */}
-            <div className="overlap">
+            <div className="search-bar">
                 <input
                     className="text-wrapper"
                     type="search"
@@ -59,11 +58,14 @@ return (
                     key={index}
                     name={cities1[index]}
                     temp = {data.main && (
-                        <p>{Math.round(data.main.temp)}°C</p>
+                        <p className='temp'>{Math.round(data.main.temp)}°C</p>
                         )}
                 />
             ))}
         </div>
+        <Link to="/"> 
+			<div class="arrow"></div>`
+		</Link>
     </div>
 );
 }
