@@ -53,7 +53,7 @@ return (
                     temp = {data.main && (
                         <p className='temp'>{Math.round(data.main.temp)}°C</p>
                         )}
-                    image = {data && data.length > 0 ? `http://openweathermap.org/img/wn/${data[index].weather[index].icon}@2x.png` : ''} alt="Weather Icon" />
+                    image = {`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="Weather Icon" />
                 
             ))}
         </div>
