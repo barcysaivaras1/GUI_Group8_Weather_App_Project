@@ -6,6 +6,7 @@
   justify-content: center;
   width: 100%;
   z-index: 1;
+  overflow: hidden;
 }
 
 .basepage .div {
@@ -46,6 +47,7 @@
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
+  z-index: 1;
 }
 
 .basepage .weather-desc {
@@ -61,6 +63,7 @@
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  z-index: 1;
 }
 
 .basepage .text-wrapper-2 {
@@ -739,21 +742,21 @@
   left: 10px;
 }
 
-.button-style {
+.basepage .button-style {
   border: none;
   background-color: transparent;
   padding: 0;
   cursor: pointer;
 }
 
-.search-button {
+.basepage .search-button {
   width: 100%; 
   text-align: left;
 }
-.active {
+.basepage .active {
   color: #ffffff; 
 }
-.weather-icon {
+.basepage .weather-icon {
   width: 50px; 
   height: 70px; 
   object-fit: cover; 
@@ -761,7 +764,7 @@
   margin-left: 10px;
 }
 
-.weather-main-icon{
+.basepage .weather-main-icon{
   position: relative;
   image-rendering: auto;
   image-rendering: crisp-edges;

@@ -16,11 +16,11 @@
 }
 .search-page .country-choice{
   position: relative;
-  border: none;
+  border: 0;
   color: white;
-  background-color: hsla(0, 0%, 0%, 0);
+  background-color: hsla(226, 84%, 22%, 0.616);
   bottom: 2rem;
-  left: 4rem;
+  left: 5rem;
 }
 .search-page .search-bar {
   position: absolute;
