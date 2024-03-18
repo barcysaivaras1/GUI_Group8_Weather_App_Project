@@ -124,11 +124,6 @@ function BasePage() {
          <div className="text-wrapper">{weatherDesc ? weatherDesc : 'Loading...'}</div>
          <div className="text-wrapper-2">London</div>
          <div className="text-wrapper-3">You are in</div>
-         <div className="group">
-         {/* /!*<button className="button-style">*!/*/}
-         {/* /!* <img className="dots-three-vertical" src={dotsThreeVertical} alt="Dots Vertical" />*!/*/}
-         {/* /!*</button>*!/*/}
-         </div>
          <div className="text-wrapper-4">{tempMin ? `${tempMin}º` : 'Loading...'}</div>
          <div className="text-wrapper-5">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
          <div className="rectangle"></div>

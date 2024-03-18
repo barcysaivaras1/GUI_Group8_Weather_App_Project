@@ -36,13 +36,13 @@ return (
             <div className="search-bar">
             <div className="overlap">
                 <input
-                    className="text-wrapper"
+                    className="text-box"
                     type="search"
                     placeholder="City"
                     value={searchTerm}
                     onChange={handleSearchChange}
                 />
-                <select value={selectedCountry} onChange={handleCountryChange}>
+                <select className='country-choice' value={selectedCountry} onChange={handleCountryChange}>
                 <option value="">Select a country</option>
                 {countries
                 .filter(country => country.name.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -68,6 +68,7 @@ return (
         <Link to="/"> 
 			<div class="arrow"></div>`
 		</Link>
+    </div>
     </div>
 );
 }
