@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import './Favourites.css';
 import { Link } from 'react-router-dom';
-
+import Animate_page from '../Animate-page';
 
 
 
@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 
 function Favourites() {
   return (
+    <Animate_page>
     <div>
           <div class="favourites">
       <div class="div">
@@ -55,6 +56,7 @@ function Favourites() {
 			</Link>
     </div>
     </div>
+    </Animate_page>
   );
 }
 

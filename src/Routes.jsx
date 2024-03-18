@@ -8,20 +8,23 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion';
 
 
 export const AppRoute = () =>{
     return (
         <div>
-          <Router>
-            <Routes>
-              <Route path="/" exact element={<BasePage />}/>
-              <Route path="/favourites" exact element={<Favourites />}/>
-              <Route path="/search" exact element={<NewWeatherSearchPage />}/>
-              <Route path="/filter" exact element={<FilterPage />}/>
-              <Route path="/filter/results" element={<ResultsPage />}/>
-            </Routes>
-          </Router>
+          <AnimatePresence>
+            <Router>
+              <Routes>
+                <Route path="/" exact element={<BasePage />}/>
+                <Route path="/favourites" exact element={<Favourites />}/>
+                <Route path="/search" exact element={<NewWeatherSearchPage />}/>
+                <Route path="/filter" exact element={<FilterPage />}/>
+                <Route path="/filter/results" element={<ResultsPage />}/>
+              </Routes>
+            </Router>
+          </AnimatePresence>
         </div>
     );
 }

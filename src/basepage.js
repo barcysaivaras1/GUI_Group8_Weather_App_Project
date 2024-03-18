@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './basepage.css'; 
 import { Link } from 'react-router-dom';
-// import './styleguide.css'; 
+import Animate_page from './Animate-page';
 import vectorImage from './img/vector.svg';
 import rectangle44 from './img/rectangle-44.svg';
 import licensedImage1 from './img/licensed-image-1.png';
@@ -116,6 +116,7 @@ function BasePage() {
   const [isOpen] = useState(true);
 
  return (
+  <Animate_page>
    <div className="basepage">
      <div className="div">
        <div className="overlap">
@@ -272,6 +273,7 @@ function BasePage() {
        </Link>
      </div>
    </div>
+   </Animate_page>
  );
 }
 

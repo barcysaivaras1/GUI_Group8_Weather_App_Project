@@ -3,11 +3,13 @@ import Slider from 'react-slider';
 import './Filter.css';
 import ButtonApply from './ApplyButtonFilter';
 import { Link } from 'react-router-dom';
+import Animate_page from '../Animate-page';
 
 // This is the page where you can apply different filters
 //Will need to extract data from the buttons / slider and this data will be used for filtering through all the countries
 export const FilterPage = () => {
 	return(
+		<Animate_page>
 		<div className='page'>
 			<div class="Filter">
 				<div class="group"></div>
@@ -28,6 +30,7 @@ export const FilterPage = () => {
 				<div class="Xsymbol"></div>
 			</div>
 		</div>
+		</Animate_page>
   )
     };
 export default FilterPage;

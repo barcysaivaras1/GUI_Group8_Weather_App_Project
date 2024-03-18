@@ -3,7 +3,7 @@ import './Results.css';
 import { Link } from "react-router-dom";
 import SearchResults from "../results";
 import useWeatherData from "../fetchWeather";
-
+import Animate_page from "../Animate-page";
 
 //This is the results page, i have been trying to implement it so that it would go through an array of cities
 // and it would return a result box for each city with its true live value, this seems to be a lot more difficult than i thought
@@ -14,16 +14,11 @@ export const ResultsPage = () =>{
     const {city,weatherData,forecastData,country,loading,error,handleInputChange,handleSubmit,handleKeyPress} = useWeatherData();
     const cities = ["London","Kyoto","Dubai","Manchester"]
     return(
+        <Animate_page>
         <div className="page">
             <div class="Results">
             <span class="find-places-to-go">Find Places To Go</span>
-            <button id="London" onClick={handleInputChange}/>
             <div className="results-container">
-                {weatherData ?(
-                <SearchResults name={weatherData.name} country={country} temp={Math.ceil(weatherData.main.temp)}  />)
-                : (
-                    <p>Loading weather data...</p>
-                )}
                 <ResultBox/>
             </div>
             <div class="options"></div>
@@ -34,6 +29,7 @@ export const ResultsPage = () =>{
             <span class="filters-applied">Filters Applied</span>
             </div>
         </div>
+        </Animate_page>
         )
 };
 export default ResultsPage;

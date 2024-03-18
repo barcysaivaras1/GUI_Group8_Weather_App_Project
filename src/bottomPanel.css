@@ -46,6 +46,7 @@
 .thePanel {
     /* Define a linear gradient background with your colors */
     /*background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e, #fad0c4);*/
+    position: relative;
     background: linear-gradient(270deg, #0a3379, #145496, #2773b0, #4188bd, #63C2FF);
     /* Set the background size to be larger than the container */
     background-size: 400% 400%;

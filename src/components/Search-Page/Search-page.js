@@ -5,6 +5,7 @@ import useWeatherData from './fetchWeather';
 import useCitySelector from '../useCountry';
 import useNewWeatherData from './NewWeatherHook';
 import { Link } from 'react-router-dom';
+import Animate_page from '../../Animate-page';
 function NewWeatherSearchPage()
 {
     const { countries, selectedCountry, cities, cityArray, capitalCity, handleCountryChange } = useCitySelector();
@@ -18,6 +19,7 @@ function NewWeatherSearchPage()
     console.log(weatherData)
 
 return (
+    <Animate_page>
     <div className="search-page">
         <div className="div">
             {/* <div className="overlap">
@@ -34,14 +36,15 @@ return (
                 </form>
             </div> */}
             <div className="search-bar">
-            <div className="overlap">
-                <input
-                    className="text-box"
-                    type="search"
-                    placeholder="City"
-                    value={searchTerm}
-                    onChange={handleSearchChange}
-                />
+                <div className="overlap">
+                    <input
+                        className="text-box"
+                        type="search"
+                        placeholder="City"
+                        value={searchTerm}
+                        onChange={handleSearchChange}
+                    />
+            </div>
                 <select className='country-choice' value={selectedCountry} onChange={handleCountryChange}>
                 <option value="">Select a country</option>
                 {countries
@@ -62,14 +65,15 @@ return (
                     temp = {data.main && (
                         <p className='temp'>{Math.round(data.main.temp)}°C</p>
                         )}
-                />
+                    image = {data && data.length > 0 ? `http://openweathermap.org/img/wn/${data[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
+                
             ))}
         </div>
         <Link to="/"> 
 			<div class="arrow"></div>`
 		</Link>
     </div>
-    </div>
+    </Animate_page>
 );
 }
 
