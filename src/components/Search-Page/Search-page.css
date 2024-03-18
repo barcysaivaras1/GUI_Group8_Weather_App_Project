@@ -106,15 +106,17 @@
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  z-index: 100;
 }
 
 .search-page .weather-type {
   position: relative;
-  width: 1rem;
-  height: 1rem;
-  bottom: 4rem;
+  width: 6rem;
+  height: 6rem;
+  bottom: 6rem;
   opacity: 40%;
   left: 11rem;
+  z-index: 0;
 }
 
 .search-page .overlap-2 {
