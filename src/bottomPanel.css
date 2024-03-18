@@ -60,6 +60,13 @@
     margin-left: 15px;
 }
 
-body {
-    height: 526px;
+/*body {*/
+/*    height: 526px;*/
+/*}*/
+.vaul-scrollable {
+    margin-top: 8px;
+}
+
+body *:focus {
+    outline: none;
 }

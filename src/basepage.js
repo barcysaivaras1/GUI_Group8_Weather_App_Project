@@ -231,7 +231,7 @@ function BasePage() {
         </button>
        </div>
        </Link>
-       <Drawer.Root open={isOpen} snapPoints={[0.33, 1]} defaultSnap={0.33} modal={false}>
+       <Drawer.Root open={isOpen} snapPoints={[0.33, 0.90]} defaultSnap={0.33} modal={false}>
          <Drawer.Portal>
            <Drawer.Content>
              <BottomPanel />
