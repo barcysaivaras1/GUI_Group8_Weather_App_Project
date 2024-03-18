@@ -6,7 +6,7 @@
 }
 
 .page{
-  background-color: black;
+  /*background-color: black;*/
 }
 .Filter button{
   background: none;
@@ -17,10 +17,10 @@
   position: relative;
   width: 428px;
   height: 926px;
-  margin: 0 auto;
-  background-color: black;
-  background: linear-gradient(180deg, rgba(2, 0, 146, 0), #0e4089);
-  background-color: black;
+  /*margin: 0 auto;*/
+  /*background-color: black;*/
+  /*background: linear-gradient(180deg, rgba(2, 0, 146, 0), #0e4089);*/
+  background-color: #0a3379;
   overflow: hidden;
 }
 .Filter .group {
