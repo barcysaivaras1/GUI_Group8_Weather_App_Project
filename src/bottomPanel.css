@@ -66,6 +66,8 @@
 /*}*/
 .vaul-scrollable {
     margin-top: 4px;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
 
 body *:focus {
