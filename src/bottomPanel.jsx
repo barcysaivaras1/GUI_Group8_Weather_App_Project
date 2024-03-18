@@ -1,22 +1,4 @@
-// function App() {
-//     // Prevent the drawer from closing
-//     const [isOpen] = useState(true);
-//     return (
-//         <div>
-//             <Drawer.Root open={isOpen} snapPoints={[0.33, 1]} defaultSnap={0.33}>
-//                 <Drawer.Portal>
-//                     <Drawer.Content>
-//                         <BottomPanel />
-//                     </Drawer.Content>
-//                     <Drawer.Overlay />
-//                 </Drawer.Portal>
-//             </Drawer.Root>
-//         </div>
-//     );
-// }
-
-
-// bottomPanel.js
+// bottomPanel.jsx
 import {Drawer} from "vaul";
 import React, {useEffect, useState} from 'react';
 import './bottomPanel.css';
@@ -63,35 +45,6 @@ function BottomPanel() {
         { city: 'Amsterdam', temperature: '...', imageUrl: amsterdamImg }
     ]);
 
-
-    // useEffect(() => {
-    //     destinations.forEach((destination, index) => {
-    //         fetchTemperature(destination.city).then(temp => {
-    //             // Create a copy of the current destinations array
-    //             const newDestinations = [...destinations];
-    //             // Update the temperature for the city
-    //             newDestinations[index] = { ...destination, temperature: `${temp}º` };
-    //             // Update the state with the new destinations array
-    //             setDestinations(newDestinations);
-    //         });
-    //     });
-    // }, []); // Empty dependency array ensures this effect runs only once after the initial render
-    //
-    // const fetchTemperature = async (city) => {
-    //     // const apiKey = '9be467c27abb32179be4ce39630252c3';
-    //     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    //
-    //     try {
-    //         const response = await fetch(url);
-    //         const data = await response.json();
-    //         const temp = Math.round(data.main.temp); // Convert temperature to an integer
-    //         return temp;
-    //     } catch (error) {
-    //         console.error("Error fetching temperature:", error);
-    //         return 'Error';
-    //     }
-    // };
-
     return (
         <div className="thePanel">
             <div className="centered-pill"></div>
@@ -106,6 +59,23 @@ function BottomPanel() {
                     />
                 ))}
             </div>
+        </div>
+    );
+}
+
+function BottomPanelImplemented() {
+    // Prevent the drawer from closing
+    const [isOpen] = useState(true);
+    return (
+        <div>
+            <Drawer.Root open={isOpen} snapPoints={[0.33, 1]} defaultSnap={0.33}>
+                <Drawer.Portal>
+                    <Drawer.Content>
+                        <BottomPanel />
+                    </Drawer.Content>
+                    <Drawer.Overlay />
+                </Drawer.Portal>
+            </Drawer.Root>
         </div>
     );
 }

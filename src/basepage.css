@@ -1,18 +1,19 @@
 .basepage {
-  background-color: black;
-  display: flex;
-  flex-direction: row;
+  /*background-color: black;*/
+  /*display: flex;*/
+  /*flex-direction: row;*/
   justify-content: center;
   width: 100%;
+  z-index: 1;
 }
 
 .basepage .div {
   background-color: rgba(255, 255, 255, 1);
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(2.93, 0, 146.32, 0) 0%, rgb(14.84, 64.08, 137.93) 49%);
-  width: 428px;
-  height: 926px;
-  position: relative;
+  background: linear-gradient(180deg, rgba(2.93, 0, 146.32, 0) 0%, rgb(14.84, 64.08, 137.93) 0%);
+  width: 432px;
+  height: 938px;
+  position: absolute;
 }
 
 .basepage .overlap {

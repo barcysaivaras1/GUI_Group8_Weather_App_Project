@@ -11,7 +11,7 @@ import {
 
 
 export const AppRoute = () =>{
-    return(
+    return (
         <div>
           <Router>
             <Routes>
@@ -23,5 +23,5 @@ export const AppRoute = () =>{
             </Routes>
           </Router>
         </div>
-      );
+    );
 }

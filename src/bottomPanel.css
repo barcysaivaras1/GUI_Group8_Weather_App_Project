@@ -56,4 +56,10 @@
     border-top-right-radius: 20px;
     width: 388px;
     height: 926px;
+    z-index: 999;
+    margin-left: 15px;
+}
+
+body {
+    height: 526px;
 }

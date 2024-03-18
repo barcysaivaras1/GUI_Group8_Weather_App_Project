@@ -8,12 +8,14 @@ import rectangle44 from './img/rectangle-44.svg';
 import licensedImage1 from './img/licensed-image-1.png';
 import arrow1 from './img/arrow-1.svg'; 
 import arrow2 from './img/arrow-2.svg';
-import dotsThreeVertical from './img/dots-three-vertical.svg';
 import ellipse8 from './img/ellipse-8.svg';
 import city1 from './images/city-1.jpg';
 import city2 from './images/city-2.jpg';
 import city3 from './images/city-3.jpg';
 import city4 from './images/city-4.jpg';
+import BottomPanelImplemented from "./bottomPanel";
+import {Drawer} from "vaul";
+import BottomPanel from "./bottomPanel";
 
 function BasePage() {
   // State for London's weather
@@ -111,7 +113,7 @@ function BasePage() {
     return () => clearInterval(intervalId); // Clean up on component unmount
   }, [nextCity]);
 
-  
+  const [isOpen] = useState(true);
 
  return (
    <div className="basepage">
@@ -123,9 +125,9 @@ function BasePage() {
          <div className="text-wrapper-2">London</div>
          <div className="text-wrapper-3">You are in</div>
          <div className="group">
-          <button className="button-style">
-           <img className="dots-three-vertical" src={dotsThreeVertical} alt="Dots Vertical" />
-          </button>
+         {/* /!*<button className="button-style">*!/*/}
+         {/* /!* <img className="dots-three-vertical" src={dotsThreeVertical} alt="Dots Vertical" />*!/*/}
+         {/* /!*</button>*!/*/}
          </div>
          <div className="text-wrapper-4">{tempMin ? `${tempMin}º` : 'Loading...'}</div>
          <div className="text-wrapper-5">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
@@ -229,35 +231,43 @@ function BasePage() {
         </button>
        </div>
        </Link>
-       <div className="places-to-go">
-  <div className="overlap-7">
-    <div className="rectangle-7"></div>
-    {/* Update to use cities array and currentCityIndex for image source */}
-    <img className="licensed-image" src={cities[currentCityIndex].image} alt="City Image" />
-    <div className="rectangle-8"></div>
-    <div className="rectangle-9"></div>
-    <div className="text-wrapper-13">Places To Go</div>
-    {/* Update to show the current city's name */}
-    <div className="text-wrapper-14">{cities[currentCityIndex].name}</div>
-    {/* Update to show the current city's weather */}
-    <div className="element-2">{cities[currentCityIndex].weather}</div>
-    <div className="group-8">
-      <div className="overlap-group-5">
-        <div className="rectangle-10"></div>
-        <div className="ellipse-2"></div>
-        <div className="ellipse-3"></div>
-        <div className="ellipse-4"></div>
-        <div className="ellipse-5"></div>
-      </div>
-    </div>
-    <button className="button-style">
-     <img className="arrow" src={arrow1} alt="Arrow 1" />
-    </button>
-    <button className="button-style">
-     <img className="arrow-2" src={arrow2} alt="Arrow 2" />
-    </button>
-  </div>
-</div>
+       <Drawer.Root open={isOpen} snapPoints={[0.33, 1]} defaultSnap={0.33} modal={false}>
+         <Drawer.Portal>
+           <Drawer.Content>
+             <BottomPanel />
+           </Drawer.Content>
+           <Drawer.Overlay />
+         </Drawer.Portal>
+       </Drawer.Root>
+   {/*<div className="places-to-go">*/}
+  {/*<div className="overlap-7">*/}
+  {/*  <div className="rectangle-7"></div>*/}
+  {/*  /!* Update to use cities array and currentCityIndex for image source *!/*/}
+  {/*  <img className="licensed-image" src={cities[currentCityIndex].image} alt="City Image" />*/}
+  {/*  <div className="rectangle-8"></div>*/}
+  {/*  <div className="rectangle-9"></div>*/}
+  {/*  <div className="text-wrapper-13">Places To Go</div>*/}
+  {/*  /!* Update to show the current city's name *!/*/}
+  {/*  <div className="text-wrapper-14">{cities[currentCityIndex].name}</div>*/}
+  {/*  /!* Update to show the current city's weather *!/*/}
+  {/*  <div className="element-2">{cities[currentCityIndex].weather}</div>*/}
+  {/*  <div className="group-8">*/}
+  {/*    <div className="overlap-group-5">*/}
+  {/*      <div className="rectangle-10"></div>*/}
+  {/*      <div className="ellipse-2"></div>*/}
+  {/*      <div className="ellipse-3"></div>*/}
+  {/*      <div className="ellipse-4"></div>*/}
+  {/*      <div className="ellipse-5"></div>*/}
+  {/*    </div>*/}
+  {/*  </div>*/}
+  {/*  <button className="button-style">*/}
+  {/*   <img className="arrow" src={arrow1} alt="Arrow 1" />*/}
+  {/*  </button>*/}
+  {/*  <button className="button-style">*/}
+  {/*   <img className="arrow-2" src={arrow2} alt="Arrow 2" />*/}
+  {/*  </button>*/}
+  {/*</div>*/}
+  {/*    </div>*/}
       <Link to="/filter">
         <div className="vector-wrapper">
           <button className="button-style">
