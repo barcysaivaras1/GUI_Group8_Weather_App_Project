@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import './Favourites.css';
 import { Link } from 'react-router-dom';
 import Animate_page from '../Animate-page';
-
+import heart from "./img/icon-heart.png"
 
 
 
@@ -15,44 +15,20 @@ function Favourites() {
     <div>
           <div class="favourites">
       <div class="div">
-        <div class="group"><img class="dots-three-vertical" src="img/dots-three-vertical.svg" /></div>
-        <div class="places-to-go">
-          <div class="overlap">
-            <div class="rectangle"></div>
-            <img class="licensed-image" src="img/licensed-image-1.png" />
-            <div class="rectangle-2"></div>
-            <div class="rectangle-3"></div>
-            <div class="text-wrapper">Places To Go</div>
-            <div class="text-wrapper-2">Dubai</div>
-            <div class="element">37º</div>
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group">
-                <div class="rectangle-4"></div>
-                <div class="ellipse"></div>
-                <div class="ellipse-2"></div>
-                <div class="ellipse-3"></div>
-                <div class="ellipse-4"></div>
-              </div>
-            </div>
-            <img class="arrow" src="img/arrow-1.svg" />
-            <img class="img" src="img/arrow-2.svg" />
-          </div>
-        </div>
         <div class="overlap-2">
           <div class="overlap-wrapper">
             <div class="overlap-3">
               <div class="text-wrapper-3">Favourites</div>
-              <img class="icon-heart" src="img/icon-heart.png" />
+              <img class="icon-heart" src={heart} />
             </div>
           </div>
           <div class="text-wrapper-4">Your</div>
         </div>
-        <div class="text-wrapper-5">4 Favourites</div>
+        <div class="text-wrapper-5">{locations.length} Favourites</div>
         <FavouriteBox/>
-        <img class="rectangle-5" src="img/rectangle-47.svg" />
       </div>
       <Link to="/"> 
-				<div class="back-arrow"></div>`
+				<div class="back-arrow"></div>
 			</Link>
     </div>
     </div>
@@ -69,14 +45,13 @@ export default Favourites;
 //     <p>{location.main.temp}°C</p> {/* Assuming temperature is under main */}
 //   </div>
 // ))}
-
+const locations = ['Tokyo', 'Osaka', 'Kyoto']; // Your favorite locations
 
 const FavouriteBox = () =>{
 
   const [temperatures, setTemperatures] = useState([]);
 
   useEffect(() => {
-    const locations = ['Tokyo', 'Osaka', 'Kyoto']; // Your favorite locations
     const fetchTemperatures = async () => {
       const promises = locations.map(location =>
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=0af6a68e53720e65df9056000903fa1a`)

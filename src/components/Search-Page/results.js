@@ -10,7 +10,7 @@ function SearchResults(props) {
             <span className="span">{props.name} <br /></span> <span className="text-wrapper-2">{props.country}</span>
         </p>
         <div className="element">{props.temp}</div>
-        <img className="weather-type" src={props.image}/>
+        <img className="weather-type" src={props.image} alt='Weather Image...'/>
         </div>
     )
 }

@@ -121,20 +121,20 @@ function BasePage() {
      <div className="div">
        <div className="overlap">
        
-         <div className="element">{currentTemp ? `${currentTemp}º` : 'Loading...'}</div>
+         <div className="temp">{currentTemp ? `${currentTemp}º` : 'Loading...'}</div>
          <img className="weather-main-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
-         <div className="text-wrapper">{weatherDesc ? weatherDesc : 'Loading...'}</div>
+         <div className="weather-desc">{weatherDesc ? weatherDesc : 'Loading...'}</div>
          <div className="text-wrapper-2">London</div>
          <div className="text-wrapper-3">You are in</div>
-         <div className="text-wrapper-4">{tempMin ? `${tempMin}º` : 'Loading...'}</div>
-         <div className="text-wrapper-5">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
-         <div className="rectangle"></div>
+         <div className="min-temp">{tempMin ? `${tempMin}º` : 'Loading...'}</div>
+         <div className="max-temp">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
+         <div className="temp-bar"></div>
        </div>
        <Link to="/search">
-        <div className="frame">
+        <div className="search-box">
         <button className="button-style search-button">
           <div className="overlap-group">
-            <div className="text-wrapper-6">Search</div>
+            <div className="search-text">Search</div>
           </div>
           </button>
         </div>
@@ -202,7 +202,6 @@ function BasePage() {
                  </div>
                  <div className="group-7">
                    <div className="overlap-6">
-                     <img className="subtract" src="img/subtract.svg" alt="" />
                      <div className="group-wrapper">
                      <div className="group-5">
                          <div className="overlap-group-4">

@@ -1,7 +1,8 @@
 .basepage {
-  /*background-color: black;*/
+  /* background-color: black;*/
   /*display: flex;*/
-  /*flex-direction: row;*/
+  /*flex-direction: row; */
+  
   justify-content: center;
   width: 100%;
   z-index: 1;
@@ -24,15 +25,9 @@
   left: -9px;
 }
 
-.basepage .cloudy {
-  position: absolute;
-  width: 200px;
-  height: 207px;
-  top: 5px;
-  left: 196px;
-}
 
-.basepage .element {
+
+.basepage .temp {
   width: 107px;
   height: 64px;
   top: 97px;
@@ -53,7 +48,7 @@
   line-height: normal;
 }
 
-.basepage .text-wrapper {
+.basepage .weather-desc {
   position: absolute;
   width: 155px;
   height: 23px;
@@ -95,27 +90,10 @@
   line-height: normal;
 }
 
-.basepage .group {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 0;
-  left: 373px;
-  background-color: #b5b8d7;
-  border-radius: 20px;
-  transform: rotate(-90deg);
-}
 
-.basepage .dots-three-vertical {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  top: 2px;
-  left: 2px;
-  transform: rotate(90deg);
-}
 
-.basepage .text-wrapper-4 {
+
+.basepage .min-temp {
   width: 114px;
   height: 31px;
   top: 194px;
@@ -132,7 +110,7 @@
   line-height: normal;
 }
 
-.basepage .text-wrapper-5 {
+.basepage .max-temp {
   width: 114px;
   height: 31px;
   top: 196px;
@@ -149,7 +127,7 @@
   line-height: normal;
 }
 /*This styles the rectangle between the min and max temps*/
-.basepage .rectangle {
+.basepage .temp-bar {
   position: absolute;
   width: 261px;
   height: 4px;
@@ -159,7 +137,7 @@
   background-image: linear-gradient(to right, #1A92E2, #D85B4D);
 }
 
-.basepage .frame {
+.basepage .search-box {
   position: absolute;
   width: 150px;
   height: 26px;
@@ -176,7 +154,7 @@
   border-radius: 30px;
 }
 
-.basepage .text-wrapper-6 {
+.basepage .search-text {
   position: absolute;
   width: 69px;
   top: 5px;

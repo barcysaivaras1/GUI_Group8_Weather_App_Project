@@ -26,14 +26,7 @@
   transform: rotate(-90deg);
 }
 
-.favourites .dots-three-vertical {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  top: 2px;
-  left: 2px;
-  transform: rotate(90deg);
-}
+
 
 .favourites .places-to-go {
   position: absolute;
