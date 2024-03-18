@@ -37,25 +37,33 @@ export default FilterPage;
 
 //This is the double slider for the temperature
 //values[0] will give you the minimum value, values[1] will give you the maximum value
-const Temperatureslider = () =>{
-	const [values, setValues] = useState([-20, 40]);
+const Temperatureslider = () => {
+	const [values, setValues] = useState([-30, 50]);
 	const handleChange = (newValues) => setValues(newValues);
+  
 	return (
-		<div>
+
+	  <div className='WholeSlider'>
 		<div className="values">
-			
 			<span id="range1">{values[0]}°</span> 
-			<span id='dash'> - </span>
+			<span id='dash'> - </span> 			
 			<span id="range2">{values[1]}°</span>
 		</div>
-		<div className="slider-container">
-			<Slider className="slider"  valueLabelDisplay="auto" value={values} onChange={handleChange} min={-30} max={50}/>
-			<div type="number" id="minTemp" onChange={(e) => handleChange([+e.target.value, values[1]])}></div>
-			<div type="number" id="maxTemp" onChange={(e) => handleChange([values[0], +e.target.value])}></div> 
-		</div>
-		</div>
+		<Slider
+		  className="slider"
+		  value={values}
+		  onChange={handleChange}
+		  min={-30}
+		  max={50}/>
+		  <div type="number" id="minTemp" onChange={(e) => handleChange([+e.target.value, values[1]])}>{values[0]}</div>
+		  <div type="number" id="maxTemp" onChange={(e) => handleChange([values[0], +e.target.value])}>{values[1]}</div>
+	  </div>
 	);
-	}
+  };
+
+
+
+
 
 
 var weatherTypes_selected = [];

@@ -415,8 +415,7 @@
     font-size: 25px;
 }
 .Filter .slider {
-  touch-action: none;
-  height: 0.6rem;
+  height: 0.8rem;
   width: 20rem;
   background: linear-gradient(270deg, rgb(209, 80, 48), #0e4089);
   border-radius: 5px;
@@ -438,9 +437,7 @@
 }
 /* Styles for the slider thumb */
 .Filter .slider .thumb {
-  pointer-events: none;
   position: absolute;
-  touch-action: none;
   height: 20px;
   width: 20px;
   border-radius: 50px;
