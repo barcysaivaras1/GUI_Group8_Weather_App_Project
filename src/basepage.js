@@ -122,6 +122,7 @@ function BasePage() {
        <div className="overlap">
        
          <div className="element">{currentTemp ? `${currentTemp}º` : 'Loading...'}</div>
+         <img className="weather-main-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
          <div className="text-wrapper">{weatherDesc ? weatherDesc : 'Loading...'}</div>
          <div className="text-wrapper-2">London</div>
          <div className="text-wrapper-3">You are in</div>

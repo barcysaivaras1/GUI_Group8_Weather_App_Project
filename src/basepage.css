@@ -782,3 +782,14 @@
   margin-top: 35px;
   margin-left: 10px;
 }
+
+.weather-main-icon{
+  position: relative;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  height: 15rem;
+  width: 15rem;
+  left: 13rem;
+  z-index: 0;
+  opacity: 0.4;
+}
