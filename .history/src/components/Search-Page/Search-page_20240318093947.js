@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import './Search-page.css'; // Import component-specific CSS styles
+import './globals.css'; // Import global CSS styles
+import './style.css'; // Import component-specific CSS styles
+import './styleguide.css';
 import SearchResults from './results';
 import useWeatherData from './fetchWeather';
 import useCitySelector from '../useCountry';
 import useNewWeatherData from './NewWeatherHook';
-import { Link } from 'react-router-dom';
 function NewWeatherSearchPage()
 {
     const { countries, selectedCountry, cities, cityArray, capitalCity, handleCountryChange } = useCitySelector();
@@ -18,22 +19,8 @@ function NewWeatherSearchPage()
     console.log(weatherData)
 
 return (
-    <div className="search-page">
+    <div className="iphone">
         <div className="div">
-            {/* <div className="overlap">
-                <input
-                    className="text-wrapper"
-                    type="search"
-                    placeholder="City"
-                    value={city}
-                    onChange={handleInputChange}
-                    onKeyPress={handleKeyPress}
-                />
-                <form onSubmit={handleSubmit}>
-                    <button type="submit" style={{ display: 'none' }}>Get Weather</button>
-                </form>
-            </div> */}
-            <div className="search-bar">
             <div className="overlap">
                 <input
                     className="text-wrapper"
@@ -60,14 +47,11 @@ return (
                     name={cityArray[index]}
                     country = {data.country} 
                     temp = {data.main && (
-                        <p className='temp'>{Math.round(data.main.temp)}°C</p>
+                        <p>{Math.round(data.main.temp)}°C</p>
                         )}
                 />
             ))}
         </div>
-        <Link to="/"> 
-			<div class="arrow"></div>`
-		</Link>
     </div>
 );
 }
