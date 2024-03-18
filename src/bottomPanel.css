@@ -26,7 +26,7 @@
     background-color: #d1d5db; /* Similar to Tailwind's bg-zinc-300 */
     border-radius: 9999px; /* To make it fully rounded like Tailwind's rounded-full */
     margin: 0 auto; /* Center it horizontally */
-    margin-bottom: 32px; /* Equivalent to Tailwind's mb-8 */
+    margin-bottom: 24px; /* Equivalent to Tailwind's mb-8 */
 }
 
 .thePanel .image {
@@ -34,7 +34,7 @@
     height: 212px; /* Height is auto to maintain aspect ratio */
     margin-left: 10px;
     border-radius: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     position: relative;
 }
@@ -64,9 +64,13 @@
 /*    height: 526px;*/
 /*}*/
 .vaul-scrollable {
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 body *:focus {
     outline: none;
+}
+
+.image vaul-scrollable {
+
 }
