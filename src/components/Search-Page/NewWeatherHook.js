@@ -22,7 +22,7 @@ const useNewWeatherData = (cities) => {
         };
 
         fetchWeatherData();
-    }, []); // Empty dependency array to run the effect only once on mount
+    }, [cities]); // Empty dependency array to run the effect only once on mount
 
     return weatherData;
 };
