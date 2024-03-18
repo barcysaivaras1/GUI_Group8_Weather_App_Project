@@ -28,8 +28,6 @@
   width: 40px;
   height: 40px;
   margin: 42px 0 0 364px;
-  background: url(./assets/images/43b9fc9b-9edf-467a-af82-0d5ff2b58576.png)
-    no-repeat center;
   background-size: cover;
 }
 .Filter .rectangle-temperature {
@@ -367,17 +365,7 @@
   white-space: nowrap;
   z-index: 1;
 }
-.Filter .Xsymbol {
-  position: absolute;
-  width: 15.564px;
-  height: 20.058px;
-  top: 114px;
-  left: 376px;
-  background: url(./assets/images/9caebbf3-9450-4d9d-afc7-60afc4de711b.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 14;
-}
+
 
 /*Arrow Symbol*/
 .Filter .arrow {

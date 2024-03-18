@@ -118,17 +118,6 @@ button {
   background-size: 100% 100%;
   z-index: 16;
 }
-/*Options symbol*/
-.Results .options {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 42px;
-  left: 364px;
-  background: url(./assets/images/571c13cf-eafd-4bb4-92a9-f63f2324f715.png)
-    no-repeat center;
-  background-size: cover;
-}
 /*Arrow Symbol*/
 .Results .arrow {
   position: absolute;

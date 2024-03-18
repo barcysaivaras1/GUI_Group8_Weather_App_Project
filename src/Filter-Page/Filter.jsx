@@ -27,7 +27,6 @@ export const FilterPage = () => {
 				<Link to="/"> 
 					<div class="arrow"></div>`
 				</Link>
-				<div class="Xsymbol"></div>
 			</div>
 		</div>
 		</Animate_page>
