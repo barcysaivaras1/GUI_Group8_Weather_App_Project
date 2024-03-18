@@ -50,7 +50,6 @@
 }
 
 
-/* what does this even do */
 
 .search-page .overlap-group {
   /* position: absolute; */
@@ -67,17 +66,26 @@
   position: relative;
   margin-top: 1rem;
   height: 77px;
-  top: 10px;
+  top: 1rem;
   left: 20px;
   font-family: "Helvetica Neue-Medium", Helvetica;
   font-weight: 500;
   color: transparent;
-  font-size: 40px;
   letter-spacing: 0;
+}
+.search-page .info{
+  max-width: 50px;
 }
 
 .search-page .span {
+  display: block;
   color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 12rem;
+  font-size: 2rem;
+  box-sizing: border-box;
 }
 
 .search-page .text-wrapper-2 {
@@ -102,9 +110,10 @@
 
 .search-page .weather-type {
   position: relative;
-  width: 54px;
-  height: 53px;
-  bottom: 6rem;
+  width: 1rem;
+  height: 1rem;
+  bottom: 4rem;
+  opacity: 40%;
   left: 11rem;
 }
 
