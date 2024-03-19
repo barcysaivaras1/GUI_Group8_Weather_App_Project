@@ -24,8 +24,39 @@ function BasePage() {
   const [tempMin, setTempMin] = useState('');
   const [tempMax, setTempMax] = useState('');
   const [forecastData, setForecastData] = useState(null);
+  const [activeForecast, setActiveForecast] = useState('Today');
 
-  
+  const handleTodayClick = () => {
+    setActiveForecast('Today');
+  };
+
+  const handle8DayClick = () => {
+    setActiveForecast('8-Day');
+  };
+
+  const activeButtonStyle = {
+    // Adjust the left position based on whether 'Today' or '8-Day' is active
+    left: activeForecast === 'Today' ? '29px' : '186px',
+    // Ensure the background color or other styles here as needed
+    backgroundColor: '#d9d9d9',
+    // Don't forget to copy other styles from .rectangle-5 if they should remain constant
+    position: 'absolute',
+    width: '163px',
+    height: '22px',
+    top: '14px',
+    borderRadius: '20px',
+  };;
+
+  const todayTextStyle = {
+    color: activeForecast === 'Today' ? '#000' : '#d9d9d9', // Change color based on active state
+    cursor: 'pointer',
+  };
+
+  const eightDayTextStyle = {
+    color: activeForecast === '8-Day' ? '#000' : '#d9d9d9', // Change color based on active state
+    cursor: 'pointer',
+  };
+
   
 
 
@@ -215,10 +246,20 @@ function BasePage() {
              </div>
            </div>
          </div>
-         <div className="rectangle-4"></div>
-         <div className="rectangle-5"></div>
-         <div className="text-wrapper-11">Today</div>
-         <div className="text-wrapper-12">8-Day</div>
+         <div className="forecast-toggle" style={{ position: 'relative' }}>
+          <div className="rectangle-4" style={{
+            width: '320px',
+            height: '26px',
+            backgroundColor: '#d9d9d966',
+            borderRadius: '20px',
+            position: 'absolute',
+            top: '12px',
+            left: '27px',
+          }}></div>
+          <div className="rectangle-5" style={activeButtonStyle}></div>
+          <div className="text-wrapper-11" onClick={handleTodayClick} style={{...todayTextStyle, position: 'absolute', left: '29px', top: '14px'}}>Today</div>
+          <div className="text-wrapper-12" onClick={handle8DayClick} style={{...eightDayTextStyle, position: 'absolute', right: '29px', top: '14px'}}>8-Day</div>
+        </div>
        </div>
        <Link to="/favourites">
        <div className="rectangle-wrapper">
