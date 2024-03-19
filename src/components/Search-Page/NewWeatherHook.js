@@ -5,7 +5,7 @@ const useNewWeatherData = (cities) => {
 
     useEffect(() => {
         const fetchWeatherData = async () => {
-            const apiKey = '8753df73a21dbdc377ad73e23efc22b4';
+            const apiKey = '0af6a68e53720e65df9056000903fa1a';
             const units = 'metric'; // You can change units to 'imperial' for Fahrenheit
             const requests = cities.map(city =>
                 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`)

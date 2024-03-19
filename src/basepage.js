@@ -76,7 +76,7 @@ function BasePage() {
     const fetchWeatherData = async () => {
       try {
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`
+          `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=0af6a68e53720e65df9056000903fa1a`
         );
         setCurrentTemp(Math.round(response.data.main.temp));
         setWeatherDesc(response.data.weather[0].description);
@@ -96,7 +96,7 @@ function BasePage() {
       try {
         // Replace "London" with a dynamic city name if needed
         const forecastResponse = await axios.get(
-          `https://api.openweathermap.org/data/2.5/forecast?q=London&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`
+          `https://api.openweathermap.org/data/2.5/forecast?q=London&units=metric&appid=0af6a68e53720e65df9056000903fa1a`
         );
         setForecastData(forecastResponse.data.list);
       } catch (error) {
@@ -113,9 +113,9 @@ function BasePage() {
   // Fetch weather for cities in the slider
   useEffect(() => {
     const fetchWeatherDataForCities = async () => {
-      const apiKey = '8753df73a21dbdc377ad73e23efc22b4'; 
+      const apiKey = '0af6a68e53720e65df9056000903fa1a'; 
       const weatherDataPromises = cities.map(city =>
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city.name}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city.name}&units=metric&appid=0af6a68e53720e65df9056000903fa1a`)
       );
 
       try {
