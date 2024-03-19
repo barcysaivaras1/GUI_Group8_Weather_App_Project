@@ -45,7 +45,7 @@ button {
   position: relative;
   width: 365px;
   height: 103px;
-  margin: 2rem 0 0 28px;
+  margin: 1rem 0 0 28px;
   background: url(./assets/images/789963b7-902b-46c4-b86e-4a0fe9869e68.png)
     no-repeat center;
   background-size: cover;
@@ -53,70 +53,58 @@ button {
 }
 /*A container holding the country and city text*/
 .Results .city-country {
-  position: absolute;
-  width: 132px;
+  position: relative;
+  margin-top: 1rem;
   height: 77px;
-  top: 11px;
-  left: 50%;
-  font-family: Helvetica Neue, var(--default-font-family);
-  font-size: 40px;
+  top: 1rem;
+  left: 20px;
+  font-family: "Helvetica Neue-Medium", Helvetica;
   font-weight: 500;
-  line-height: 48.84px;
-  text-align: left;
-  transform: translate(-122.35%, 0);
-  z-index: 13;
+  color: transparent;
+  letter-spacing: 0;
 }
 /*city text*/
 .Results .city {
-  position: relative;
+  display: block;
   color: #ffffff;
-  font-family: Helvetica Neue, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 48.84px;
-  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 12rem;
+  font-size: 2rem;
+  box-sizing: border-box;
 }
 /*country text*/
 .Results .country {
-  position: relative;
-  bottom: 1rem;
   color: #acb0db;
-  font-family: Helvetica Neue, var(--default-font-family);
   font-size: 25px;
-  font-weight: 500;
-  line-height: 48.84px;
-  text-align: left;
 }
 /*temperature text*/
 .Results .temperature {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 5rem;
-  height: 1rem;
-  top: 2.5rem;
-  left: calc(50% - -89.5px);
-  color: #fcf6f6;
-  font-family: Helvetica Neue, var(--default-font-family);
+  position: relative;
+  height: 61px;
+  bottom: 4.5rem;
+  left: 15rem;
   font-size: 51px;
-  font-weight: 400;
-  line-height: 60.843px;
-  text-align: center;
   white-space: nowrap;
-  z-index: 14;
+  position: absolute;
+  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-weight: 400;
+  color: #fcf6f6;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 100;
 }
 /*Weather Image*/
 .Results .weather-type {
-  position: absolute;
-  width: 42px;
-  height: 45.396px;
-  top: 29px;
-  left: 214px;
-  background: url(./assets/images/7ee590b4-2cff-4e9e-a540-c0c149cde4ff.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 16;
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  bottom: 5rem;
+  opacity: 40%;
+  left: 10rem;
+  z-index: 0;
 }
 /*Arrow Symbol*/
 .Results .arrow {
