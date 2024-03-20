@@ -17,10 +17,10 @@ button {
   position: relative;
   width: 428px;
   height: 926px;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   font-size: 0px;
-  background: linear-gradient(180deg, rgba(2, 0, 146, 0), #0e4089);
-  background-color: black;
+  background: #0e4089;
+  background-color: #0e4089;
   overflow: hidden;
 }
 .Results .find-places-to-go {
@@ -39,6 +39,8 @@ button {
 }
 .Results .results-container{
   margin-top: 7rem;
+  height: 100%;
+  overflow: scroll;
 }
 /*A Container holding the results*/
 .Results .result-box {
@@ -113,21 +115,30 @@ button {
   height: 14.84px;
   top: 48px;
   left: 36px;
- 
+  /*background: url(./assets/images/arrow.png);*/
+  /*no-repeat center;*/
   background-size: cover;
   z-index: 23;
+  color: #e9f1ff;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  border-radius: 3px;
 }
 /*This is the box around the Filters applied text*/
 .Results .filter-box {
   position: absolute;
   width: 260px;
-  height: 34px;
+  height: 33px;
   top: 216px;
   left: 81px;
-  background: url(./assets/images/8855fa4a-ff7a-4e32-aada-7d08b1599537.png)
-    no-repeat center;
-  background-size: cover;
+  background: #0a3379;
   z-index: 3;
+  border: solid beige;
+  border-radius: 20px;
 }
 /*Filters applied Text*/
 .Results .filters-applied {
@@ -147,4 +158,8 @@ button {
   text-align: center;
   white-space: nowrap;
   z-index: 4;
+}
+
+.Results .cont {
+  height: 605px;
 }

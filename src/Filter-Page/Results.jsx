@@ -20,7 +20,8 @@ export const ResultsPage = () =>{
         <div className="page">
             <div className="Results">
             <span className="find-places-to-go">Find Places To Go</span>
-            <div className="results-container">
+            <div className="cont">
+                <div className="results-container">
                 {weatherData.map((data, index) => (
                 <SearchResults
                     key={index}
@@ -31,11 +32,12 @@ export const ResultsPage = () =>{
                         )}
                     image = {`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="Weather Icon" />  
             ))}
+                </div>
             </div>
-            <Link to="/filter"> 
-            <div className="arrow"></div>
-            </Link>
-            <div className="filter-box"></div>
+                <Link to="/filter">
+                    <i className="arrow"></i>
+                </Link>
+                <div className="filter-box"></div>
             <span className="filters-applied">Filters Applied</span>
             </div>
         </div>
