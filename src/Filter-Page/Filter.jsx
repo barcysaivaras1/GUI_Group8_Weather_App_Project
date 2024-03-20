@@ -131,13 +131,6 @@ const FilterCountriesByContinent = async (continent) => {
 		document.getElementById(continent).borderRadius = "20px";
 	}
 
-
-
-
-
-
-
-
     for (const country of countries) {
         // Fetch country information to get the capital city
         const countryResponse = await fetch(`https://api.countrystatecity.in/v1/countries/${country}`, {
@@ -161,12 +154,12 @@ const FilterCountriesByContinent = async (continent) => {
 return (
 	<div className="Filter">
 		<div className="group"></div>
+		<div class="boxes">
 		<div className="rectangle-temperature">
 			<span className="temperature">Temperature</span>
 			<div>
 				<div className="values">
 					<span id="range1">{values[0]}°</span>
-					<span id='dash'> - </span>
 					<span id="range2">{values[1]}°</span>
 				</div>
 				<div className="container">
@@ -178,6 +171,7 @@ return (
 			<span className="continent">Continent</span>
 			<ButtonContinent handleContinentClick={FilterCountriesByContinent} />
 		</div>
+		</div>
 		<ButtonWeather handleButtonPress={handleButtonPress} />
 		<div>
 			{/* <Link to={{ pathname: "/filter/results", state: { testArray: [1, 2, 3, 4, 5] } }}> */}
@@ -186,9 +180,11 @@ return (
 				</button>
 			{/* </Link> */}
 		</div>
-		<Link to="/"> 
-            <div className="arrow"></div>
-        </Link>
+
+		<Link to="/">
+			<i className="arrow"></i>
+		</Link>
+
 		<span className="filters">Filters</span>
 		{/* {console.log({ pathname: "/filter/results", state: { finalArray } })} */}
 
