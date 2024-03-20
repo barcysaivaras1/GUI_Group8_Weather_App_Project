@@ -98,7 +98,7 @@
   margin: 0.5rem 0 0 18px;
   z-index: 28;
 }
-.Filter #africa {
+.Filter #Africa {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,7 +117,7 @@
   white-space: nowrap;
   z-index: 25;
 }
-.Filter #asia {
+.Filter #Asia {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,7 +136,7 @@
   white-space: nowrap;
   z-index: 22;
 }
-.Filter #europe {
+.Filter #Europe {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +155,7 @@
   white-space: nowrap;
   z-index: 28;
 }
-.Filter #north-america {
+.Filter #North-America {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,7 +173,7 @@
   white-space: nowrap;
   z-index: 50;
 }
-.Filter #south-america {
+.Filter #South-America {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -389,7 +389,7 @@
     position: relative;
     width: 80%;
     height: 100px;
-    left: 40px;
+    left: 0.5;
 }
 .Filter .values{
     width: 32%;

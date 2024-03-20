@@ -20,13 +20,13 @@ const world_continents = {
 	"Europe": {
 		"Countries": ["AL", "AD", "AT", "BY", "BE", "BA", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "XK", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "NL", "MK", "NO", "PL", "PT", "RO", "RU", "SM", "RS", "SK", "SI", "ES", "SE", "CH", "UA", "GB", "VA"]
 	},
-	"North America": {
+	"North-America": {
 		"Countries": ["AG", "BS", "BB", "BZ", "CA", "CR", "CU", "DM", "DO", "SV", "GD", "GT", "HT", "HN", "JM", "MX", "NI", "PA", "KN", "LC", "VC", "TT", "US"]
 	},
 	"Oceania": {
 		"Countries": ["AU", "FJ", "KI", "MH", "FM", "NR", "NZ", "PW", "PG", "WS", "SB", "TO", "TV", "VU"]
 	},
-	"South America": {
+	"South-America": {
 		"Countries": ["AR", "BO", "BR", "CL", "CO", "EC", "GY", "PY", "PE", "SR", "UY", "VE"]
 	}
 }
@@ -119,6 +119,24 @@ const FilterCountriesByContinent = async (continent) => {
     const countries = world_continents[continent].Countries;
     const capitalCities = [];
 	const filteredTempArray = [];
+	console.log(continent)
+
+	// Styling Change
+	if (document.getElementById(continent).style.background === "white") {
+		document.getElementById(continent).style.background = "hsla(0, 0%, 0%, 0.5)";
+		document.getElementById(continent).style.color = "white";
+	} else {
+		document.getElementById(continent).style.background = "white";
+		document.getElementById(continent).style.color = "black";
+		document.getElementById(continent).borderRadius = "20px";
+	}
+
+
+
+
+
+
+
 
     for (const country of countries) {
         // Fetch country information to get the capital city
@@ -168,8 +186,10 @@ return (
 				</button>
 			{/* </Link> */}
 		</div>
+		<Link to="/"> 
+            <div className="arrow"></div>
+        </Link>
 		<span className="filters">Filters</span>
-		<div className="Xsymbol"></div>
 		{/* {console.log({ pathname: "/filter/results", state: { finalArray } })} */}
 
 	</div>
@@ -192,11 +212,11 @@ return (
 const ButtonContinent = ({ handleContinentClick }) => {
 return (
 	<div className="continents-container">
-		<button id="africa" className='btn' onClick={() => handleContinentClick("Africa")}>Africa</button>
-		<button id="asia" className='btn' onClick={() => handleContinentClick("Asia")}>Asia</button>
-		<button id="europe" className='btn' onClick={() => handleContinentClick("Europe")}>Europe</button>
-		<button id="north-america" className='btn' onClick={() => handleContinentClick("North America")}>North America</button>
-		<button id="south-america" className='btn' onClick={() => handleContinentClick("South America")}>South America</button>
+		<button id="Africa" className='btn' onClick={() => handleContinentClick("Africa")}>Africa</button>
+		<button id="Asia" className='btn' onClick={() => handleContinentClick("Asia")}>Asia</button>
+		<button id="Europe" className='btn' onClick={() => handleContinentClick("Europe")}>Europe</button>
+		<button id="North-America" className='btn' onClick={() => handleContinentClick("North-America")}>North America</button>
+		<button id="South-America" className='btn' onClick={() => handleContinentClick("South-America")}>South America</button>
 	</div>
 );
 };

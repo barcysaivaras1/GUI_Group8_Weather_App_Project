@@ -51,7 +51,7 @@
 
 
 
-.search-page .overlap-group {
+.search-page .result-box {
   /* position: absolute; */
   position: relative;
   width: 365px;
@@ -73,11 +73,9 @@
   color: transparent;
   letter-spacing: 0;
 }
-.search-page .info{
-  max-width: 50px;
-}
 
-.search-page .span {
+
+.search-page .city {
   display: block;
   color: #ffffff;
   white-space: nowrap;
@@ -88,12 +86,12 @@
   box-sizing: border-box;
 }
 
-.search-page .text-wrapper-2 {
+.search-page .country {
   color: #acb0db;
   font-size: 25px;
 }
 
-.search-page .element {
+.search-page .temperature {
   height: 61px;
   top: 20px;
   left: 271px;
