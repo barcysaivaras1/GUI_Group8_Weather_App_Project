@@ -4,24 +4,29 @@ import './Favourites.css';
 import { Link, useLocation } from 'react-router-dom';
 import Animate_page from '../Animate-page';
 import heart from "./img/icon-heart.png";
-import FavouriteBox from './FavouriteBox'; // Import FavouriteBox
+import FavouriteBox from './FavouriteBox';
 
 function Favourites() {
   const [info, setInfo] = useState(null);
   const location = useLocation();
+
+  const [locations, setLocations] = useState(() => {
+    const storedLocations = localStorage.getItem('favouriteLocations');
+    return storedLocations ? JSON.parse(storedLocations) : ['Tokyo', 'Osaka', 'Kyoto'];
+  });
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search.replace('?', ''));
     const infoParam = searchParams.get('info');
 
     if (infoParam && !locations.includes(infoParam)) {
-      setLocations(prevLocations => [...new Set([...prevLocations, infoParam])]);
+      const updatedLocations = [...new Set([...locations, infoParam])];
+      setLocations(updatedLocations);
+      localStorage.setItem('favouriteLocations', JSON.stringify(updatedLocations));
     }
 
     setInfo(infoParam);
   }, [location.search]);
-
-  const [locations, setLocations] = useState(['Tokyo', 'Osaka', 'Kyoto']);
 
   console.log('Info:', info);
   return (
@@ -39,7 +44,7 @@ function Favourites() {
               <div className="text-wrapper-4">Your</div>
             </div>
             <div className="text-wrapper-5">{locations.length} Favourites</div>
-            <FavouriteBox locations={locations} /> {/* Pass locations as a prop */}
+            <FavouriteBox locations={locations} />
           </div>
           <Link to="/"> 
             <div className="back-arrow"></div>

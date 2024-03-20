@@ -14,6 +14,11 @@ const FavouriteBox = ({ locations }) => {
       setTemperatures(data);
     };
     fetchTemperatures();
+
+    // Clean up function
+    return () => {
+      setTemperatures([]);
+    };
   }, [locations]);
 
   return (
