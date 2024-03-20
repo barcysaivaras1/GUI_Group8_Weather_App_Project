@@ -3,11 +3,13 @@
   src: url('../public/fonts/helvetica-neue-master/HelveticaNeue-Regular.otf') format('opentype');
 }
 
+body{
+  background-color: rgb(6, 32, 71);
+}
 .basepage {
-  /* background-color: black;*/
   /*display: flex;*/
   /*flex-direction: row; */
-  
+  background: black;
   justify-content: center;
   width: 100%;
   /*z-index: 1;*/
@@ -52,7 +54,7 @@
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
-  /*z-index: 1;*/
+  /* z-index: 1; */
 }
 
 .basepage .weather-desc {
@@ -68,7 +70,6 @@
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
-  /*z-index: 1;*/
 }
 
 .basepage .text-wrapper-2 {
