@@ -19,12 +19,18 @@ a {
 }
 @font-face {
   font-family: "Helvetica Neue-Regular";
-  src: url("https://anima-uploads.s3.amazonaws.com/projects/6543e9cea69d613280f7e835/fonts/helvetica.otf")
+  src: url("public/fonts/helvetica-neue-master/HelveticaNeue-Regular.otf")
     format("opentype");
 }
 
 @font-face {
   font-family: "Helvetica Neue-Medium";
-  src: url("https://anima-uploads.s3.amazonaws.com/projects/63dcde9badcdfbdea71f504c/fonts/helveticaneuemed.ttf")
-    format("truetype");
+  src: url("public/fonts/helvetica-neue-master/HelveticaNeue-Medium.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Helvetica Neue-Bold";
+  src: url("public/fonts/helvetica-neue-master/HelveticaNeue-Bold.otf")
+  format("opentype");
 }
