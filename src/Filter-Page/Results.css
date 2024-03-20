@@ -109,12 +109,11 @@ button {
 /*Arrow Symbol*/
 .Results .arrow {
   position: absolute;
-  width: 10.889px;
-  height: 23.84px;
+  width: 13.889px;
+  height: 14.84px;
   top: 48px;
   left: 36px;
-  background: url(./assets/images/e98cccf9-a070-4e0e-9663-fffb79f8e3c8.png)
-    no-repeat center;
+ 
   background-size: cover;
   z-index: 23;
 }

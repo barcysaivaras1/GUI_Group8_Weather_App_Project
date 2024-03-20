@@ -32,7 +32,6 @@ export const ResultsPage = () =>{
                     image = {`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="Weather Icon" />  
             ))}
             </div>
-            <div className="options"></div>
             <Link to="/filter"> 
             <div className="arrow"></div>
             </Link>
