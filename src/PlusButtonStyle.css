@@ -1,44 +1,92 @@
-.plus{
-    height: 40px;
-    width: 40px;
-}
+/*.plus{*/
+/*    height: 40px;*/
+/*    width: 40px;*/
+/*}*/
 
-.plus .group{
-    background-color:  #b5b8d7;
-    border-radius: 20px;
-    height: 40px;
-    left: 0;
-    position: fixed;
-    top: 0;
-    transform: rotate(-90deg);
-    width: 40px;
-}
+/*.plus .group{*/
+/*    background-color:  #b5b8d7;*/
+/*    border-radius: 20px;*/
+/*    height: 40px;*/
+/*    left: 0;*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    transform: rotate(-90deg);*/
+/*    width: 40px;*/
+/*}*/
 
-.plus .overlap-group{
-    height: 20px;
-    left: 10px;
-    position: relative;
-    top: 10px;
-    width: 20px;
-}
+/*.plus .overlap-group{*/
+/*    height: 20px;*/
+/*    left: 10px;*/
+/*    position: relative;*/
+/*    top: 10px;*/
+/*    width: 20px;*/
+/*}*/
 
-.plus .rectangle{
-    background-color: #000000;
-    border-radius: 1px;
-    height: 20px;
-    left: 9px;
+/*.plus .rectangle{*/
+/*    background-color: #000000;*/
+/*    border-radius: 1px;*/
+/*    height: 20px;*/
+/*    left: 9px;*/
+/*    position: absolute;*/
+/*    top: 0px;*/
+/*    transform: rotate(90deg);*/
+/*    width: 2px;*/
+/*}*/
+
+/*.plus .div {*/
+/*    background-color: #000000;*/
+/*    border-radius: 1px;*/
+/*    height: 20px;*/
+/*    left: 9px;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    width: 2px;*/
+/*}*/
+
+.plus {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+.plus {
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    background-color: #b8c9ea;
     position: absolute;
-    top: 0px;
-    transform: rotate(90deg);
-    width: 2px;
+    top: 30px;
+    left: 367px;
+    font-size: 50px;
+    font-weight: 10;
+    border: solid 2px #e0f3ff;
+    transition: 0.2s;
 }
 
-.plus .div {
-    background-color: #000000;
-    border-radius: 1px;
-    height: 20px;
-    left: 9px;
-    position: absolute;
-    top: 0;
-    width: 2px;
+.plus:hover {
+    background-color: rgba(84, 156, 182, 0.3);
 }
+
+
+.plus span {
+    position: absolute;
+    top: -7px;
+    left: 6px;
+}
+
+/*.plus::before {*/
+/*    content: "+";*/
+/*    height: 43px;*/
+/*    width: 43px;*/
+/*    font-size: 43px;*/
+/*    color: #4d515b;*/
+/*    position: absolute;*/
+/*    top: -9px;*/
+/*    left: 1px;*/
+/*    transition: 0.2s;*/
+/*    border: solid 2px #e0f3ff;*/
+/*    border-radius: 22px;*/
+/*}*/

@@ -23,7 +23,7 @@ const PlusFavouritesButton = () => {
   };
 
   return (
-    <button onClick={handleClick}>Add to Favorites</button>
+    <button className="plus" onClick={handleClick}><span>+</span></button>
   );
 };
 
