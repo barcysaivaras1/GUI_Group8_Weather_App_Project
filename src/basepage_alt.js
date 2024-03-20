@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './basepage.css'; 
-import { Link } from 'react-router-dom';
+import { Link ,useLocation, useNavigate} from 'react-router-dom';
 import Animate_page from './Animate-page';
 import vectorImage from './img/vector.svg';
 import rectangle44 from './img/rectangle-44.svg';
@@ -17,7 +17,7 @@ import BottomPanelImplemented from "./bottomPanel";
 import {Drawer} from "vaul";
 import BottomPanel from "./bottomPanel";
 
-function BasePage() {
+function BasePage_alt() {
   // State for London's weather
   const [currentTemp, setCurrentTemp] = useState('');
   const [weatherDesc, setWeatherDesc] = useState('');
@@ -40,6 +40,12 @@ function BasePage() {
   const handle8DayClick = () => {
     setActiveForecast('5-Day');
   };
+
+  const location = useLocation();
+    const [selected_city, setSelectedCity] = useState(location.state?.selected_city || []);
+    useEffect(() => {
+        console.log("Final Array:", selected_city); // Log only once after initial render
+        }, [selected_city]); // Only re-run when finalArray changes IMPORTANT: selectedCity has been fetched from resultsPage
 
   const activeButtonStyle = {
     // Adjust the left position based on whether 'Today' or '8-Day' is active
@@ -89,8 +95,8 @@ function BasePage() {
         const todayForecasts = forecasts.filter(forecast => {
           const forecastDate = new Date(forecast.dt * 1000);
           return forecastDate.getDate() === today.getDate() &&
-                 forecastDate.getMonth() === today.getMonth() &&
-                 forecastDate.getFullYear() === today.getFullYear();
+                forecastDate.getMonth() === today.getMonth() &&
+                forecastDate.getFullYear() === today.getFullYear();
         });
         const averageTempToday = todayForecasts.reduce((acc, forecast) => acc + forecast.main.temp, 0) / todayForecasts.length;
         setDailyAverageTemp(Math.round(averageTempToday));
@@ -135,13 +141,12 @@ function BasePage() {
   
     fetchForecastData();
   }, []);
-
   // Fetch weather for London
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`
+          `https://api.openweathermap.org/data/2.5/weather?q=${selected_city}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`
         );
         setCurrentTemp(Math.round(response.data.main.temp));
         setWeatherDesc(response.data.weather[0].description);
@@ -161,7 +166,7 @@ function BasePage() {
       try {
         // Replace "London" with a dynamic city name if needed
         const forecastResponse = await axios.get(
-          `https://api.openweathermap.org/data/2.5/forecast?q=London&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`
+          `https://api.openweathermap.org/data/2.5/forecast?q=${selected_city}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`
         );
         setForecastData(forecastResponse.data.list);
       } catch (error) {
@@ -432,4 +437,4 @@ function BasePage() {
  );
 }
 
-export default BasePage; 
+export default BasePage_alt; 

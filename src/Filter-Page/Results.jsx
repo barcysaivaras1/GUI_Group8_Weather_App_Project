@@ -1,6 +1,6 @@
 import React, { useState ,useEffect } from "react";
 import './Results.css';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useNewWeatherData from "../components/Search-Page/NewWeatherHook";
 import Animate_page from "../Animate-page";
 import SearchResults from "../components/Search-Page/results";
@@ -15,6 +15,14 @@ export const ResultsPage = () =>{
     const weatherData = useNewWeatherData(finalArray);
     console.log(weatherData[2])
 
+    const navigate = useNavigate();
+
+    const selected_city = "Manchester" //Hardcoded Manchester for now, use handleApplyClick as onClick in <SearchResults> so that it navigates to basepage_alt
+    const handleApplyClick = () => {
+        // const testArray = [1, 2, 3, 4, 5];  // Your test array
+        navigate("/", { state: {selected_city} }); //IMPORTANT: this sends selected_city to basepage_alt
+    }
+
     return(
         <Animate_page>
         <div className="page">
@@ -22,6 +30,7 @@ export const ResultsPage = () =>{
             <span className="find-places-to-go">Find Places To Go</span>
             <div className="cont">
                 <div className="results-container">
+                    <button onClick = {handleApplyClick} >redirect to basepage_alt</button>
                 {weatherData.map((data, index) => (
                 <SearchResults
                     key={index}
