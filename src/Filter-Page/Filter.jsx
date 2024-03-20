@@ -50,7 +50,7 @@ console.log(values);
 
 const handleButtonPress = (e) => {
 	const id = e.target.id;
-	const weather = ["Rain", "Clouds", "Sun", "Snow", "Wind"];
+	const weather = ["Rain", "Clouds", "Sun", "Snow", "Wind","Clear"];
 	const continent = ["africa", "europe", "asia", "north-america", "south-america"];
 	if (e.target.style.background === "white") {
 		if (weather.includes(id)) {
@@ -201,6 +201,7 @@ return (
 		<button className='btn' id="Snow" onClick={(e) => handleButtonPress(e)}>Snow</button>
 		<button className='btn' id="Wind" onClick={(e) => handleButtonPress(e)}>Wind</button>
 		<button className='btn' id="Clouds" onClick={(e) => handleButtonPress(e)}>Clouds</button>
+		<button className='btn' id="Clear" onClick={(e) => handleButtonPress(e)}>Clear</button>
 	</div>
 );
 };
@@ -213,6 +214,7 @@ return (
 		<button id="Europe" className='btn' onClick={() => handleContinentClick("Europe")}>Europe</button>
 		<button id="North-America" className='btn' onClick={() => handleContinentClick("North-America")}>North America</button>
 		<button id="South-America" className='btn' onClick={() => handleContinentClick("South-America")}>South America</button>
+		<button id="Oceania" className='btn' onClick={() => handleContinentClick("Oceania")}>Oceania</button>
 	</div>
 );
 };
