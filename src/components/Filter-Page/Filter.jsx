@@ -152,6 +152,7 @@ const FilterCountriesByContinent = async (continent) => {
 };
 
 return (
+	<Animate_page>
 	<div className="Filter">
 		<div className="group"></div>
 		<div class="boxes">
@@ -189,6 +190,7 @@ return (
 		{/* {console.log({ pathname: "/filter/results", state: { finalArray } })} */}
 
 	</div>
+	</Animate_page>
 );
 };
 
