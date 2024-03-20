@@ -199,15 +199,6 @@
   border-radius: 3.5px;
 }
 
-.favourites .arrow {
-  left: 375px;
-  position: absolute;
-  width: 13px;
-  height: 22px;
-  top: 172px;
-  mix-blend-mode: exclusion;
-}
-
 .favourites .img {
   left: 40px;
   position: absolute;
@@ -221,7 +212,7 @@
   position: absolute;
   width: 323px;
   height: 105px;
-  top: 67px;
+  top: 115px;
   left: 40px;
 }
 
@@ -276,7 +267,7 @@
 .favourites .text-wrapper-5 {
   position: absolute;
   width: 169px;
-  top: 181px;
+  top: 242px;
   left: 37px;
   opacity: 0.8;
   font-family: "Helvetica Neue-Medium", Helvetica;
@@ -440,8 +431,11 @@
 }
 
 .favourites .container {
-  margin-top: 14rem;
+  margin-top: 16rem;
   justify-content: space-around;
+  height: 38rem;
+  padding: 1rem;
+  padding-left: 0rem;
 }
 
 .favourites .box {
@@ -450,15 +444,22 @@
   margin-left: 2rem;
 }
 
-/*Arrow Symbol*/
-.favourites .back-arrow {
-  position: relative;
-  width: 10.889px;
-  height: 23.84px;
-  top: 2rem;
-  right: 25rem;
-  background: url(../Filter-Page/assets/images/e98cccf9-a070-4e0e-9663-fffb79f8e3c8.png)
-    no-repeat center;
+.arrow {
+  position: absolute;
+  width: 13.889px;
+  height: 14.84px;
+  top: 48px;
+  left: 36px;
+  /*background: url(./assets/images/arrow.png);*/
+  /*no-repeat center;*/
   background-size: cover;
   z-index: 23;
+  color: #e9f1ff;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  border-radius: 3px;
 }
