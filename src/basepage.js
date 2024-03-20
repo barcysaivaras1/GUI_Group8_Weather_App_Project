@@ -265,6 +265,18 @@ function BasePage() {
                    </div>
                  </div>
                  <div className="rectangle-3"></div>
+
+                  
+                   <div className="group-3">
+                     <div className="overlap-4">
+                       <div className="ellipse"></div>
+                       <div className="overlap-group-wrapper">
+                         <div className="union-wrapper">
+                           <div className="union-wrapper"></div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
                    <div className="rectangle-3"></div>
                  </div>
                </div>
@@ -391,4 +403,4 @@ function BasePage() {
  );
 }
 
-export default BasePage; 
+export default BasePage;
