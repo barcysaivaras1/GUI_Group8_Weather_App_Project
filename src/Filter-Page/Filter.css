@@ -314,6 +314,11 @@
   background-color: hsla(0, 0%, 0%, 0.5);
   border-radius: 20px;
   z-index: 31;
+  border: 1.5px white solid;
+  transition: 0.2s;
+}
+.Filter .btn:hover{
+  background-color: hsla(201, 85%, 45%, 0.5);
 }
 .Filter .rectangle-11 {
   position: relative;
@@ -326,7 +331,13 @@
   border: 3px solid rgba(255, 255, 255, 0.37);
   z-index: 15;
   border-radius: 46px;
+  transition: 0.2s;
 }
+.Filter .rectangle-11:hover {
+  background-color: hsla(201, 85%, 45%, 0.5);
+}
+
+
 .Filter .apply {
   display: flex;
   align-items: center;
@@ -442,6 +453,8 @@
   position: absolute;
   left: -118px;
 }
+
+
 /* Styles for the slider thumb */
 .Filter .slider .thumb {
   position: absolute;
