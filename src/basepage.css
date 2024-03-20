@@ -254,16 +254,31 @@ body{
   box-shadow: var(--text-shadow-normal);
 }
 
-.basepage .text-wrapper-8 {
+.basepage .time {
   position: absolute;
   width: 50px;
   top: 113px;
-  left: 14px;
+  left: 20px;
   text-shadow: -2px 3px 1px #0000001a;
   font-family: "Helvetica Neue-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  box-shadow: var(--text-shadow-normal);
+}
+
+.basepage .date {
+  position: absolute;
+  width: 50px;
+  top: 113px;
+  left: 1.5rem;
+  text-shadow: -2px 3px 1px #0000001a;
+  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1rem;
   letter-spacing: 0;
   line-height: normal;
   box-shadow: var(--text-shadow-normal);

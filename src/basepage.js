@@ -245,12 +245,12 @@ function BasePage() {
                  {activeForecast === 'Today' ? (
                   <>
                   <div className="text-wrapper-7">{forecastData && forecastData.length > 0 ? `${Math.round(forecastData[0].main.temp)}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8">{forecastData && forecastData.length > 0 ? `${new Date(forecastData[0].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                  <div className="time">{forecastData && forecastData.length > 0 ? `${new Date(forecastData[0].dt * 1000).getHours()}:00` : 'Loading...'}</div>
                   </>
                   ) : (
                   <>
                   <div className="text-wrapper-7" > {averageTemp}°C</div>
-                  <div className="text-wrapper-8" style={{ fontSize: '12px' }}>{new Date().toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                  <div className="date">{new Date().toLocaleDateString('en-US', { weekday: 'long' }).substring(0,3)}</div>
                   </>
                  )}
              <img className="weather-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
@@ -285,12 +285,12 @@ function BasePage() {
                  {activeForecast === 'Today' ? (
                   <>
                   <div className="text-wrapper-9">{forecastData && forecastData.length > 1 ? `${Math.round(forecastData[1].main.temp)}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8">{forecastData && forecastData.length > 1 ? `${new Date(forecastData[1].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                  <div className="time">{forecastData && forecastData.length > 1 ? `${new Date(forecastData[1].dt * 1000).getHours()}:00` : 'Loading...'}</div>
                   </>
                   ) : (
                   <>
                   <div className="text-wrapper-9" >{nextDayAverageTemp ? `${nextDayAverageTemp}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                  <div className="date">{(new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-US', { weekday: 'long' })).substring(0,3)}</div>
                   </>
                   )}
                    <img className="weather-icon" src={forecastData && forecastData.length > 1 ? `http://openweathermap.org/img/wn/${forecastData[1].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
@@ -310,12 +310,12 @@ function BasePage() {
                  {activeForecast === 'Today' ? (
                   <>
                   <div className="text-wrapper-9">{forecastData && forecastData.length > 2 ? `${Math.round(forecastData[2].main.temp)}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8">{forecastData && forecastData.length > 2 ? `${new Date(forecastData[2].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                  <div className="time">{forecastData && forecastData.length > 2 ? `${new Date(forecastData[2].dt * 1000).getHours()}:00` : 'Loading...'}</div>
                   </>
                   ) : (
                    <>
                   <div className="text-wrapper-9" >{dayAfterNextAverageTemp ? `${dayAfterNextAverageTemp}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                  <div className="date">{new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('en-US', { weekday: 'long' }).substring(0,3)}</div>
                   </>
                   )}
                    <img className="weather-icon" src={forecastData && forecastData.length > 1 ? `http://openweathermap.org/img/wn/${forecastData[1].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
@@ -332,12 +332,12 @@ function BasePage() {
                      {activeForecast === 'Today' ? (
                       <>
                       <div className="text-wrapper-7">{forecastData && forecastData.length > 3 ? `${Math.round(forecastData[3].main.temp)}°C` : 'Loading...'}</div>
-                      <div className="text-wrapper-10">{forecastData && forecastData.length > 3 ? `${new Date(forecastData[3].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                      <div className="time">{forecastData && forecastData.length > 3 ? `${new Date(forecastData[3].dt * 1000).getHours()}:00` : 'Loading...'}</div>
                       </>
                     ) : (
                     <>
                     <div className="text-wrapper-7" >{twoDaysAfterNextTemp ? `${twoDaysAfterNextTemp}°C` : 'Loading...'}</div>
-                    <div className="text-wrapper-10" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 3)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                    <div className="date">{new Date(new Date().setDate(new Date().getDate() + 3)).toLocaleDateString('en-US', { weekday: 'long' }).substring(0,3)}</div>
                     </>
                     )}
                        <img className="weather-icon" src={forecastData && forecastData.length > 3 ? `http://openweathermap.org/img/wn/${forecastData[2].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
