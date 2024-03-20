@@ -1,0 +1,18 @@
+.results-list{
+    width:90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px royalblue;
+    border-radius: 10px;
+    margin-top: 2rem;
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 10px 20px;
+}
+.country:hover{
+    background-color: #efefef;
+}
+.country{
+    margin-bottom: 6px;
+}
