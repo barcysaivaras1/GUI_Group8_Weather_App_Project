@@ -46,8 +46,8 @@ function Favourites() {
             <div className="text-wrapper-5">{locations.length} Favourites</div>
             <FavouriteBox locations={locations} />
           </div>
-          <Link to="/"> 
-            <div className="back-arrow"></div>
+          <Link to="/">
+            <i className="arrow"></i>
           </Link>
         </div>
       </div>

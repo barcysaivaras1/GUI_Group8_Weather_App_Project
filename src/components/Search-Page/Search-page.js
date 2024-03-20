@@ -57,9 +57,9 @@ return (
                 
             ))}
         </div>
-        <Link to="/"> 
-			<div class="arrow"></div>`
-		</Link>
+        <Link to="/">
+            <i className="arrow"></i>
+        </Link>
     </div>
     </Animate_page>
 );
