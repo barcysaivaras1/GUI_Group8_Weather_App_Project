@@ -329,4 +329,3 @@ function BasePage() {
 
 export default BasePage;
 
-

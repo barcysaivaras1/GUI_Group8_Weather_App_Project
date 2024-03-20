@@ -1,32 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useState ,useEffect } from "react";
 import './Results.css';
-import { Link } from "react-router-dom";
-import SearchResults from "../results";
-import useWeatherData from "../fetchWeather";
+import { Link, useLocation } from "react-router-dom";
+import useNewWeatherData from "../components/Search-Page/NewWeatherHook";
 import Animate_page from "../Animate-page";
 
-//This is the results page, i have been trying to implement it so that it would go through an array of cities
-// and it would return a result box for each city with its true live value, this seems to be a lot more difficult than i thought
-// or im missing some kind of syntax
-//There is currently a very tiny button on the left side that when clicked will give live data for London
-//I changed the handleInputChange to read the event id instead of the value so that i dont have to use input
 export const ResultsPage = () =>{
-    const {city,weatherData,forecastData,country,loading,error,handleInputChange,handleSubmit,handleKeyPress} = useWeatherData();
     const cities = ["London","Kyoto","Dubai","Manchester"]
+    const location = useLocation();
+    const [finalArray, setFinalArray] = useState(location.state?.finalArray || []);
+    useEffect(() => {
+        console.log("Final Array:", finalArray); // Log only once after initial render
+        }, [finalArray]); // Only re-run when finalArray changes
+    const weatherData = useNewWeatherData(finalArray);
+    console.log(weatherData[2])
+
     return(
         <Animate_page>
         <div className="page">
-            <div class="Results">
-            <span class="find-places-to-go">Find Places To Go</span>
+            <div className="Results">
+            <span className="find-places-to-go">Find Places To Go</span>
             <div className="results-container">
-                <ResultBox/>
+                {weatherData.map((data, index) => (
+                    <ResultBox key={index} city = {data.name} country = {data.sys.country}
+                    temp = {data.main && (
+                        <p className='temp'>{Math.round(data.main.temp)}°C</p>
+                        )}
+                    image = {`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="Weather Icon" />
+                ))}
             </div>
-            <div class="options"></div>
+            <div className="options"></div>
             <Link to="/filter"> 
-            <div class="arrow"></div>
+            <div className="arrow"></div>
             </Link>
-            <div class="filter-box"></div>
-            <span class="filters-applied">Filters Applied</span>
+            <div className="filter-box"></div>
+            <span className="filters-applied">Filters Applied</span>
             </div>
         </div>
         </Animate_page>
@@ -36,27 +43,16 @@ export default ResultsPage;
 
 
 //This creates a results box, THIS IS FOR TESTING, better to use results component (results.js)
-const ResultBox = () =>{
+const ResultBox = (props) =>{
 
     return(
-        <div class="result-box">
-        <div class="city-country">
-        <span class="city">Kyoto, <br /></span>
-        <span class="country">JP</span>
+        <div className="result-box">
+        <div className="city-country">
+        <span className="city">{props.city}, <br /></span>
+        <span className="country">{props.country}</span>
         </div>
-        <span class="temperature"> 5º</span>
-        <div class="weather-type"></div>
+        <span className="temperature"> {props.temp}</span>
+        <div className="weather-type">{props.image}</div>
         </div>
     )
-}
-
-//This was for testing
-const ButtonPress = (val) =>{
-    const {city,weatherData,forecastData,country,loading,error,handleInputChange,handleSubmit,handleKeyPress} = useWeatherData();
-    var val = "London"
-
-    useEffect(() => {
-        handleInputChange(val)
-    }, [handleInputChange])
-
 }
