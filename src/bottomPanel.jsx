@@ -19,7 +19,7 @@ import amsterdamImg from './images/amsterdam.jpeg';
 function BottomPanel() {
     const overflowPanel = {
         paddingTop: '5px',
-        maxHeight: '700px', /* Adjust based on your needs */
+        maxHeight: '550px', /* Adjust based on your needs */
         overflowY: 'auto',
         overflowX: 'hidden',
     }
