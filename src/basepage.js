@@ -160,8 +160,11 @@ function BasePage() {
       <div className="basepage">
         <div className="div">
           <div className="overlap">
-            <div className="temp">{currentTemp ? `${currentTemp}º` : 'Loading...'}</div>
-            <img className="weather-main-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
+
+            <img className="weather-main-icon"
+                 src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''}
+                 alt="Weather Icon"/>
+            <div className="temp">{currentTemp ? `${currentTemp}º` : '...'}</div>
             <div className="weather-desc">{weatherDesc ? weatherDesc : 'Loading...'}</div>
             <div className="text-wrapper-2">London</div>
             <div className="text-wrapper-3">You are in</div>
@@ -169,9 +172,9 @@ function BasePage() {
             <div className="max-temp">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
             <div className="temp-bar"></div>
           </div>
-          <PlusFavouritesButton />
+          <PlusFavouritesButton/>
           <Link to="/search">
-            <div className="search-box">
+          <div className="search-box">
               <button className="button-style search-button">
                 <div className="overlap-group">
                   <div className="search-text">Search</div>

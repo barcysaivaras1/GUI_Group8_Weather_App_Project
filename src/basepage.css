@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Helvetica Neue-Regular";
+  src: url('../public/fonts/helvetica-neue-master/HelveticaNeue-Regular.otf') format('opentype');
+}
+
 .basepage {
   /* background-color: black;*/
   /*display: flex;*/
@@ -71,12 +76,13 @@
   width: 196px;
   top: 97px;
   left: 40px;
-  font-family: 'Helvetica Neue-Regular';
+  /*font-family: (--default-font-family);*/
   color: #ffffff;
   font-size: 54px;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  font-family: "Helvetica Neue-Regular";
 }
 
 .basepage .text-wrapper-3 {
