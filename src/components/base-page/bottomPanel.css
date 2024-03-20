@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Helvetica Neue-Regular";
-    src: url("../public/fonts/helvetica-neue-master/HelveticaNeue-Regular.otf")
+    src: url("../../../public/fonts/helvetica-neue-master/HelveticaNeue-Regular.otf")
     format("opentype");
 }
 @font-face {
     font-family: "Helvetica Neue-Bold";
-    src: url("../public/fonts/helvetica-neue-master/HelveticaNeue-Bold.otf")
+    src: url("../../../public/fonts/helvetica-neue-master/HelveticaNeue-Bold.otf")
     format("opentype");
 }
 @keyframes gradientBackground {

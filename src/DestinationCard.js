@@ -1,6 +1,6 @@
 // DestinationCard.js
 import React from 'react';
-import './bottomPanel.css';
+import './components/base-page/bottomPanel.css';
 
 function DestinationCard({ city, temperature, imageUrl }) {
     console.log(city, temperature, imageUrl); // Check the props values

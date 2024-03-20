@@ -1,11 +1,11 @@
 import React, { useState,  useEffect } from 'react';
 import Slider from 'react-slider';
 import './Filter.css';
-import useCitySelector from '../components/useCountry';
-import useNewWeatherData from '../components/Search-Page/NewWeatherHook';
+import useCitySelector from '../useCountry';
+import useNewWeatherData from '../Search-Page/NewWeatherHook';
 import ResultsPage from './Results';
 import { Link, useNavigate } from 'react-router-dom';
-import Animate_page from '../Animate-page';
+import Animate_page from '../../Animate-page';
 
 
 // This is the page where you can apply different filters

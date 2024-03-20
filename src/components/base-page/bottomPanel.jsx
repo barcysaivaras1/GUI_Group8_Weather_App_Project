@@ -2,18 +2,18 @@
 import {Drawer} from "vaul";
 import React, {useEffect, useState} from 'react';
 import './bottomPanel.css';
-import DestinationCard from "./DestinationCard";
-import dubaiImg from './images/dubai.png';
-import newYorkImg from './images/newyork.png';
-import seoulImg from './images/seoul.png';
-import miamiImg from './images/miami.jpg';
-import shanghaiImg from './images/shanghai.jpeg';
-import singaporeImg from './images/singapore.jpeg';
-import sydneyImg from './images/sydney.jpeg';
-import losAngImg from './images/los-angeles.jpeg';
-import kochiImg from './images/kochi.jpeg';
-import bangkokImg from './images/bangkok.jpeg';
-import amsterdamImg from './images/amsterdam.jpeg';
+import DestinationCard from "../../DestinationCard";
+import dubaiImg from '../images/dubai.png';
+import newYorkImg from '../images/newyork.png';
+import seoulImg from '../images/seoul.png';
+import miamiImg from '../images/miami.jpg';
+import shanghaiImg from '../images/shanghai.jpeg';
+import singaporeImg from '../images/singapore.jpeg';
+import sydneyImg from '../images/sydney.jpeg';
+import losAngImg from '../images/los-angeles.jpeg';
+import kochiImg from '../images/kochi.jpeg';
+import bangkokImg from '../images/bangkok.jpeg';
+import amsterdamImg from '../images/amsterdam.jpeg';
 
 
 function BottomPanel() {
