@@ -47,8 +47,8 @@ const useCitySelector = () => {
     setCapitalCity(countryData.capital);
 
     // Update city array with the capital city and the first four cities
-    const first25Cities = data.slice(0, 25).map(city => city.name);
-    setCityArray([countryData.capital, ...first25Cities]);
+    const firstFourCities = data.slice(0, 4).map(city => city.name);
+    setCityArray([countryData.capital, ...firstFourCities]);
   };
 
   const handleSearchChange = event => {
