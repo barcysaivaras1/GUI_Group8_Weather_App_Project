@@ -14,6 +14,9 @@ import BasePage_alt from './components/base-page/basepage_alt.js';
 
 export const AppRoute = () =>{
     return (
+      //This function carries out all the routing between the pages and organises
+      //them in a file directory manner.
+      //It imports all page components so that it can redirect them
         <div>
           <AnimatePresence>
             <Router>
