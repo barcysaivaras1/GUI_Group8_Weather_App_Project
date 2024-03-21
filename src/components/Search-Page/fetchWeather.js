@@ -14,13 +14,13 @@ setLoading(true);
 setError(null);
 try {
     const response = await axios.get(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`
     );
     setWeatherData(response.data);
     setCountry(response.data.sys.country);
 
     const forecastResponse = await axios.get(
-    `https://api.openweathermap.org/data/2.5/forecast?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=8753df73a21dbdc377ad73e23efc22b4`
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=9df311f9fe645c18fd874a670d03f0ca`
     );
     setForecastData(forecastResponse.data.list);
 } catch (error) {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
-import './basepage.css'; 
+import './basepage_alt.css';
 import { Link ,useLocation, useNavigate} from 'react-router-dom';
 import Animate_page from '../../Animate-page';
 import vectorImage from '../img/vector.svg';
@@ -87,7 +87,7 @@ function BasePage_alt() {
   useEffect(() => {
     const fetchForecastData = async () => {
       try {
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=51.5085&lon=-0.1257&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`);
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=51.5085&lon=-0.1257&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`);
         const forecasts = response.data.list;
         const today = new Date();
   
@@ -146,7 +146,7 @@ function BasePage_alt() {
     const fetchWeatherData = async () => {
       try {
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${selected_city}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`
+          `https://api.openweathermap.org/data/2.5/weather?q=${selected_city}&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`
         );
         setCurrentTemp(Math.round(response.data.main.temp));
         setWeatherDesc(response.data.weather[0].description);
@@ -166,7 +166,7 @@ function BasePage_alt() {
       try {
         // Replace "London" with a dynamic city name if needed
         const forecastResponse = await axios.get(
-          `https://api.openweathermap.org/data/2.5/forecast?q=${selected_city}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`
+          `https://api.openweathermap.org/data/2.5/forecast?q=${selected_city}&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`
         );
         setForecastData(forecastResponse.data.list);
       } catch (error) {
@@ -185,7 +185,7 @@ function BasePage_alt() {
     const fetchWeatherDataForCities = async () => {
       const apiKey = '8753df73a21dbdc377ad73e23efc22b4'; 
       const weatherDataPromises = cities.map(city =>
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city.name}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city.name}&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`)
       );
 
       try {
@@ -231,6 +231,34 @@ function BasePage_alt() {
 
   const [locations, setLocations] = useState(['Tokyo', 'Osaka', 'Kyoto']);
 
+  const x1 = {
+    position: 'fixed',
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0'
+  }
+
+  const x2 = {
+    position: 'fixed',
+    bottom: '0',
+    left: '0',
+    right: '0',
+    display: 'flex',
+    flexDirection: 'column',
+    maxHeight: '96vh'
+  }
+
+  const x3 = {
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    overflow: 'auto',
+    padding: '1rem' /* Adjust based on your framework's base spacing scale */
+  }
+
  return (
   <Animate_page>
    <div className="basepage">
@@ -241,7 +269,7 @@ function BasePage_alt() {
          <img className="weather-main-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
          <div className="weather-desc">{weatherDesc ? weatherDesc : 'Loading...'}</div>
          <div className="text-wrapper-2">{selected_city}</div>
-         <div className="text-wrapper-3">Viewing Weather of </div>
+         <div className="text-wrapper-3">Weather in </div>
          <div className="min-temp">{tempMin ? `${tempMin}º` : 'Loading...'}</div>
          <div className="max-temp">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
          <div className="temp-bar"></div>
@@ -266,12 +294,12 @@ function BasePage_alt() {
                  {activeForecast === 'Today' ? (
                   <>
                   <div className="text-wrapper-7">{forecastData && forecastData.length > 0 ? `${Math.round(forecastData[0].main.temp)}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8">{forecastData && forecastData.length > 0 ? `${new Date(forecastData[0].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                  <div className="time">{forecastData && forecastData.length > 0 ? `${new Date(forecastData[0].dt * 1000).getHours()}:00` : 'Loading...'}</div>
                   </>
                   ) : (
                   <>
                   <div className="text-wrapper-7" > {averageTemp}°C</div>
-                  <div className="text-wrapper-8" style={{ fontSize: '12px' }}>{new Date().toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                  <div className="time" style={{ fontSize: '12px' }}>{new Date().toLocaleDateString('en-US', { weekday: 'long' })}</div>
                   </>
                  )}
             <div className="group-3">
@@ -284,7 +312,7 @@ function BasePage_alt() {
                    </div>
                    </div>
                  </div>
-                 <div className="rectangle-3"></div>
+                 {/*<div className="rectangle-3"></div>*/}
 
                   <img className="weather-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
                    <div className="group-3">
@@ -305,12 +333,12 @@ function BasePage_alt() {
                  {activeForecast === 'Today' ? (
                   <>
                   <div className="text-wrapper-9">{forecastData && forecastData.length > 1 ? `${Math.round(forecastData[1].main.temp)}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8">{forecastData && forecastData.length > 1 ? `${new Date(forecastData[1].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                  <div className="time">{forecastData && forecastData.length > 1 ? `${new Date(forecastData[1].dt * 1000).getHours()}:00` : 'Loading...'}</div>
                   </>
                   ) : (
                   <>
                   <div className="text-wrapper-9" >{nextDayAverageTemp ? `${nextDayAverageTemp}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                  <div className="time" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
                   </>
                   )}
                    <img className="weather-icon" src={forecastData && forecastData.length > 1 ? `http://openweathermap.org/img/wn/${forecastData[1].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
@@ -330,12 +358,12 @@ function BasePage_alt() {
                  {activeForecast === 'Today' ? (
                   <>
                   <div className="text-wrapper-9">{forecastData && forecastData.length > 2 ? `${Math.round(forecastData[2].main.temp)}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8">{forecastData && forecastData.length > 2 ? `${new Date(forecastData[2].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                  <div className="time">{forecastData && forecastData.length > 2 ? `${new Date(forecastData[2].dt * 1000).getHours()}:00` : 'Loading...'}</div>
                   </>
                   ) : (
                    <>
                   <div className="text-wrapper-9" >{dayAfterNextAverageTemp ? `${dayAfterNextAverageTemp}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                  <div className="time" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
                   </>
                   )}
                    <img className="weather-icon" src={forecastData && forecastData.length > 1 ? `http://openweathermap.org/img/wn/${forecastData[1].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
@@ -352,12 +380,12 @@ function BasePage_alt() {
                      {activeForecast === 'Today' ? (
                       <>
                       <div className="text-wrapper-7">{forecastData && forecastData.length > 3 ? `${Math.round(forecastData[3].main.temp)}°C` : 'Loading...'}</div>
-                      <div className="text-wrapper-10">{forecastData && forecastData.length > 3 ? `${new Date(forecastData[3].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                      <div className="time">{forecastData && forecastData.length > 3 ? `${new Date(forecastData[3].dt * 1000).getHours()}:00` : 'Loading...'}</div>
                       </>
                     ) : (
                     <>
                     <div className="text-wrapper-7" >{twoDaysAfterNextTemp ? `${twoDaysAfterNextTemp}°C` : 'Loading...'}</div>
-                    <div className="text-wrapper-10" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 3)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                    <div className="time" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 3)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
                     </>
                     )}
                        <img className="weather-icon" src={forecastData && forecastData.length > 3 ? `http://openweathermap.org/img/wn/${forecastData[2].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
@@ -402,12 +430,12 @@ function BasePage_alt() {
         </button>
        </div>
        </Link>
-       <Drawer.Root open={isOpen} snapPoints={[0.33, 0.90]} defaultSnap={0.33} modal={false}>
+       <Drawer.Root open={isOpen} snapPoints={[0.58, 0.99]} defaultSnap={0.33} modal={false}>
          <Drawer.Portal>
-           <Drawer.Content>
-             <BottomPanel />
+           <Drawer.Overlay style={x1} />
+           <Drawer.Content style={x2}>
+             <BottomPanel style={x3} />
            </Drawer.Content>
-           <Drawer.Overlay />
          </Drawer.Portal>
        </Drawer.Root>
    {/*<div className="places-to-go">*/}

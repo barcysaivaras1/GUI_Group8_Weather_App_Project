@@ -434,11 +434,12 @@
 }
 
 .favourites .container {
-  margin-top: 16rem;
+  margin-top: 18rem;
   justify-content: space-around;
   height: 38rem;
   padding: 1rem;
   padding-left: 0rem;
+  overflow: scroll;
 }
 
 .favourites .box {

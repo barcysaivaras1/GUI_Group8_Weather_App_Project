@@ -9,12 +9,12 @@ const Weather = () => {
   const fetchData = useCallback(async () => {
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=0af6a68e53720e65df9056000903fa1a`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`
       );
       setWeatherData(response.data);
 
       const forecastResponse = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=0af6a68e53720e65df9056000903fa1a`
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=9df311f9fe645c18fd874a670d03f0ca`
       );
       setForecastData(forecastResponse.data.list);
       console.log(forecastResponse.data.list);

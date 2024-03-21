@@ -7,13 +7,13 @@ const FavouriteBox = ({ locations }) => {
   useEffect(() => {
     const fetchTemperatures = async () => {
       const promises = locations.map(location =>
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=0af6a68e53720e65df9056000903fa1a`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`)
           .then(response => response.json())
       );
       const data = await Promise.all(promises);
       setTemperatures(data);
     };
-    fetchTemperatur=es();
+    fetchTemperatures();
 
     // Clean up function
     return () => {

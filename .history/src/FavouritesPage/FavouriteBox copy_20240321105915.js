@@ -7,7 +7,7 @@ const FavouriteBox = ({ locations }) => {
   useEffect(() => {
     const fetchTemperatures = async () => {
       const promises = locations.map(location =>
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`)
           .then(response => response.json())
       );
       const data = await Promise.all(promises);
