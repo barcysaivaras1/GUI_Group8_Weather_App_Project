@@ -494,7 +494,7 @@ body{
 
 .basepage .rectangle-4 {
   position: absolute;
-  width: 320px;
+  width: 324px !important;
   height: 26px;
   top: 12px;
   left: 27px;
@@ -526,6 +526,7 @@ body{
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  transition: 0.2s;
 }
 /*8-Day text styling*/
 .basepage .text-wrapper-12 {
@@ -541,6 +542,11 @@ body{
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  transition: 0.2s;
+}
+
+.basepage .text-wrapper-12:hover, .basepage .text-wrapper-11:hover {
+  color: #000000 !important;
 }
 
 .basepage .rectangle-wrapper {

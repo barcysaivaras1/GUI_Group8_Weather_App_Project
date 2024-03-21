@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
-import './basepage_alt.css';
+import './basepage.css';
 import { Link ,useLocation, useNavigate} from 'react-router-dom';
 import Animate_page from '../../Animate-page';
 import vectorImage from '../img/vector.svg';
@@ -39,7 +39,7 @@ function BasePage_alt() {
   };
 
   const handle8DayClick = () => {
-    setActiveForecast('5-Day');
+    setActiveForecast('4-Day');
   };
   const location = useLocation();
     const [selected_city, setSelectedCity] = useState(location.state?.selected_city || []);

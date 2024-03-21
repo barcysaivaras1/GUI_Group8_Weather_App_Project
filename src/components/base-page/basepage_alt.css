@@ -492,7 +492,7 @@ body{
 
 .basepage .rectangle-4 {
     position: absolute;
-    width: 320px;
+    width: 323px !important;
     height: 26px;
     top: 12px;
     left: 27px;

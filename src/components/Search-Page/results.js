@@ -11,14 +11,16 @@ function SearchResults(props) {
     };
 
     return (
-        <div className="result-box" onClick = {handleClick}>
-        <div class="city-country">
-            <span class="city">{props.name} <br /></span> 
-            <span class="country">{props.country}</span>
-        </div>
-        <div class="temperature">{props.temp}</div>
-        <img class="weather-type" src={props.image}/>
-        </div>
+        // <div className="all-results" style={{overflow: "scroll"}}>
+                <div className="result-box" onClick = {handleClick}>
+                        <div class="city-country">
+                            <span class="city">{props.name} <br /></span>
+                            <span class="country">{props.country}</span>
+                        </div>
+                    <div class="temperature">{props.temp}</div>
+                <img class="weather-type" src={props.image}/>
+            </div>
+        // </div>
     )
 }
 export default SearchResults;
