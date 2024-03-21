@@ -9,6 +9,7 @@ import {
   Route,
 } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
+import BasePage_alt from './components/base-page/basepage_alt.js';
 
 
 export const AppRoute = () =>{
@@ -17,7 +18,8 @@ export const AppRoute = () =>{
           <AnimatePresence>
             <Router>
               <Routes>
-                <Route path="/" exact element={<BasePage />}/>
+                <Route path="/" exact element={<BasePage/>}/>
+                <Route path="/alt" exact element={<BasePage_alt/>}/>
                 <Route path="/favourites" exact element={<Favourites />}/>
                 <Route path="/search" exact element={<NewWeatherSearchPage />}/>
                 <Route path="/filter" exact element={<FilterPage />}/>

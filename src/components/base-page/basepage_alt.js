@@ -3,16 +3,16 @@ import axios from 'axios';
 import './basepage.css'; 
 import { Link ,useLocation, useNavigate} from 'react-router-dom';
 import Animate_page from '../../Animate-page';
-import vectorImage from './img/vector.svg';
-import rectangle44 from './img/rectangle-44.svg';
-import licensedImage1 from './img/licensed-image-1.png';
-import arrow1 from './img/arrow-1.svg'; 
-import arrow2 from './img/arrow-2.svg';
-import ellipse8 from './img/ellipse-8.svg';
-import city1 from './images/city-1.jpg';
-import city2 from './images/city-2.jpg';
-import city3 from './images/city-3.jpg';
-import city4 from './images/city-4.jpg';
+import vectorImage from '../img/vector.svg';
+import rectangle44 from '../img/rectangle-44.svg';
+import licensedImage1 from '../img/licensed-image-1.png';
+import arrow1 from '../img/arrow-1.svg'; 
+import arrow2 from '../img/arrow-2.svg';
+import ellipse8 from '../img/ellipse-8.svg';
+import city1 from '../images/city-1.jpg';
+import city2 from '../images/city-2.jpg';
+import city3 from '../images/city-3.jpg';
+import city4 from '../images/city-4.jpg';
 import BottomPanelImplemented from "./bottomPanel";
 import {Drawer} from "vaul";
 import BottomPanel from "./bottomPanel";
@@ -44,7 +44,7 @@ function BasePage_alt() {
   const location = useLocation();
     const [selected_city, setSelectedCity] = useState(location.state?.selected_city || []);
     useEffect(() => {
-        console.log("Final Array:", selected_city); // Log only once after initial render
+        console.log("Selected_city:", selected_city); // Log only once after initial render
         }, [selected_city]); // Only re-run when finalArray changes IMPORTANT: selectedCity has been fetched from resultsPage
 
   const activeButtonStyle = {
@@ -225,7 +225,7 @@ function BasePage_alt() {
          <div className="temp">{currentTemp ? `${currentTemp}º` : 'Loading...'}</div>
          <img className="weather-main-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
          <div className="weather-desc">{weatherDesc ? weatherDesc : 'Loading...'}</div>
-         <div className="text-wrapper-2"></div>
+         <div className="text-wrapper-2">{selected_city}</div>
          <div className="text-wrapper-3">Viewing Weather of </div>
          <div className="min-temp">{tempMin ? `${tempMin}º` : 'Loading...'}</div>
          <div className="max-temp">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
@@ -258,7 +258,6 @@ function BasePage_alt() {
                   <div className="text-wrapper-8" style={{ fontSize: '12px' }}>{new Date().toLocaleDateString('en-US', { weekday: 'long' })}</div>
                   </>
                  )}
-             <img className="weather-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
             <div className="group-3">
               <div className="overlap-4">
                  <div className="ellipse"></div>
