@@ -522,7 +522,7 @@ body{
   height: 21px;
   top: 15px !important;
   left: 65px !important;
-  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
   font-weight: 400;
   color: #000000;
   font-size: 15px;
@@ -537,19 +537,15 @@ body{
   width: 85px;
   height: 21px;
   top: 15px !important;
-  left: 225px;
-  font-family: "Helvetica Neue-Regular", Helvetica;
+  left: 225px !important;
+  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
   font-weight: 400;
-  color: #c7c7c7;
+  color: #000000;
   font-size: 15px;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
-  /*transition: 0.2s;*/
-}
-
-.basepage .text-wrapper-12:hover, .basepage .text-wrapper-11:hover {
-  color: #000000 !important;
+  transition: 0.2s;
 }
 
 .basepage .rectangle-wrapper {
