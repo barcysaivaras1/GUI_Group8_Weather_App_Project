@@ -10,6 +10,8 @@ const animations = {
 const Animate_page = ({children}) =>{
 
     return(
+        //This simply creates a simple animation for all the pages
+        //The animation will slide new pages up, this is applied to all pages
         <motion.div 
         variants={animations} 
         initial="initial" 
