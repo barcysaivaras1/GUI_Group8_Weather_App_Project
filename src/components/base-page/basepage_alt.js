@@ -33,11 +33,11 @@ function BasePage_alt() {
 
   const averageTemp = tempMin !== null && tempMax !== null ? Math.ceil((tempMin + tempMax) / 2) : 'Loading...';
 
-
+  // Sets setActiveForecast to Today
   const handleTodayClick = () => {
     setActiveForecast('Today');
   };
-
+  // Sets setActiveForecast to 4-day
   const handle8DayClick = () => {
     setActiveForecast('4-Day');
   };
@@ -141,7 +141,7 @@ function BasePage_alt() {
   
     fetchForecastData();
   }, []);
-  // Fetch weather for London
+  // Fetch weather for selected city
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
@@ -160,11 +160,10 @@ function BasePage_alt() {
     fetchWeatherData();
   }, []); // Runs once after initial render to fetch London's weather
 
-
+ //Fetch data for selected city
   useEffect(() => {
     const fetchForecastData = async () => {
       try {
-        // Replace "London" with a dynamic city name if needed
         const forecastResponse = await axios.get(
           `https://api.openweathermap.org/data/2.5/forecast?q=${selected_city}&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`
         );
@@ -264,7 +263,7 @@ function BasePage_alt() {
    <div className="basepage">
      <div className="div">
        <div className="overlap">
-       
+       // Overlap to display current temperature, description, min and max temp using API key
          <div className="temp">{currentTemp ? `${currentTemp}º` : 'Loading...'}</div>
          <img className="weather-main-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
          <div className="weather-desc">{weatherDesc ? weatherDesc : 'Loading...'}</div>
@@ -284,6 +283,7 @@ function BasePage_alt() {
           </button>
         </div>
        </Link>
+  //Overlap to include daily and hourly forecast
        <div className="overlap-2">
          <div className="overlap-wrapper">
            <div className="overlap-3">
