@@ -39,7 +39,7 @@ function BasePage() {
   };
 
   const handle8DayClick = () => {
-    setActiveForecast('5-Day');
+    setActiveForecast('4-Day');
   };
 
   const activeButtonStyle = {
@@ -416,7 +416,7 @@ function BasePage() {
           }}></div>
           <div className="rectangle-5" style={activeButtonStyle}></div>
           <div className="text-wrapper-11" onClick={handleTodayClick} style={{...todayTextStyle, position: 'absolute', left: '29px', top: '14px'}}>Today</div>
-          <div className="text-wrapper-12" onClick={handle8DayClick} style={{...eightDayTextStyle, position: 'absolute', right: '29px', top: '14px'}}>5-Day</div>
+          <div className="text-wrapper-12" onClick={handle8DayClick} style={{...eightDayTextStyle, position: 'absolute', right: '29px', top: '14px'}}>4-Day</div>
         </div>
        </div>
        <Link to="/favourites">
