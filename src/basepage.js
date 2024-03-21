@@ -64,8 +64,6 @@ function BasePage() {
     cursor: 'pointer',
   };
 
-  
-
 
   // State for cities and their weather information in the slider
   const [cities, setCities] = useState([
@@ -74,7 +72,7 @@ function BasePage() {
     { name: "Bangkok", image: city2, weather: 'Loading weather...' },
     { name: "Sydney", image: city3, weather: 'Loading weather...' },
     { name: "Cairo", image: city4, weather: 'Loading weather...' },
-    
+
   ]);
   const [currentCityIndex, setCurrentCityIndex] = useState(0);
 
@@ -168,46 +166,43 @@ function BasePage() {
         console.error("Failed to fetch forecast data:", error);
       }
     };
-  
     fetchForecastData();
   }, []);
 
-  
-  
 
   // Fetch weather for cities in the slider
-  useEffect(() => {
-    const fetchWeatherDataForCities = async () => {
-      const apiKey = '8753df73a21dbdc377ad73e23efc22b4'; 
-      const weatherDataPromises = cities.map(city =>
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city.name}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`)
-      );
+  // useEffect(() => {
+    // const fetchWeatherDataForCities = async () => {
+    //   const apiKey = '8753df73a21dbdc377ad73e23efc22b4';
+    //   // const weatherDataPromises = cities.map(city =>
+    //   //   axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city.name}&units=metric&appid=8753df73a21dbdc377ad73e23efc22b4`)
+    //   // );
+    //
+    //   try {
+    //     const results = await Promise.all(weatherDataPromises);
+    //     const updatedCities = cities.map((city, index) => ({
+    //       ...city,
+    //       weather: `${Math.round(results[index].data.main.temp)}°C`
+    //     }));
+    //     setCities(updatedCities);
+    //   } catch (error) {
+    //     console.error("Failed to fetch weather data for cities:", error);
+    //   }
+    // };
 
-      try {
-        const results = await Promise.all(weatherDataPromises);
-        const updatedCities = cities.map((city, index) => ({
-          ...city,
-          weather: `${Math.round(results[index].data.main.temp)}°C`
-        }));
-        setCities(updatedCities);
-      } catch (error) {
-        console.error("Failed to fetch weather data for cities:", error);
-      }
-    };
+    // fetchWeatherDataForCities();
+  // }, []); // Dependency array is empty, so this runs once after initial render
 
-    fetchWeatherDataForCities();
-  }, []); // Dependency array is empty, so this runs once after initial render
+  // // Function to cycle to the next city in the slider
+  // const nextCity = useCallback(() => {
+  //   setCurrentCityIndex((prevIndex) => (prevIndex + 1) % cities.length);
+  // }, [cities.length]);
 
-  // Function to cycle to the next city in the slider
-  const nextCity = useCallback(() => {
-    setCurrentCityIndex((prevIndex) => (prevIndex + 1) % cities.length);
-  }, [cities.length]);
-
-  // Automatic cycle through cities
-  useEffect(() => {
-    const intervalId = setInterval(nextCity, 3000); // Change city every 3 seconds
-    return () => clearInterval(intervalId); // Clean up on component unmount
-  }, [nextCity]);
+  // // Automatic cycle through cities
+  // useEffect(() => {
+  //   const intervalId = setInterval(nextCity, 3000); // Change city every 3 seconds
+  //   return () => clearInterval(intervalId); // Clean up on component unmount
+  // }, [nextCity]);
 
   const [isOpen] = useState(true);
 
@@ -239,60 +234,73 @@ function BasePage() {
          <div className="overlap-wrapper">
            <div className="overlap-3">
              <div className="rectangle-2"></div>
+             {/*-------------------------------------*/}
+
              <div className="group-2">
                <div className="cardweather">
                  <div className="overlap-group-2">
                  {activeForecast === 'Today' ? (
-                  <>
-                  <div className="text-wrapper-7">{forecastData && forecastData.length > 0 ? `${Math.round(forecastData[0].main.temp)}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8">{forecastData && forecastData.length > 0 ? `${new Date(forecastData[0].dt * 1000).getHours()}:00` : 'Loading...'}</div>
-                  </>
-                  ) : (
-                  <>
-                  <div className="text-wrapper-7" > {averageTemp}°C</div>
-                  <div className="text-wrapper-8" style={{ fontSize: '12px' }}>{new Date().toLocaleDateString('en-US', { weekday: 'long' })}</div>
-                  </>
+                     <>
+                       <div className="rectangle-3"></div>
+                       <div
+                           className="text-wrapper-7">{forecastData && forecastData.length > 0 ? `${Math.round(forecastData[0].main.temp)}°C` : 'Loading...'}</div>
+                       <div
+                           className="text-wrapper-8">{forecastData && forecastData.length > 0 ? `${new Date(forecastData[0].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                     </>
+                 ) : (
+                     <>
+                       <div className="rectangle-3"></div>
+                       <div className="text-wrapper-7"> {averageTemp}°C</div>
+                       <div className="text-wrapper-8"
+                            style={{fontSize: '12px'}}>{new Date().toLocaleDateString('en-US', {weekday: 'long'})}</div>
+                     </>
                  )}
-             <img className="weather-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
-            <div className="group-3">
-              <div className="overlap-4">
-                 <div className="ellipse"></div>
-                  <div className="overlap-group-wrapper">
-                   <div className="union-wrapper">
-                     <div className="union-wrapper"></div>
-                   </div>
-                   </div>
-                   </div>
-                 </div>
-                 <div className="rectangle-3"></div>
+                   <img className="weather-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
+            {/*<div className="group-3">*/}
+            {/*  <div className="overlap-4">*/}
+            {/*     <div className="ellipse"></div>*/}
+            {/*      <div className="overlap-group-wrapper">*/}
+            {/*       <div className="union-wrapper">*/}
+            {/*         <div className="union-wrapper"></div>*/}
+            {/*       </div>*/}
+            {/*       </div>*/}
+            {/*       </div>*/}
+            {/*     </div>*/}
 
-                  
-                   <div className="group-3">
-                     <div className="overlap-4">
-                       <div className="ellipse"></div>
-                       <div className="overlap-group-wrapper">
-                         <div className="union-wrapper">
-                           <div className="union-wrapper"></div>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <div className="rectangle-3"></div>
+
+                   {/*<div className="group-3">*/}
+                   {/*  <div className="overlap-4">*/}
+                   {/*    <div className="ellipse"></div>*/}
+                   {/*    <div className="overlap-group-wrapper">*/}
+                   {/*      <div className="union-wrapper">*/}
+                   {/*        <div className="union-wrapper"></div>*/}
+                   {/*      </div>*/}
+                   {/*    </div>*/}
+                   {/*  </div>*/}
+                   {/*</div>*/}
                  </div>
                </div>
+
+
                <div className="div-wrapper">
                  <div className="overlap-group-2">
                  {activeForecast === 'Today' ? (
-                  <>
-                  <div className="text-wrapper-9">{forecastData && forecastData.length > 1 ? `${Math.round(forecastData[1].main.temp)}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8">{forecastData && forecastData.length > 1 ? `${new Date(forecastData[1].dt * 1000).getHours()}:00` : 'Loading...'}</div>
-                  </>
-                  ) : (
-                  <>
-                  <div className="text-wrapper-9" >{nextDayAverageTemp ? `${nextDayAverageTemp}°C` : 'Loading...'}</div>
-                  <div className="text-wrapper-8" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
-                  </>
-                  )}
+                     <>
+                       <div className="rectangle-3"></div>
+                       <div
+                           className="text-wrapper-9">{forecastData && forecastData.length > 1 ? `${Math.round(forecastData[1].main.temp)}°C` : 'Loading...'}</div>
+                       <div
+                           className="text-wrapper-8">{forecastData && forecastData.length > 1 ? `${new Date(forecastData[1].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                     </>
+                 ) : (
+                     <>
+                       <div className="rectangle-3"></div>
+                       <div
+                           className="text-wrapper-9">{nextDayAverageTemp ? `${nextDayAverageTemp}°C` : 'Loading...'}</div>
+                       <div className="text-wrapper-8"
+                            style={{fontSize: '12px'}}>{new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-US', {weekday: 'long'})}</div>
+                     </>
+                 )}
                    <img className="weather-icon" src={forecastData && forecastData.length > 1 ? `http://openweathermap.org/img/wn/${forecastData[1].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
                    <div className="group-4">
                      <div className="overlap-4">
@@ -302,7 +310,7 @@ function BasePage() {
                        </div>
                      </div>
                    </div>
-                   <div className="rectangle-3"></div>
+
                  </div>
                </div>
                <div className="cardweather-2">
@@ -329,19 +337,26 @@ function BasePage() {
                  <div className="overlap-5">
                    <div className="cardweather">
                      <div className="overlap-group-2">
-                     {activeForecast === 'Today' ? (
-                      <>
-                      <div className="text-wrapper-7">{forecastData && forecastData.length > 3 ? `${Math.round(forecastData[3].main.temp)}°C` : 'Loading...'}</div>
-                      <div className="text-wrapper-10">{forecastData && forecastData.length > 3 ? `${new Date(forecastData[3].dt * 1000).getHours()}:00` : 'Loading...'}</div>
-                      </>
-                    ) : (
-                    <>
-                    <div className="text-wrapper-7" >{twoDaysAfterNextTemp ? `${twoDaysAfterNextTemp}°C` : 'Loading...'}</div>
-                    <div className="text-wrapper-10" style={{ fontSize: '12px' }}>{new Date(new Date().setDate(new Date().getDate() + 3)).toLocaleDateString('en-US', { weekday: 'long' })}</div>
-                    </>
-                    )}
-                       <img className="weather-icon" src={forecastData && forecastData.length > 3 ? `http://openweathermap.org/img/wn/${forecastData[2].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
                        <div className="rectangle-3"></div>
+                       {activeForecast === 'Today' ? (
+                           <>
+                             <div
+                                 className="text-wrapper-7">{forecastData && forecastData.length > 3 ? `${Math.round(forecastData[3].main.temp)}°C` : 'Loading...'}</div>
+                             <div
+                                 className="text-wrapper-10">{forecastData && forecastData.length > 3 ? `${new Date(forecastData[3].dt * 1000).getHours()}:00` : 'Loading...'}</div>
+                           </>
+                       ) : (
+                           <>
+                             <div
+                                 className="text-wrapper-7">{twoDaysAfterNextTemp ? `${twoDaysAfterNextTemp}°C` : 'Loading...'}</div>
+                             <div className="text-wrapper-10"
+                                  style={{fontSize: '12px'}}>{new Date(new Date().setDate(new Date().getDate() + 3)).toLocaleDateString('en-US', {weekday: 'long'})}</div>
+                           </>
+                       )}
+                       <img className="weather-icon"
+                            src={forecastData && forecastData.length > 3 ? `http://openweathermap.org/img/wn/${forecastData[2].weather[0].icon}@2x.png` : ''}
+                            alt="Weather Icon"/>
+
                      </div>
                    </div>
                  </div>
@@ -358,6 +373,8 @@ function BasePage() {
                  </div>
                </div>
              </div>
+
+             {/*-------------------------------------*/}
            </div>
          </div>
          <div className="forecast-toggle" style={{ position: 'relative' }}>

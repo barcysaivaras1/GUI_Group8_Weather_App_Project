@@ -789,6 +789,8 @@
   object-fit: cover; 
   margin-top: 35px;
   margin-left: 10px;
+  left: 4px;
+  position: absolute;
 }
 
 .basepage .weather-main-icon{
