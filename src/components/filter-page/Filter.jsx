@@ -1,8 +1,8 @@
 import React, { useState,  useEffect } from 'react';
 import Slider from 'react-slider';
 import './Filter.css';
-import useCitySelector from '../useCountry';
-import useNewWeatherData from '../Search-Page/NewWeatherHook';
+import useCitySelector from '../search-page/useCountry';
+import useNewWeatherData from '../search-page/NewWeatherHook';
 import ResultsPage from './Results';
 import { Link, useNavigate } from 'react-router-dom';
 import Animate_page from '../../Animate-page';

@@ -1,8 +1,8 @@
-import { FilterPage } from './components/Filter-Page/Filter.jsx';
+import { FilterPage } from './components/filter-page/Filter.jsx';
 import BasePage from './components/base-page/basepage.js';
-import NewWeatherSearchPage from './components/Search-Page/Search-page.js';
-import Favourites from './components/FavouritesPage/Favourites.js';
-import { ResultsPage } from './components/Filter-Page/Results.jsx';
+import NewWeatherSearchPage from './components/search-page/Search-page.js';
+import Favourites from './components/favourites-page/Favourites.js';
+import { ResultsPage } from './components/filter-page/Results.jsx';
 import {
   BrowserRouter as Router,
   Routes,

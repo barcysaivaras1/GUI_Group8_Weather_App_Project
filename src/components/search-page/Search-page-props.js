@@ -4,7 +4,7 @@ import './Search-page.css'; // Import component-specific CSS styles
 import './styleguide.css';
 import SearchResults from './results';
 import useWeatherData from './fetchWeather';
-import useCitySelector from '../useCountry';
+import useCitySelector from './useCountry';
 function WeatherSearchPage()
 {
 const {city,weatherData,forecastData,country,loading,error,handleInputChange,handleSubmit,handleKeyPress} = useWeatherData();

@@ -100,13 +100,14 @@ button {
 }
 /*Weather Image*/
 .Results .weather-type {
-  position: relative;
+  position: absolute;
   width: 6rem;
   height: 6rem;
   bottom: 5rem;
   opacity: 40%;
   left: 10rem;
   z-index: 0;
+  top: 10px;
 }
 /*Arrow Symbol*/
 .Results .arrow {
