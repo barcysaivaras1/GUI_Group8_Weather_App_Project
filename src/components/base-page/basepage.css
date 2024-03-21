@@ -1,13 +1,15 @@
 @font-face {
   font-family: "Helvetica Neue-Regular";
-  src: url('../public/fonts/helvetica-neue-master/HelveticaNeue-Regular.otf') format('opentype');
+  src: url('../../../public/fonts/helvetica-neue-master/HelveticaNeue-Regular.otf') format('opentype');
 }
 
+body{
+  background-color: rgb(6, 32, 71);
+}
 .basepage {
-  /* background-color: black;*/
   /*display: flex;*/
   /*flex-direction: row; */
-  
+  background: black;
   justify-content: center;
   width: 100%;
   /*z-index: 1;*/
@@ -52,7 +54,7 @@
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
-  /*z-index: 1;*/
+  /* z-index: 1; */
 }
 
 .basepage .weather-desc {
@@ -68,7 +70,6 @@
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
-  /*z-index: 1;*/
 }
 
 .basepage .text-wrapper-2 {
@@ -253,16 +254,31 @@
   box-shadow: var(--text-shadow-normal);
 }
 
-.basepage .text-wrapper-8 {
+.basepage .time {
   position: absolute;
   width: 50px;
   top: 113px;
-  left: 14px;
+  left: 20px;
   text-shadow: -2px 3px 1px #0000001a;
   font-family: "Helvetica Neue-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  box-shadow: var(--text-shadow-normal);
+}
+
+.basepage .date {
+  position: absolute;
+  width: 50px;
+  top: 113px;
+  left: 1.5rem;
+  text-shadow: -2px 3px 1px #0000001a;
+  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1rem;
   letter-spacing: 0;
   line-height: normal;
   box-shadow: var(--text-shadow-normal);
@@ -305,7 +321,7 @@
   height: 117px;
   top: -39px;
   left: -40px;
-  background-image: url(./img/ellipse-8-3.svg);
+  background-image: url(../img/ellipse-8-3.svg);
   background-size: 100% 100%;
 }
 
@@ -364,7 +380,7 @@
   height: 117px;
   top: -39px;
   left: -40px;
-  background-image: url(./img/ellipse-8-2.svg);
+  background-image: url(../img/ellipse-8-2.svg);
   background-size: 100% 100%;
 }
 
@@ -388,7 +404,7 @@
   height: 117px;
   top: -39px;
   left: -40px;
-  background-image: url(./img/ellipse-8-1.svg);
+  background-image: url(../img/ellipse-8-1.svg);
   background-size: 100% 100%;
 }
 

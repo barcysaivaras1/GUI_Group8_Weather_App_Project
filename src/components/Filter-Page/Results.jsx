@@ -1,9 +1,9 @@
 import React, { useState ,useEffect } from "react";
 import './Results.css';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import useNewWeatherData from "../components/Search-Page/NewWeatherHook";
-import Animate_page from "../Animate-page";
-import SearchResults from "../components/Search-Page/results";
+import useNewWeatherData from "../Search-Page/NewWeatherHook";
+import Animate_page from "../../Animate-page";
+import SearchResults from "../Search-Page/results";
 
 export const ResultsPage = () =>{
     const cities = ["London","Kyoto","Dubai","Manchester"]

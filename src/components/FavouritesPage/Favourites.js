@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './Favourites.css';
 import { Link, useLocation } from 'react-router-dom';
-import Animate_page from '../Animate-page';
+import Animate_page from '../../Animate-page';
 import heart from "./img/icon-heart.png";
 import FavouriteBox from './FavouriteBox';
 
