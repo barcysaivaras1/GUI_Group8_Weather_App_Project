@@ -33,11 +33,11 @@ function BasePage() {
 
   const averageTemp = tempMin !== null && tempMax !== null ? Math.ceil((tempMin + tempMax) / 2) : 'Loading...';
 
-
+  // Sets setActiveForecast to Today
   const handleTodayClick = () => {
     setActiveForecast('Today');
   };
-
+  // Sets setActiveForecast to 4-day
   const handle8DayClick = () => {
     setActiveForecast('4-Day');
   };
@@ -156,7 +156,7 @@ function BasePage() {
     fetchWeatherData();
   }, []); // Runs once after initial render to fetch London's weather
 
-
+  //Fetch weather for London
   useEffect(() => {
     const fetchForecastData = async () => {
       try {
@@ -198,7 +198,7 @@ function BasePage() {
     display: 'flex',
     flexDirection: 'column',
     overflow: 'auto',
-    padding: '1rem' /* Adjust based on your framework's base spacing scale */
+    padding: '1rem' 
   }
 
   // Fetch weather for cities in the slider
@@ -259,18 +259,20 @@ function BasePage() {
   <Animate_page>
    <div className="basepage">
      <div className="div">
+   // Overlap to display current temperature, description, min and max temp using API key
        <div className="overlap">
          <img className="weather-main-icon"
               src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''}
               alt="Weather Icon"/>
          <div className="temp">{currentTemp ? `${currentTemp}º` : 'Loading...'}</div>
-         <div className="weather-desc">{weatherDesc ? weatherDesc : 'Loading...'}</div>
+         <div className="weather-desc">{weatherDesc ? weatherDesc : 'Loading...'}</div> 
          <div className="text-wrapper-2">London</div>
          <div className="text-wrapper-3">You are in</div>
          <div className="min-temp">{tempMin ? `${tempMin}º` : 'Loading...'}</div>
          <div className="max-temp">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
          <div className="temp-bar"></div>
        </div>
+                //Favorite button
        <PlusFavouritesButton />
        <Link to="/search">
          <div className="search-box">
@@ -281,6 +283,7 @@ function BasePage() {
           </button>
         </div>
        </Link>
+                //Overlap to include daily and hourly forecast
        <div className="overlap-2">
          <div className="overlap-wrapper">
            <div className="overlap-3">
