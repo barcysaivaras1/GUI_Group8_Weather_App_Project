@@ -66,7 +66,7 @@ function BasePage_alt() {
   };
 
   const eightDayTextStyle = {
-    color: activeForecast === '5-Day' ? '#000' : '#d9d9d9', // Change color based on active state
+    color: activeForecast === '4-Day' ? '#000' : '#d9d9d9', // Change color based on active state
     cursor: 'pointer',
   };
 
@@ -420,7 +420,7 @@ function BasePage_alt() {
           }}></div>
           <div className="rectangle-5" style={activeButtonStyle}></div>
           <div className="text-wrapper-11" onClick={handleTodayClick} style={{...todayTextStyle, position: 'absolute', left: '29px', top: '14px'}}>Today</div>
-          <div className="text-wrapper-12" onClick={handle8DayClick} style={{...eightDayTextStyle, position: 'absolute', right: '29px', top: '14px'}}>5-Day</div>
+          <div className="text-wrapper-12" onClick={handle8DayClick} style={{...eightDayTextStyle, position: 'absolute', right: '29px', top: '14px'}}>4-Day</div>
         </div>
        </div>
        <Link to="/favourites">
