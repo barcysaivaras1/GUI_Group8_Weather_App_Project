@@ -4,7 +4,7 @@ import SearchResults from './results';
 import useCitySelector from '../useCountry';
 import { SearchCountryResultsList } from './searchCountryResultsList';
 import useNewWeatherData from './NewWeatherHook';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Animate_page from '../../Animate-page';
 
 function NewWeatherSearchPage() {
@@ -15,6 +15,16 @@ function NewWeatherSearchPage() {
     const [showCountryResults, setShowCountryResults] = useState(false); // State to track whether to show country results
     const [showWeatherData, setShowWeatherData] = useState(false); // State to track whether to show weather data of cities
     const [typing, setTyping] = useState(false); // State to track if user is typing
+
+    const location = useLocation();
+
+    const navigate = useNavigate();
+
+    const [selected_city,setSelectedCity] = useState("") //Hardcoded Manchester for now, use handleApplyClick as onClick in <SearchResults> so that it navigates to basepage_alt
+    const handleApplyClick = (cityName) => {
+        setSelectedCity(cityName);
+        navigate("/alt", { state: { selected_city: cityName } }); //IMPORTANT: this sends selected_city to basepage_alt
+    };
 
     const handleSearchChange = event => {
         setSearchTerm(event.target.value);
@@ -99,6 +109,7 @@ function NewWeatherSearchPage() {
                             )}
                             image={data.weather && data.weather.length > 0 && data.weather[0].icon ? `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` : ''}
                             alt="Weather Icon"
+                            onClick={() => handleApplyClick(data.name)} // Call handleApplyClick with city name onClick
                         />
                     ))}
 
@@ -113,6 +124,7 @@ function NewWeatherSearchPage() {
                             )}
                             image={data.weather && data.weather.length > 0 && data.weather[0].icon ? `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` : ''}
                             alt="Weather Icon"
+                            onClick={() => handleApplyClick(data.name)} // Call handleApplyClick with city name onClick
                         />
                     ))}
                 </div>
