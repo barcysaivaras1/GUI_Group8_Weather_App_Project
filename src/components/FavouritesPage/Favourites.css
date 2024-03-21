@@ -289,7 +289,7 @@
 
 .favourites .city-country {
   position: relative;
-  top: 0.5rem;
+  top: 0.8rem;
   height: 77px;
   left: 20px;
   font-family: "Helvetica Neue-Medium", Helvetica;
@@ -307,13 +307,15 @@
 .favourites .text-wrapper-6 {
   color: #acb0db;
   font-size: 25px;
+  position: absolute;
+  top: 45px;
 }
 
 .favourites .temp {
   position: relative;
   bottom: 6rem;
   height: 61px;
-  font-size: 51px;
+  font-size: 48px;
   white-space: nowrap;
   font-family: "Helvetica Neue-Regular", Helvetica;
   font-weight: 400;
@@ -323,6 +325,7 @@
   line-height: normal;
   margin-left: 15rem;
   margin-top: 0;
+  left:-3px;
 }
 
 .favourites .weather-type {

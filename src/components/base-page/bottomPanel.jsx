@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './bottomPanel.css'; // Adjust the path as necessary
-import DestinationCard from "../../DestinationCard"; // Adjust the path as necessary
+import DestinationCard from "./DestinationCard"; // Adjust the path as necessary
 import dubaiImg from '../images/dubai.png';
 import newYorkImg from '../images/newyork.png';
 import seoulImg from '../images/seoul.png';

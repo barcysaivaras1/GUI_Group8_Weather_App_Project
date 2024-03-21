@@ -1,6 +1,6 @@
 // DestinationCard.js
 import React from 'react';
-import './components/base-page/bottomPanel.css';
+import './bottomPanel.css';
 
 function DestinationCard({ city, temperature, imageUrl }) {
     console.log(city, temperature, imageUrl); // Check the props values
@@ -34,7 +34,6 @@ function DestinationCard({ city, temperature, imageUrl }) {
             backgroundImage: `url(${imageUrl})`,
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
-            
         }}>
             <span className="city-name" style={styleCity}>{city}</span>
             <span className="degree" style={styleDegree}>{temperature}</span>

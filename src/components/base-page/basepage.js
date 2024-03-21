@@ -172,8 +172,33 @@ function BasePage() {
     fetchForecastData();
   }, []);
 
-  
-  
+  const x1 = {
+    position: 'fixed',
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0'
+  }
+
+  const x2 = {
+    position: 'fixed',
+    bottom: '0',
+    left: '0',
+    right: '0',
+    display: 'flex',
+    flexDirection: 'column',
+    maxHeight: '96vh'
+  }
+
+  const x3 = {
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    overflow: 'auto',
+    padding: '1rem' /* Adjust based on your framework's base spacing scale */
+  }
 
   // Fetch weather for cities in the slider
   useEffect(() => {
@@ -216,9 +241,10 @@ function BasePage() {
    <div className="basepage">
      <div className="div">
        <div className="overlap">
-       
+         <img className="weather-main-icon"
+              src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''}
+              alt="Weather Icon"/>
          <div className="temp">{currentTemp ? `${currentTemp}º` : 'Loading...'}</div>
-         <img className="weather-main-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
          <div className="weather-desc">{weatherDesc ? weatherDesc : 'Loading...'}</div>
          <div className="text-wrapper-2">London</div>
          <div className="text-wrapper-3">You are in</div>
@@ -227,10 +253,10 @@ function BasePage() {
          <div className="temp-bar"></div>
        </div>
        <Link to="/search">
-        <div className="search-box">
-        <button className="button-style search-button">
-          <div className="overlap-group">
-            <div className="search-text">Search</div>
+         <div className="search-box">
+           <button className="button-style search-button">
+             <div className="overlap-group">
+               <div className="search-text">Search</div>
           </div>
           </button>
         </div>
@@ -380,12 +406,12 @@ function BasePage() {
         </button>
        </div>
        </Link>
-       <Drawer.Root open={isOpen} snapPoints={[0.33, 0.90]} defaultSnap={0.33} modal={false}>
+       <Drawer.Root open={isOpen} snapPoints={[0.58, 0.99]} defaultSnap={0.33} modal={false}>
          <Drawer.Portal>
-           <Drawer.Content>
-             <BottomPanel />
+           <Drawer.Overlay style={x1} />
+           <Drawer.Content style={x2}>
+             <BottomPanel style={x3} />
            </Drawer.Content>
-           <Drawer.Overlay />
          </Drawer.Portal>
        </Drawer.Root>
       <Link to="/filter">

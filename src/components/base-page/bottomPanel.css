@@ -44,19 +44,16 @@
 }
 
 .thePanel {
-    /* Define a linear gradient background with your colors */
     /*background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e, #fad0c4);*/
     position: relative;
     background: linear-gradient(270deg, #0a3379, #145496, #2773b0, #4188bd, #63C2FF);
-    /* Set the background size to be larger than the container */
     background-size: 400% 400%;
-    /* Start the animation */
     animation: gradientBackground 15s ease infinite;
     padding: 5px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 388px;
-    height: 1500px;
+    max-height: 710px;
     z-index: 999;
     margin-left: 15px;
 
@@ -87,7 +84,22 @@ body *:focus {
     scrollbar-width: none;
 }
 
-
 .thePanel {
-    -ms-overflow-style: none;  
+    -ms-overflow-style: none;
+
+}
+
+/*[vaul-drawer][vaul-drawer-direction=bottom]:after {*/
+/*    top: 0% !important;*/
+/*    bottom: initial !important;*/
+/*    left: 0 !important;*/
+/*    right: 0 !important;*/
+/*    height: 0% !important;*/
+/*}*/
+
+span.degree {
+    max-width: 70px !important;
+    position: absolute;
+    left: -24px;
+    text-align: center;
 }
