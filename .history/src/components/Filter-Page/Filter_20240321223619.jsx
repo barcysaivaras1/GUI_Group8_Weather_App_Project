@@ -1,8 +1,8 @@
 import React, { useState,  useEffect } from 'react';
 import Slider from 'react-slider';
 import './Filter.css';
-import useCitySelector from '../search-page/useCountry';
-import useNewWeatherData from '../search-page/NewWeatherHook';
+import useCitySelector from '../useCountry';
+import useNewWeatherData from '../Search-Page/NewWeatherHook';
 import ResultsPage from './Results';
 import { Link, useNavigate } from 'react-router-dom';
 import Animate_page from '../../Animate-page';
@@ -89,7 +89,7 @@ const weatherData = useNewWeatherData(capitalCities); // storing weatherData of 
 	useEffect(() => {
 	const filterCitiesByTemperature = () => {     		// filters out capitalCities based on temperature selected by user from the slider
 		const tempArray = weatherData.filter(city => {
-		const temp = city.main.temp;
+		  const temp = city.main.temp;
 		return temp >= values[0] && temp <= values[1];
 		}).map(city => city.name); 
 		setFilteredTempArray(tempArray);

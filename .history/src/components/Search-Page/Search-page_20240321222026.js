@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import './Search-page.css'; // Import component-specific CSS styles
 import SearchResults from './results';
-import useCitySelector from './useCountry';
+import useCitySelector from '../useCountry';
 import { SearchCountryResultsList } from './searchCountryResultsList';
 import useNewWeatherData from './NewWeatherHook';
 import { Link, useNavigate } from 'react-router-dom';
