@@ -16,6 +16,7 @@ import city4 from '../images/city-4.jpg';
 import BottomPanelImplemented from "./bottomPanel";
 import {Drawer} from "vaul";
 import BottomPanel from "./bottomPanel";
+import PlusFavouritesButton from '../../PlusFavouritesButton';
 
 function BasePage_alt() {
   // State for London's weather
@@ -40,7 +41,6 @@ function BasePage_alt() {
   const handle8DayClick = () => {
     setActiveForecast('5-Day');
   };
-
   const location = useLocation();
     const [selected_city, setSelectedCity] = useState(location.state?.selected_city || []);
     useEffect(() => {
@@ -216,6 +216,21 @@ function BasePage_alt() {
 
   const [isOpen] = useState(true);
 
+  const [info, setInfo] = useState(null);
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search.replace('?', ''));
+    const infoParam = searchParams.get('info');
+    setInfo(infoParam);
+
+    if (infoParam) {
+      // Add infoParam to locations array if it's not null
+      setLocations(prevLocations => [...prevLocations, infoParam]);
+    }
+  }, [location.search]);
+
+  const [locations, setLocations] = useState(['Tokyo', 'Osaka', 'Kyoto']);
+
  return (
   <Animate_page>
    <div className="basepage">
@@ -231,6 +246,7 @@ function BasePage_alt() {
          <div className="max-temp">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
          <div className="temp-bar"></div>
        </div>
+       <PlusFavouritesButton />
        <Link to="/search">
         <div className="search-box">
         <button className="button-style search-button">

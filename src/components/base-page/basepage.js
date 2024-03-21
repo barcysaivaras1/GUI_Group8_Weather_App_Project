@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './basepage.css'; 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Animate_page from '../../Animate-page';
 import vectorImage from '../img/vector.svg';
 import rectangle44 from '../img/rectangle-44.svg';
@@ -16,6 +16,7 @@ import city4 from '../images/city-4.jpg';
 import BottomPanelImplemented from "./bottomPanel";
 import {Drawer} from "vaul";
 import BottomPanel from "./bottomPanel";
+import PlusFavouritesButton from '../../PlusFavouritesButton';
 
 function BasePage() {
   // State for London's weather
@@ -236,6 +237,24 @@ function BasePage() {
 
   const [isOpen] = useState(true);
 
+
+  const [info, setInfo] = useState(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search.replace('?', ''));
+    const infoParam = searchParams.get('info');
+    setInfo(infoParam);
+
+    if (infoParam) {
+      // Add infoParam to locations array if it's not null
+      setLocations(prevLocations => [...prevLocations, infoParam]);
+    }
+  }, [location.search]);
+
+  const [locations, setLocations] = useState(['Tokyo', 'Osaka', 'Kyoto']);
+
+
  return (
   <Animate_page>
    <div className="basepage">
@@ -252,6 +271,7 @@ function BasePage() {
          <div className="max-temp">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
          <div className="temp-bar"></div>
        </div>
+       <PlusFavouritesButton />
        <Link to="/search">
          <div className="search-box">
            <button className="button-style search-button">
