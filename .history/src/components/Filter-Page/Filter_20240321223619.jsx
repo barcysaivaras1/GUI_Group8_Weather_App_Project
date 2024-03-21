@@ -89,7 +89,7 @@ const weatherData = useNewWeatherData(capitalCities); // storing weatherData of 
 	useEffect(() => {
 	const filterCitiesByTemperature = () => {     		// filters out capitalCities based on temperature selected by user from the slider
 		const tempArray = weatherData.filter(city => {
-		const temp = city.main.temp;
+		  const temp = city.main.temp;
 		return temp >= values[0] && temp <= values[1];
 		}).map(city => city.name); 
 		setFilteredTempArray(tempArray);

@@ -24,7 +24,7 @@ const FavouriteBox = ({ locations }) => {
 
   const navigate = useNavigate();
 
-  const [selected_city,setSelectedCity] = useState("") //use handleApplyClick as onClick in <SearchResults> so that it navigates to basepage_alt
+  const [selected_city,setSelectedCity] = useState("") //Hardcoded Manchester for now, use handleApplyClick as onClick in <SearchResults> so that it navigates to basepage_alt
   const handleApplyClick = (cityName) => {
       setSelectedCity(cityName);
       navigate("/alt", { state: { selected_city: cityName } }); //IMPORTANT: this sends selected_city to basepage_alt

@@ -96,12 +96,12 @@ function NewWeatherSearchPage() {
                             <option value="city">Select by city</option>
                         </select>
                         {selectedOption === 'country' && showCountryResults && !showWeatherData && (
-                            <SearchCountryResultsList results={countries} searchTerm={searchTerm} handleCountryChange={handleCountryChange} /> // displays a dropdown with input based filtering of countries
+                            <SearchCountryResultsList results={countries} searchTerm={searchTerm} handleCountryChange={handleCountryChange} />
                         )}
                     </div>
 
                     {selectedOption === 'country' && selectedCountry && showWeatherData &&weatherData && weatherData.map((data, index) => (
-                        <SearchResults //calling SearchResults component to display individual city results
+                        <SearchResults
                             key={index}
                             name={cityArray[index]}
                             country={selectedCountry}
