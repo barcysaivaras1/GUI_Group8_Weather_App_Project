@@ -78,3 +78,16 @@ body *:focus {
 .image vaul-scrollable {
 
 }
+.thePanel::-webkit-scrollbar {
+    display: none;
+}
+
+
+.thePanel {
+    scrollbar-width: none;
+}
+
+
+.thePanel {
+    -ms-overflow-style: none;  
+}
