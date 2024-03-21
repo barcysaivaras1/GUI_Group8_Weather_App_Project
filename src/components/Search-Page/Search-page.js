@@ -30,6 +30,7 @@ function NewWeatherSearchPage() {
         setSearchTerm(event.target.value);
         setTyping(true); // User started typing
         setShowCountryResults(event.target.value.trim() !== ''); // Show country results if search term is not empty
+        setShowWeatherData(false);
     };
 
     const handleSearchTermUpdate = () => {
@@ -44,6 +45,8 @@ function NewWeatherSearchPage() {
             setSearchTermsArray([]);
         }
     }, [typing]);
+
+    console.log("cityArray: " + cityArray)
 
     const weatherData = useNewWeatherData(selectedOption === 'country' ? cityArray : searchTermsArray);
     
@@ -95,52 +98,46 @@ function NewWeatherSearchPage() {
                             <option value="city">Select by city</option>
                         </select>
                         {selectedOption === 'country' && showCountryResults && !showWeatherData && (
-                            <SearchCountryResultsList results={countries} searchTerm={searchTerm}
-                                                      handleCountryChange={handleCountryChange}/>
+                            <SearchCountryResultsList results={countries} searchTerm={searchTerm} handleCountryChange={handleCountryChange} />
                         )}
                     </div>
 
-                    <div className="all_results">
-                        {selectedOption === 'country' && selectedCountry && weatherData && weatherData.map((data, index) => (
-                            <SearchResults
-                                key={index}
-                                name={cityArray[index]}
-                                country={selectedCountry}
-                                temp={data.main && (
-                                    <p className='temp'>{Math.round(data.main.temp)}°C</p>
-                                )}
-                                image={data.weather && data.weather.length > 0 && data.weather[0].icon ? `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` : ''}
-                                alt="Weather Icon"
-                                onClick={() => handleApplyClick(data.name)} // Call handleApplyClick with city name onClick
-                            />
-                        ))}
+                    {selectedOption === 'country' && selectedCountry && showWeatherData &&weatherData && weatherData.map((data, index) => (
+                        <SearchResults
+                            key={index}
+                            name={cityArray[index]}
+                            country={selectedCountry}
+                            temp={data.main && (
+                                <p className='temp'>{Math.round(data.main.temp)}°C</p>
+                            )}
+                            image={data.weather && data.weather.length > 0 && data.weather[0].icon ? `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` : ''}
+                            alt="Weather Icon"
+                            onClick={() => handleApplyClick(data.name)} // Call handleApplyClick with city name onClick
+                        />
+                    ))}
 
-
-                        {/* Additional logic for 'Select by city' */}
-                        {selectedOption === 'city' && searchTermsArray.length > 0 && weatherData.map((data, index) => (
-                            <SearchResults
-                                key={index}
-                                name={data.name}
-                                country={data.sys.country}
-                                temp={data.main && (
-                                    <p className='temp'>{Math.round(data.main.temp)}°C</p>
-                                )}
-                                image={data.weather && data.weather.length > 0 && data.weather[0].icon ? `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` : ''}
-                                alt="Weather Icon"
-                                onClick={() => handleApplyClick(data.name)} // Call handleApplyClick with city name onClick
-                            />
-
-                        ))}
-                    </div>
+                    {/* Additional logic for 'Select by city' */}
+                    {selectedOption === 'city' && searchTermsArray.length > 0 && weatherData.map((data, index) => (
+                        <SearchResults
+                            key={index}
+                            name={data.name}
+                            country={data.sys.country}
+                            temp={data.main && (
+                                <p className='temp'>{Math.round(data.main.temp)}°C</p>
+                            )}
+                            image={data.weather && data.weather.length > 0 && data.weather[0].icon ? `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` : ''}
+                            alt="Weather Icon"
+                            onClick={() => handleApplyClick(data.name)} // Call handleApplyClick with city name onClick
+                        />
+                    ))}
                 </div>
-                <Link to="/">
-                        <div className="arrow"></div>
-                    </Link>
-                </div>
+                <Link to="/"> 
+                    <div className="arrow"></div>
+                </Link>
+            </div>
         </Animate_page>
     );
 }
 
 export default NewWeatherSearchPage;
-
 

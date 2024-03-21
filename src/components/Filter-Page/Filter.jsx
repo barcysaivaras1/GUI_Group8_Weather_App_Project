@@ -10,6 +10,7 @@ import Animate_page from '../../Animate-page';
 
 // This is the page where you can apply different filters
 //Will need to extract data from the buttons / slider and this data will be used for filtering through all the countries
+
 const world_continents = {
 	"Africa": {
 		"Countries": ["DZ", "AO", "BJ", "BW", "BF", "BI", "CV", "CM", "CF", "TD", "KM", "CD", "DJ", "EG", "GQ", "ER", "SZ", "ET", "GA", "GM", "GH", "GN", "GW", "CI", "KE", "LS", "LR", "LY", "MG", "MW", "ML", "MR", "MU", "MA", "MZ", "NA", "NE", "NG", "CG", "RW", "ST", "SN", "SC", "SL", "SO", "ZA", "SS", "SD", "TZ", "TG", "TN", "UG", "ZM", "ZW"]
@@ -42,11 +43,15 @@ const navigate = useNavigate();
 
 const handleApplyClick = () => {
     // const testArray = [1, 2, 3, 4, 5];  // Your test array
-    navigate("/filter/results", { state: { finalArray } });
+if (finalArray.length == 0){
+        alert("Loading ...");
+	}
+	else{
+		navigate("/filter/results", { state: { finalArray } });
+	}
 }
-
-
 console.log(values);
+console.log('redirected')
 
 const handleButtonPress = (e) => {
 	const id = e.target.id;
@@ -70,7 +75,7 @@ const handleButtonPress = (e) => {
 		e.target.style.color = "black";
 		e.target.style.borderRadius = "20px";
 	}
-	console.log(weatherTypes_selected);
+	console.log(weatherTypes_selected,);
 	console.log(continents_selected);
 };
 
