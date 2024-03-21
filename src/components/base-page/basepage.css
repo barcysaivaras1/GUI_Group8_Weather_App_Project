@@ -12,6 +12,9 @@ body{
   width: 100%;
   overflow: hidden;
 }
+.text-box::placeholder{
+  color: rgba(255, 255, 255, 0.432);
+}
 
 .basepage .div {
   background-color: rgba(255, 255, 255, 1);
