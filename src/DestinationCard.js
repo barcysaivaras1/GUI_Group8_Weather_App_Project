@@ -12,7 +12,7 @@ function DestinationCard({ city, temperature, imageUrl }) {
         fontWeight: '500',
         position: 'absolute',
         bottom: '0',
-        width: '100%', /* Make it full width, if needed */
+        width: '100%', 
         paddingBottom: '8px',
         paddingLeft: '16px'
     }
@@ -24,7 +24,7 @@ function DestinationCard({ city, temperature, imageUrl }) {
         fontWeight: '500',
         position: 'absolute',
         bottom: '0',
-        width: '100%', /* Make it full width, if needed */
+        width: '100%', 
         paddingBottom: '8px',
         paddingLeft: '310px'
     }
@@ -34,7 +34,7 @@ function DestinationCard({ city, temperature, imageUrl }) {
             backgroundImage: `url(${imageUrl})`,
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
-            // backgroundPosition: 'center' /* Center the background image */
+            
         }}>
             <span className="city-name" style={styleCity}>{city}</span>
             <span className="degree" style={styleDegree}>{temperature}</span>
