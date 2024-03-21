@@ -20,7 +20,11 @@
   color: white;
   background-color: hsla(226, 84%, 22%, 0.616);
   bottom: 2rem;
-  left: 5rem;
+  left: 7rem;
+  height: 27px;
+  border-radius: 15px;
+  width: 154px;
+  padding-left: 16px;
 }
 .search-page .search-bar {
   position: absolute;
