@@ -87,7 +87,7 @@ function BasePage_alt() {
   useEffect(() => {
     const fetchForecastData = async () => {
       try {
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=51.5085&lon=-0.1257&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`);
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${selected_city}&units=metric&appid=9df311f9fe645c18fd874a670d03f0ca`);
         const forecasts = response.data.list;
         const today = new Date();
   
