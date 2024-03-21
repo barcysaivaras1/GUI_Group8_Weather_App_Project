@@ -2,6 +2,10 @@
   --default-font-family: "Helvetica Neue-Medium", "Source Han Sans CN", sans-serif;
 }
 
+body{
+  background-color: rgb(6, 32, 71);
+}
+
 .page{
   /*background-color: black;*/
 }
@@ -11,14 +15,17 @@
 }
 
 .Filter {
+  /*background: black;*/
   position: relative;
   width: 428px;
   height: 926px;
   /*margin: 0 auto;*/
   /*background-color: black;*/
   /*background: linear-gradient(180deg, rgba(2, 0, 146, 0), #0e4089);*/
-  background-color: #0a3379;
+  /*background-color: #0a3379;*/
   overflow: hidden;
+  background: linear-gradient(180deg, rgba(2.93, 0, 146.32, 0) 0%, rgb(14.84, 64.08, 137.93) 0%);
+
 }
 .Filter .group {
   position: relative;

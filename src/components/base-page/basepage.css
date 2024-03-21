@@ -7,12 +7,9 @@ body{
   background-color: rgb(6, 32, 71);
 }
 .basepage {
-  /*display: flex;*/
-  /*flex-direction: row; */
   background: black;
   justify-content: center;
   width: 100%;
-  /*z-index: 1;*/
   overflow: hidden;
 }
 
@@ -32,8 +29,6 @@ body{
   top: 42px;
   left: -9px;
 }
-
-
 
 .basepage .temp {
   width: 107px;
@@ -99,9 +94,6 @@ body{
   line-height: normal;
 }
 
-
-
-
 .basepage .min-temp {
   width: 114px;
   height: 31px;
@@ -135,6 +127,7 @@ body{
   letter-spacing: 0;
   line-height: normal;
 }
+
 /*This styles the rectangle between the min and max temps*/
 .basepage .temp-bar {
   position: absolute;
@@ -252,13 +245,14 @@ body{
   letter-spacing: 0;
   line-height: normal;
   box-shadow: var(--text-shadow-normal);
+  text-align: center;
 }
 
 .basepage .time {
   position: absolute;
   width: 50px;
   top: 113px;
-  left: 20px;
+  left: 13px;
   text-shadow: -2px 3px 1px #0000001a;
   font-family: "Helvetica Neue-Regular", Helvetica;
   font-weight: 400;
@@ -267,13 +261,14 @@ body{
   letter-spacing: 0;
   line-height: normal;
   box-shadow: var(--text-shadow-normal);
+  text-align: center;
 }
 
 .basepage .date {
   position: absolute;
   width: 50px;
   top: 113px;
-  left: 1.5rem;
+  left: 12px;
   text-shadow: -2px 3px 1px #0000001a;
   font-family: "Helvetica Neue-Regular", Helvetica;
   font-weight: 400;
@@ -282,6 +277,7 @@ body{
   letter-spacing: 0;
   line-height: normal;
   box-shadow: var(--text-shadow-normal);
+  text-align: center;
 }
 
 .basepage .group-3 {
@@ -364,6 +360,7 @@ body{
   letter-spacing: 0;
   line-height: normal;
   box-shadow: var(--text-shadow-normal);
+  text-align: center;
 }
 
 .basepage .group-4 {
@@ -534,7 +531,7 @@ body{
   width: 85px;
   height: 21px;
   top: 15px !important;
-  left: 221px;
+  left: 225px;
   font-family: "Helvetica Neue-Regular", Helvetica;
   font-weight: 400;
   color: #c7c7c7;
