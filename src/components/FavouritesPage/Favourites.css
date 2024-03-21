@@ -302,6 +302,14 @@
 
 .favourites .span {
   color: #ffffff;
+  display: block;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 12rem;
+  font-size: 2rem;
+  box-sizing: border-box;
 }
 
 .favourites .text-wrapper-6 {
@@ -331,9 +339,12 @@
 .favourites .weather-type {
   position: relative;
   left: 11rem;
-  width: 54px;
-  height: 53px;
-  bottom: 9.5rem;
+  width: 6rem;
+  height: 6rem;
+  bottom: 11rem;
+  opacity: 40%;
+  left: 10rem;
+  z-index: 0;
 }
 
 .favourites .overlap-5 {

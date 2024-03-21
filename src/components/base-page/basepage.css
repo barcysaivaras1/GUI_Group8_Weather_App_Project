@@ -69,7 +69,7 @@ body{
 
 .basepage .text-wrapper-2 {
   position: absolute;
-  width: 196px;
+  width: 15rem;
   top: 97px;
   left: 40px;
   /*font-family: (--default-font-family);*/
@@ -78,6 +78,8 @@ body{
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-family: "Helvetica Neue-Regular";
 }
 
