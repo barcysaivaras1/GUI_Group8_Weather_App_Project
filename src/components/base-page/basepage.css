@@ -1,3 +1,4 @@
+/*Font*/
 @font-face {
   font-family: "Helvetica Neue-Regular";
   src: url('../../../public/fonts/helvetica-neue-master/HelveticaNeue-Regular.otf') format('opentype');
@@ -83,7 +84,7 @@ body{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "Helvetica Neue-Regular";
+  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
 }
 
 .basepage .text-wrapper-3 {
@@ -91,7 +92,7 @@ body{
   width: 124px;
   top: 75px;
   left: 41px;
-  font-family: "Helvetica Neue-Medium", Helvetica;
+  font-family: "Helvetica Neue-Medium", Helvetica, sans-serif;
   font-weight: 500;
   color: #ffffff94;
   font-size: 22px;
@@ -127,7 +128,7 @@ body{
   text-align: center;
   white-space: nowrap;
   position: absolute;
-  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
@@ -172,7 +173,7 @@ body{
   width: 69px;
   top: 5px;
   left: 61px;
-  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
   font-weight: 400;
   color: #ffffff;
   font-size: 22px;
@@ -211,7 +212,7 @@ body{
   left: 0;
   background-color: #000f26;
   border-radius: 20px;
-  box-shadow: 0px 0px 20px #00000040;
+  box-shadow: 0 0 20px #00000040;
   opacity: 0.3;
 }
 
@@ -243,7 +244,7 @@ body{
   top: 12px;
   left: 17px;
   text-shadow: -2px 3px 1px #0000001a;
-  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
   font-weight: 400;
   color: #ffffff;
   font-size: 18px;
@@ -259,7 +260,7 @@ body{
   top: 113px;
   left: 13px;
   text-shadow: -2px 3px 1px #0000001a;
-  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
   font-weight: 400;
   color: #ffffff;
   font-size: 18px;
@@ -275,7 +276,7 @@ body{
   top: 113px;
   left: 12px;
   text-shadow: -2px 3px 1px #0000001a;
-  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
   font-weight: 400;
   color: #ffffff;
   font-size: 1rem;
@@ -305,7 +306,6 @@ body{
   top: 1px;
   left: 12px;
   border-radius: 6.92px/6.35px;
-  
 }
 
 .basepage .overlap-group-wrapper {
@@ -357,8 +357,8 @@ body{
   width: 43px;
   top: 12px;
   left: 16px;
-  text-shadow: 0px 3px 1px #0000001a;
-  font-family: "Helvetica Neue-Regular", Helvetica;
+  text-shadow: 0 3px 1px #0000001a;
+  font-family: "Helvetica Neue-Regular",Helvetica, sans-serif;
   font-weight: 400;
   color: #ffffff;
   font-size: 18px;
@@ -431,7 +431,7 @@ body{
   color: #ffffff;
   font-size: 18px;
   position: absolute;
-  font-family: "Helvetica Neue-Regular", Helvetica;
+  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
