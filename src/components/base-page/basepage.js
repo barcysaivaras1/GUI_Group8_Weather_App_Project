@@ -259,7 +259,7 @@ function BasePage() {
   <Animate_page>
    <div className="basepage">
      <div className="div">
-   // Overlap to display current temperature, description, min and max temp using API key
+   {/*// Overlap to display current temperature, description, min and max temp using API key*/}
        <div className="overlap">
          <img className="weather-main-icon"
               src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''}
@@ -272,7 +272,7 @@ function BasePage() {
          <div className="max-temp">{tempMax ? `${tempMax}º` : 'Loading...'}</div>
          <div className="temp-bar"></div>
        </div>
-                //Favorite button
+                {/*//Favorite button*/}
        <PlusFavouritesButton />
        <Link to="/search">
          <div className="search-box">
@@ -283,7 +283,7 @@ function BasePage() {
           </button>
         </div>
        </Link>
-                //Overlap to include daily and hourly forecast
+                {/*//Overlap to include daily and hourly forecast*/}
        <div className="overlap-2">
          <div className="overlap-wrapper">
            <div className="overlap-3">

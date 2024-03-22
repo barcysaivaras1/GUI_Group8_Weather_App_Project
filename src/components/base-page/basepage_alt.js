@@ -263,7 +263,6 @@ function BasePage_alt() {
    <div className="basepage">
      <div className="div">
        <div className="overlap">
-       // Overlap to display current temperature, description, min and max temp using API key
          <div className="temp">{currentTemp ? `${currentTemp}º` : 'Loading...'}</div>
          <img className="weather-main-icon" src={forecastData && forecastData.length > 0 ? `http://openweathermap.org/img/wn/${forecastData[0].weather[0].icon}@2x.png` : ''} alt="Weather Icon" />
          <div className="weather-desc">{weatherDesc ? weatherDesc : 'Loading...'}</div>
@@ -283,7 +282,7 @@ function BasePage_alt() {
           </button>
         </div>
        </Link>
-  //Overlap to include daily and hourly forecast
+  {/*//Overlap to include daily and hourly forecast*/}
        <div className="overlap-2">
          <div className="overlap-wrapper">
            <div className="overlap-3">
@@ -438,35 +437,6 @@ function BasePage_alt() {
            </Drawer.Content>
          </Drawer.Portal>
        </Drawer.Root>
-   {/*<div className="places-to-go">*/}
-  {/*<div className="overlap-7">*/}
-  {/*  <div className="rectangle-7"></div>*/}
-  {/*  /!* Update to use cities array and currentCityIndex for image source *!/*/}
-  {/*  <img className="licensed-image" src={cities[currentCityIndex].image} alt="City Image" />*/}
-  {/*  <div className="rectangle-8"></div>*/}
-  {/*  <div className="rectangle-9"></div>*/}
-  {/*  <div className="text-wrapper-13">Places To Go</div>*/}
-  {/*  /!* Update to show the current city's name *!/*/}
-  {/*  <div className="text-wrapper-14">{cities[currentCityIndex].name}</div>*/}
-  {/*  /!* Update to show the current city's weather *!/*/}
-  {/*  <div className="element-2">{cities[currentCityIndex].weather}</div>*/}
-  {/*  <div className="group-8">*/}
-  {/*    <div className="overlap-group-5">*/}
-  {/*      <div className="rectangle-10"></div>*/}
-  {/*      <div className="ellipse-2"></div>*/}
-  {/*      <div className="ellipse-3"></div>*/}
-  {/*      <div className="ellipse-4"></div>*/}
-  {/*      <div className="ellipse-5"></div>*/}
-  {/*    </div>*/}
-  {/*  </div>*/}
-  {/*  <button className="button-style">*/}
-  {/*   <img className="arrow" src={arrow1} alt="Arrow 1" />*/}
-  {/*  </button>*/}
-  {/*  <button className="button-style">*/}
-  {/*   <img className="arrow-2" src={arrow2} alt="Arrow 2" />*/}
-  {/*  </button>*/}
-  {/*</div>*/}
-  {/*    </div>*/}
       <Link to="/filter">
         <div className="vector-wrapper">
           <button className="button-style">
